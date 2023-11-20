@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="280dp"
+        android:layout_height="400dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="12dp"
+        android:elevation="4dp"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/poppinsBold16spBlack"
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="16dp"
+            android:text="Doktermu sudah siap, silakan masuk ruang chat konsultasi"
+            android:gravity="center"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="72dp"
+            android:background="@color/PrimaryColor"
+            android:layout_below="@id/tvTitle"/>
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/doctor_ready"
+            android:layout_gravity="center"/>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="72dp"
+            android:background="@color/PrimaryColor"
+            android:layout_gravity="bottom"
+            android:layout_below="@id/tvTitle"/>
+
+        <Button
+            android:id="@+id/btMasuk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="16dp"
+            android:paddingHorizontal="64dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#F28705"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="Masuk"
+            />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="368dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:padding="5dp"
+    tools:context=".Logout">
+    
+    <TextView
+        style="@style/poppinsSemiBold14spBlack"
+        android:id="@+id/txtV_popup_logout"
+        android:layout_width="241dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:text="Anda yakin ingin logout?"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"/>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/SecondaryColor"
+        android:layout_below="@id/txtV_popup_logout"/>
+
+    <ImageView
+        android:id="@+id/img_popup_logout"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/view1"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/popup_logout"/>
+    <View
+        android:id="@+id/view_popup_logout"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/SecondaryColor"
+        android:layout_below="@+id/img_popup_logout"
+        android:layout_marginTop="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/view_popup_logout"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp">
+        <Button
+            android:id="@+id/btYa"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/PrimaryColor"
+            android:layout_marginEnd="50dp"
+            android:textColor="@color/white"
+            android:text="Iya"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btTidak"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/PrimaryColor"
+            android:text="Tidak"
+            android:textAllCaps="false"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

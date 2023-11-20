@@ -1,0 +1,182 @@
+<resources>
+    <string name="app_name">Catwell</string>
+
+    <!--    list payment-->
+    <string name="dana">Dana</string>
+    <string name="ovo">OVO</string>
+    <string name="gopay">Gopay</string>
+    <string name="shopeepay">ShopeePay</string>
+    <string name="linkaja">LinkAja</string>
+    <string name="mandiri">Mandiri</string>
+    <string name="bca">BCA</string>
+    <string name="bri">BRI</string>
+    <string name="bni">BNI</string>
+
+    <!--    Data transactions-->
+
+    <string-array name="doctor_name_trans">
+        <item>Drh. Aji Kusuma</item>
+        <item>Drh. Mutiara</item>
+        <item>Drh. Aisha</item>
+        <item>Drh. Mutiara</item>
+        <item>Drh. Nadine</item>
+        <item>Drh. Aji Kusuma</item>
+    </string-array>
+
+    <string-array name="doctor_instance_trans">
+        <item>OJ Pet Care</item>
+        <item>OJ Pet Care</item>
+        <item>OJ Pet Care</item>
+        <item>OJ Pet Care</item>
+        <item>OJ Pet Care</item>
+        <item>OJ Pet Care</item>
+    </string-array>
+
+    <string-array name="rating_trans">
+        <item>4</item>
+        <item>4</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="date_trans">
+        <item>Rabu, 4-08-2023</item>
+        <item>Rabu, 12-08-2023</item>
+        <item>Rabu, 4-09-2023</item>
+        <item>Rabu, 12-09-2023</item>
+        <item>Rabu, 4-10-2023</item>
+        <item>Rabu, 12-10-2023</item>
+    </string-array>
+
+    <string-array name="time_trans">
+        <item>14:00-15:00</item>
+        <item>20:00-21:00</item>
+        <item>16:00-17:00</item>
+        <item>10:00-11:00</item>
+        <item>14:00-15:00</item>
+        <item>08:00-09:00</item>
+    </string-array>
+
+    <string name="price_trans">Rp130.000</string>
+
+    <string-array name="payment_trans">
+        <item>DANA</item>
+        <item>Mandiri</item>
+        <item>OVO</item>
+        <item>DANA</item>
+        <item>DANA</item>
+        <item>Mandiri</item>
+    </string-array>
+
+    <!--    Data Doctors-->
+    <string-array name="doctor_names">
+        <item>Drh. Aji</item>
+        <item>Drh. Mutiara</item>
+        <item>Drh. Chandra</item>
+        <item>Drh. Nadine</item>
+        <item>Drh. Caroline</item>
+        <item>Drh. Julia</item>
+        <item>Drh. Aisha</item>
+        <item>Drh. Nalend</item>
+        <item>Drh. Isa</item>
+        <item>Drh. Annisa</item>
+        <item>Drh. Nabila</item>
+        <item>Drh. Dion</item>
+    </string-array>
+
+    <string-array name="doctor_instances">
+        <item>OJ Pet Care</item>
+        <item>OJ Pet Care</item>
+        <item>BVC Clinic</item>
+        <item>Canopy Clinic</item>
+        <item>Amor Clinic</item>
+        <item>Groovy Vet</item>
+        <item>Ciyo Pet Care</item>
+        <item>Gloriouz Pet</item>
+        <item>Puskeswan Batam</item>
+        <item>Gloriouz Pet</item>
+        <item>Ciyo Pet Care</item>
+        <item>Gloriouz Pet</item>
+    </string-array>
+
+    <string name="doctor_price">Rp130.000</string>
+    <string name="doctor_schedule">08:00 - 22:00</string>
+    <string name="doctor_duration">60</string>
+
+    <string-array name="doctor_rating">
+        <item>4.5</item>
+        <item>5</item>
+        <item>4</item>
+        <item>5</item>
+        <item>5</item>
+        <item>4.5</item>
+        <item>4</item>
+        <item>4</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+    </string-array>
+
+    <!--<<<<<<< HEAD-->
+    <string name="list_diskusi">RecylerViewYT</string>
+    =======
+    <!--    data address-->
+    <string-array name="place_name">
+        <item>Rumah</item>
+        <item>Apartemen</item>
+        <item>Sekolah</item>
+        <item>Kantor</item>
+        <item>Rumah Ibu</item>
+    </string-array>
+
+    <string-array name="name_person">
+        <item>Ruhi</item>
+        <item>Wawan</item>
+        <item>Nur</item>
+        <item>Budi</item>
+        <item>Jiya</item>
+    </string-array>
+
+    <string-array name="phone_number">
+        <item>12345678123</item>
+        <item>32178439232</item>
+        <item>12428012429</item>
+        <item>12149179481</item>
+        <item>12401094754</item>
+    </string-array>
+
+    <string-array name="province">
+        <item>Jawa Barat</item>
+        <item>Jakarta</item>
+        <item>Jawa Timur</item>
+        <item>Bengkulu</item>
+        <item>Sumatra Selatan</item>
+    </string-array>
+
+    <string-array name="city">
+        <item>Bandung</item>
+        <item>Jakarta Barat</item>
+        <item>Malang</item>
+        <item>Sabang</item>
+        <item>Palembang</item>
+    </string-array>
+
+    <string-array name="street">
+        <item>Jalan Ahmad Yani</item>
+        <item>Jalan Senopati</item>
+        <item>Jalan Ngagel</item>
+        <item>Jalan H.R Rasuna Said</item>
+        <item>Jalan R.A Kartini</item>
+    </string-array>
+
+    <string-array name="setting_default">
+        <item>true</item>
+        <item>else</item>
+        <item>else</item>
+        <item>true</item>
+        <item>else</item>
+    </string-array>
+</resources>

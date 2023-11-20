@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="368dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:padding="5dp"
+    tools:context=".HapusAkun">
+
+    <TextView
+        style="@style/poppinsSemiBold14spBlack"
+        android:id="@+id/txtV_hapus_akun"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Anda yakin ingin menghapus akun Anda? Tindakan ini tidak dapat dibatalkan."
+        android:layout_centerHorizontal="true"/>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/SecondaryColor"
+        android:layout_below="@id/txtV_hapus_akun"/>
+
+    <ImageView
+        android:id="@+id/img_popup_logout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/view1"
+        android:background="@drawable/img_popup_hapus_account"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/SecondaryColor"
+        android:layout_below="@+id/img_popup_logout"
+        android:layout_marginTop="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/view2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+        <Button
+            android:id="@+id/btYa"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/PrimaryColor"
+            android:layout_marginEnd="50dp"
+            android:textColor="@color/white"
+            android:text="Iya" />
+        <Button
+            android:id="@+id/btTidak"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/PrimaryColor"
+            android:text="Tidak"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

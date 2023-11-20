@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/beranda"
+        android:icon="@drawable/ic_beranda"
+        android:title="Beranda"/>
+    <item
+        android:title="Diskusi"
+        android:id="@+id/diskusi"
+        android:icon="@drawable/ic_diskusi"/>
+    <item
+        android:title="Konsultasi"
+        android:id="@+id/konsultasi"
+        android:icon="@drawable/ic_konsultasi"/>
+    <item
+        android:title="Riwayat"
+        android:id="@+id/riwayat"
+        android:icon="@drawable/ic_riwayat"/>
+    <item
+        android:title="Info Vet"
+        android:id="@+id/infoVet"
+        android:icon="@drawable/ic_info"/>
+
+</menu>

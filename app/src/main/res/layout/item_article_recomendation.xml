@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="175dp"
+    android:layout_height="125dp"
+    android:layout_marginStart="8dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp">
+
+    <ImageView
+        android:id="@+id/ivArticle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_kucing_berantem"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:src="@drawable/gradient_orange" />
+
+    <TextView
+        style="@style/poppinsSemiBold12spWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tvTitle"
+        android:gravity="bottom|center"
+        android:text="Kucing Luka Karena Berkelahi" />
+
+
+</androidx.cardview.widget.CardView>
