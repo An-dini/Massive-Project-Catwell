@@ -66,18 +66,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"/>
 
-
-
     <Button
         style="@style/poppinsSemiBold16spWhite"
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle_rounded"
         android:layout_below="@+id/txt_forgot"
         android:layout_centerHorizontal="true"
-        android:width="250dp"
-        android:backgroundTint="@color/SecondaryColor"
-        android:text="Gabung"
+        android:text="Masuk"
         android:layout_marginTop="14dp"/>
     
     <LinearLayout

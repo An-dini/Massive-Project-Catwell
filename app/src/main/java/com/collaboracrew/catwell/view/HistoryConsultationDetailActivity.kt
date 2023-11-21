@@ -7,6 +7,7 @@ import android.view.SurfaceControl.Transaction
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import com.collaboracrew.catwell.MainActivity
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.databinding.HistoryConsultationDetailBinding
