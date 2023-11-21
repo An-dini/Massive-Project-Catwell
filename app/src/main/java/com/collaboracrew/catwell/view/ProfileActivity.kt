@@ -74,7 +74,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
         val btYa: Button = dialog.findViewById(R.id.btYa)
         btYa.setOnClickListener {
-            val intent = Intent(this@ProfileActivity, Login::class.java)
+            val intent = Intent(this@ProfileActivity, WelcomeScreenActivity::class.java)
             startActivity(intent)
         }
 
@@ -95,7 +95,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
         val btYa: Button = dialog.findViewById(R.id.btYa)
         btYa.setOnClickListener {
-            val intent = Intent(this@ProfileActivity, Login::class.java)
+            val intent = Intent(this@ProfileActivity, WelcomeScreenActivity::class.java)
             startActivity(intent)
         }
 

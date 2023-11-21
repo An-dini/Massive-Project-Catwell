@@ -60,6 +60,12 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/white</item>
     </style>
+    <style name="poppinsSemiBold16spBGWhite">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/white</item>
+    </style>
     <style name="poppinsSemiBold20spWhite">
         <item name="android:fontFamily">@font/poppins_semibold</item>
         <item name="android:textSize">20sp</item>
@@ -232,6 +238,11 @@
     <style name="poppinsSemiBold14spOrange">
         <item name="android:fontFamily">@font/poppins_semibold</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/PrimaryColor</item>
+    </style>
+    <style name="poppinsSemiBold16spOrange">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/PrimaryColor</item>
     </style>
     <style name="poppinsSemiBold20spOrange">

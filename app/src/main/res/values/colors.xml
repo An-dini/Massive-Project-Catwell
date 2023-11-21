@@ -5,6 +5,6 @@
     <color name="BackgroundColor">#F2F0E4 </color>
     <color name="transparan">#80FFFFFF </color>
     <color name="black">#3F3D56</color>
-    <color name="white">#FAFAFA</color>
+    <color name="white">#F5F5F5</color>
     <color name="grey">#A4A4A4</color>
 </resources>

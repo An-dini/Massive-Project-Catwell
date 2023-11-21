@@ -8,10 +8,12 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Catwell"
         tools:targetApi="31">
+        <activity
+            android:name=".view.WelcomeScreenActivity"
+            android:exported="false" />
         <activity
             android:name=".view.ScheduleConsultationActivity"
             android:exported="false" />
@@ -63,10 +65,11 @@
         <activity
             android:name=".view.WishListku"
             android:exported="false" />
-
-
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SplashScreenActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Catwell">
@@ -76,6 +79,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

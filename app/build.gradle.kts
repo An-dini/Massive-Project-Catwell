@@ -76,4 +76,5 @@ dependencies {
     implementation ("com.github.smarteist:autoimageslider:1.4.0")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation ("com.github.lisawray.groupie:groupie:2.10.1")
+    implementation ("com.airbnb.android:lottie:4.2.0")
 }
