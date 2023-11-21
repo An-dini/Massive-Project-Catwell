@@ -19,6 +19,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         bottomNavigationView = findViewById(R.id.bottomNavigationBar)
+
+        if (intent.getBooleanExtra("transactionData", false)) {
+            replaceFragment(RiwayatFragment())
+            bottomNavigationView.selectedItemId = R.id.riwayat
+        } else if (intent.getBooleanExtra("newSchedule", false)) {
+            replaceFragment(KonsultasiFragment())
+            bottomNavigationView.selectedItemId = R.id.konsultasi
+        } else {
+            replaceFragment(BerandaFragment())
+            bottomNavigationView.selectedItemId = R.id.beranda
+        }
+
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.beranda -> {
