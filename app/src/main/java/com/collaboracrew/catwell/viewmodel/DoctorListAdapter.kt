@@ -1,4 +1,4 @@
-package com.pawpatrol.catwell
+package com.collaboracrew.catwell.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

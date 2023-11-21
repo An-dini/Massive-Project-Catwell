@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.register"
+    android:background="@color/white">
+
+     <TextView
+         style="@style/poppinsBold24spOrange"
+         android:id="@+id/txt1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:text="Halo!"
+         android:layout_marginTop="110dp"/>
+    <TextView
+        style="@style/poppinsMed16spOrange"
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Lengkapi Data Akunmu"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/txt2"
+        android:padding="20dp"
+        android:id="@+id/linear">
+
+        <EditText
+            style="@style/poppinsReg14spBlack"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nama lengkap"
+            android:background="@drawable/rectangle_rounded_stroke"
+            android:paddingLeft="10dp"
+            android:id="@+id/edt_fullname"/>
+        <EditText
+            style="@style/poppinsReg14spBlack"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Jenis kelamin"
+            android:textColorHint="#B2B4B6"
+            android:background="@drawable/rectangle_rounded_stroke"
+            android:drawableEnd="@drawable/gender"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edt_gender"/>
+        <EditText
+            style="@style/poppinsReg14spBlack"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangle_rounded_stroke"
+            android:hint="Email"
+            android:textColorHint="#B2B4B6"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edt_email"
+            android:inputType="textEmailAddress"/>
+        <EditText
+            style="@style/poppinsReg14spBlack"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangle_rounded_stroke"
+            android:hint="Kata sandi"
+            android:textColorHint="#B2B4B6"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edt_enteepasswd"
+            android:inputType="textPassword"/>
+        <EditText
+            style="@style/poppinsReg14spBlack"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangle_rounded_stroke"
+            android:hint="Konfirmasi kata sandi"
+            android:textColorHint="#B2B4B6"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edt_confirmpasswd"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+    <Button
+        style="@style/poppinsSemiBold16spWhite"
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linear"
+        android:backgroundTint="@color/SecondaryColor"
+        android:text="Gabung"
+        android:width="250dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRegister"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+        <TextView
+            style="@style/poppinsReg14spBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Punya Akun?"/>
+        <TextView
+            style="@style/poppinsSemiBold14spOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masuk"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/txtLogin"/>
+    </LinearLayout>
+    
+
+</RelativeLayout>

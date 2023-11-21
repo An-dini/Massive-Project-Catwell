@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/notifikasi"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp">
+
+        <ImageView
+            android:id="@+id/iv_logo_orange"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_lingkaran" />
+
+        <TextView
+            style="@style/poppinsReg14spBlack"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_notif"
+            android:text="Dokter kamu sudah siap, silakan masuk ruang chat. Selamat berkonsultasi!"
+            app:layout_constraintStart_toEndOf="@+id/iv_logo_orange"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
