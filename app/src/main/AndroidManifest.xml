@@ -27,6 +27,43 @@
         <activity
             android:name=".view.HistoryConsultationDetailActivity"
             android:exported="false" />
+        <activity
+            android:name=".view.Detail_Vet_Puskeswan"
+            android:exported="false" />
+        <activity
+            android:name=".view.NotifikasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.Login"
+            android:exported="false" />
+        <activity
+            android:name=".view.EditAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.register"
+            android:exported="false" />
+        <activity
+            android:name=".view.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.BookmarkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.EditPassword"
+            android:exported="false" />
+        <activity
+            android:name=".view.EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".view.OtpPassword"
+            android:exported="false" />
+        <activity
+            android:name=".view.ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".view.WishListku"
+            android:exported="false" />
+
 
         <activity
             android:name=".MainActivity"

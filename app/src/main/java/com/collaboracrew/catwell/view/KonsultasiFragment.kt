@@ -13,8 +13,6 @@ import com.collaboracrew.catwell.databinding.FragmentKonsultasiBinding
 import com.collaboracrew.catwell.model.DOCTOR_ID_EXTRA
 import com.collaboracrew.catwell.model.DoctorModel
 import com.collaboracrew.catwell.model.doctorList
-import com.pawpatrol.catwell.DoctorClickListener
-import com.pawpatrol.catwell.DoctorListAdapter
 
 class KonsultasiFragment : Fragment(), DoctorClickListener {
     private lateinit var binding: FragmentKonsultasiBinding

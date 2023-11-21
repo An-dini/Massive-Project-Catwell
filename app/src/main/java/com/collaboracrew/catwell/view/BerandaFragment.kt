@@ -1,10 +1,14 @@
 package com.collaboracrew.catwell.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +17,7 @@ import com.collaboracrew.catwell.model.ArticleRecommendationModel
 import com.collaboracrew.catwell.model.DoctorRecommendationModel
 import com.collaboracrew.catwell.model.ProductRecommendationModel
 import com.collaboracrew.catwell.model.UpComingScheduleItem
+import com.collaboracrew.catwell.model.VET_ID_EXTRA
 import com.collaboracrew.catwell.viewmodel.ArticlesRecomAdapter
 import com.collaboracrew.catwell.viewmodel.DoctorRecomAdapter
 import com.collaboracrew.catwell.viewmodel.ProductRecomAdapter
@@ -44,6 +49,22 @@ class BerandaFragment : Fragment() {
         repeat(5) {
             repeatedProductData.addAll(getSampleProductData())
         }
+
+        val icNotification = view.findViewById<ImageView>(R.id.icNotification)
+        val icBookmark = view.findViewById<ImageView>(R.id.icBookmark)
+        val icProfile = view.findViewById<ImageView>(R.id.icProfile)
+
+        icNotification.setOnClickListener {
+            startActivity(Intent(requireContext(), NotifikasiActivity::class.java))
+        }
+        icBookmark.setOnClickListener {
+            startActivity(Intent(requireContext(), BookmarkActivity::class.java))
+        }
+        icProfile.setOnClickListener {
+            startActivity(Intent(requireContext(), ProfileActivity::class.java))
+        }
+
+
 
         // Inisialisasi RecyclerView
         rvPromotions = view.findViewById(R.id.rvPromotions)

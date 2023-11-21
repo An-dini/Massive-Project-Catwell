@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.EditAddressActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_orange"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_back" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="48dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    style="@style/poppinsBold24spWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Diskusi yuk!" />
+
+                <TextView
+                    android:id="@+id/tvSubTitle"
+                    style="@style/poppinsMed12spWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diskusikan dengan user lain" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/base_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/poppinsSemiBold16spBlack"
+                    android:id="@+id/tvSatu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Kontak"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <EditText
+                    style="@style/poppinsReg14spBlack"
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rectangle_rounded_stroke"
+                    android:hint="Nama Lengkap"
+                    android:inputType="textPersonName"
+                    android:maxLength="75"
+                    android:maxLines="1"
+                    android:paddingHorizontal="16dp"
+                    android:textColorHint="#B2B4B6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSatu" />
+
+                <EditText
+                    style="@style/poppinsReg14spBlack"
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rectangle_rounded_stroke"
+                    android:hint="Nomor Telepon"
+                    android:inputType="textPersonName"
+                    android:maxLength="75"
+                    android:maxLines="1"
+                    android:paddingHorizontal="16dp"
+                    android:textColorHint="#B2B4B6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etName" />
+
+
+                <TextView
+                    style="@style/poppinsSemiBold16spBlack"
+                    android:id="@+id/tvDua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Alamat"
+                    app:layout_constraintTop_toBottomOf="@id/etPhone"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <EditText
+                    style="@style/poppinsReg14spBlack"
+                    android:id="@+id/etProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rectangle_rounded_stroke"
+                    android:hint="Provinsi, Kota, Kecematan, Kode Pos"
+                    android:inputType="textPersonName"
+                    android:maxLength="75"
+                    android:maxLines="1"
+                    android:paddingHorizontal="16dp"
+                    android:textColorHint="#B2B4B6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDua" />
+
+                <EditText
+                    style="@style/poppinsReg14spBlack"
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rectangle_rounded_stroke"
+                    android:hint="Nama Jalan, Gedung, No. Rumah"
+                    android:inputType="textPersonName"
+                    android:maxLength="75"
+                    android:maxLines="1"
+                    android:paddingHorizontal="16dp"
+                    android:textColorHint="#B2B4B6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etProvince" />
+
+                <EditText
+                    style="@style/poppinsReg14spBlack"
+                    android:id="@+id/etStreet"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rectangle_rounded_stroke"
+                    android:hint="Detail Lainnya (Cth:Blok / Unit No., Patokan"
+                    android:inputType="textPersonName"
+                    android:maxLength="150"
+                    android:maxLines="1"
+                    android:paddingHorizontal="16dp"
+                    android:textColorHint="#B2B4B6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etCity" />
+
+
+                <TextView
+                    style="@style/poppinsSemiBold16spBlack"
+                    android:id="@+id/tvTiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Pengaturan"
+                    app:layout_constraintTop_toBottomOf="@id/etStreet"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <Switch
+                    style="@style/poppinsReg14spBlack"
+                    android:id="@+id/switchDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/rectangle_rounded_stroke"
+                    android:outlineSpotShadowColor="@color/PrimaryColor"
+                    android:text="Tetapkan Sebagai Default"
+                    app:layout_constraintTop_toBottomOf="@id/tvTiga"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <Button
+                    style="@style/poppinsSemiBold16spWhite"
+                    android:id="@+id/btnSimpan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:width="250dp"
+                    android:backgroundTint="@color/SecondaryColor"
+                    android:text="Simpan"
+                    android:clickable="true"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintTop_toBottomOf="@+id/switchDefault"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

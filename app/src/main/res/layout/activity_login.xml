@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Login"
+    android:background="@color/white">
+
+
+    <TextView
+        style="@style/poppinsBold24spOrange"
+        android:id="@+id/Text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Selamat Datang!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Text1"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/img1"/>
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img1"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            style="@style/poppinsReg14spBlack"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangle_rounded_stroke"
+            android:hint="Username"
+            android:textColorHint="#B2B4B6"
+            android:paddingLeft="10dp"
+            android:id="@+id/username"/>
+
+        <EditText
+            style="@style/poppinsReg14spBlack"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangle_rounded_stroke"
+            android:hint="Password"
+            android:textColorHint="#B2B4B6"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:id="@+id/passwd"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+    <TextView
+        style="@style/poppinsMed16spOrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_forgot"
+        android:text="Lupa Password?"
+        android:layout_below="@+id/linear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+
+
+    <Button
+        style="@style/poppinsSemiBold16spWhite"
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_forgot"
+        android:layout_centerHorizontal="true"
+        android:width="250dp"
+        android:backgroundTint="@color/SecondaryColor"
+        android:text="Gabung"
+        android:layout_marginTop="14dp"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogin"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+        <TextView
+            style="@style/poppinsReg14spBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tidak Punya Akun?" />
+        <TextView
+            style="@style/poppinsSemiBold14spOrange"
+            android:id="@+id/txt_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mendaftar"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+  
+
+
+</RelativeLayout>
