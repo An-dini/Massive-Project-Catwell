@@ -72,4 +72,8 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    implementation ("com.github.smarteist:autoimageslider:1.4.0")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation ("com.github.lisawray.groupie:groupie:2.10.1")
 }

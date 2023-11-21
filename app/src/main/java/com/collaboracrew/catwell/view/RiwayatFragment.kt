@@ -35,7 +35,7 @@ class RiwayatFragment : Fragment(), TransactionClickListener {
     }
 
     override fun onClick(transaction: RiwayatModel) {
-        val intent = Intent(requireContext(), MainActivity::class.java)
+        val intent = Intent(requireContext(), HistoryConsultationDetailActivity::class.java)
         intent.putExtra(TRANSACTION_ID_EXTRA, transaction.id)
         startActivity(intent)
     }

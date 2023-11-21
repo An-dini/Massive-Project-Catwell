@@ -5,8 +5,7 @@
     android:id="@+id/clTransaction"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingStart="16dp"
-    android:paddingTop="16dp"
-    android:background="@color/white">
+    android:paddingTop="16dp">
 
     <ImageView
         android:id="@+id/imgIcon"
