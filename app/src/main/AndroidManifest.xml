@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Catwell"
         tools:targetApi="31">
         <activity
+            android:name=".view.Edit_Profil_Kucing"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.ScheduleConsultationActivity"
             android:exported="false" />
         <activity
@@ -63,10 +69,8 @@
         <activity
             android:name=".view.WishListku"
             android:exported="false" />
-
-
         <activity
-            android:name=".MainActivity"
+            android:name=".model.profil_kucing"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Catwell">
@@ -76,6 +80,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

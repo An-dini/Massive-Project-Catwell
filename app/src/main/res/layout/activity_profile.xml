@@ -43,16 +43,17 @@
                 <TextView
                     android:id="@+id/tvTitle"
                     style="@style/poppinsBold24spWhite"
+                    android:fontFamily="@font/poppinssemibold"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:text="Diskusi yuk!" />
+                    android:text="Edit Profil" />
 
                 <TextView
                     android:id="@+id/tvSubTitle"
                     style="@style/poppinsMed12spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Diskusikan dengan user lain" />
+                    android:text="Edit Profil Kucing Kamu" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -74,14 +75,14 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/fotoprofile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_below="@+id/include"
                 android:layout_marginTop="40dp"
-                android:src="@drawable/dr_aji" />
+                android:src="@drawable/usereditprofil" />
 
             <TextView
                 style="@style/poppinsBold16spOrange"
@@ -166,7 +167,7 @@
         <TextView
             style="@style/poppinsReg16spBlack"
             android:id="@+id/hps_akn"
-            android:drawableEnd="@drawable/ic_delete"
+            android:drawableEnd="@drawable/ic_delete2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:backgroundTint="@color/white"
