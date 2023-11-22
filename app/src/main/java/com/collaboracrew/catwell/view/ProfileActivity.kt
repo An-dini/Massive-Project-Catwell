@@ -17,7 +17,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
-        val txtviewalmt: TextView = findViewById(R.id.almt_rumah)
+        val txtviewalmt: TextView = findViewById(R.id.profileKucing)
         txtviewalmt.setOnClickListener(this)
         val txtviedtpass: TextView = findViewById(R.id.edt_pass)
         txtviedtpass.setOnClickListener(this)
@@ -25,6 +25,8 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         txtviedtlogout.setOnClickListener(this)
         val txtviedtprofil: TextView = findViewById(R.id.editProfile)
         txtviedtprofil.setOnClickListener(this)
+        val txtviabout: TextView = findViewById(R.id.ttg_aplikasi)
+        txtviabout.setOnClickListener(this)
         val txtvihapusakn: TextView = findViewById(R.id.hps_akn)
         txtvihapusakn.setOnClickListener(this)
 
@@ -37,8 +39,8 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.almt_rumah -> {
-                val intent = Intent(this@ProfileActivity, EditAddressActivity::class.java)
+            R.id.profileKucing -> {
+                val intent = Intent(this@ProfileActivity, EditProfileKucing::class.java)
                 startActivity(intent)
             }
         }
@@ -56,6 +58,12 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         when (v.id) {
             R.id.editProfile-> {
                 val intent = Intent(this@ProfileActivity, EditProfile::class.java)
+                startActivity(intent)
+            }
+        }
+        when (v.id) {
+            R.id.ttg_aplikasi-> {
+                val intent = Intent(this@ProfileActivity, TentangAplikasi::class.java)
                 startActivity(intent)
             }
         }
