@@ -12,6 +12,10 @@
         android:theme="@style/Theme.Catwell"
         tools:targetApi="31">
         <activity
+            android:name=".view.Edit_Profil_Kucing"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:name=".view.TentangAplikasi"
             android:exported="false" />
         <activity
@@ -83,6 +87,9 @@
         <activity
             android:name=".view.WishListku"
             android:exported="false" />
+        <activity
+            android:name=".model.profil_kucing"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="false" />
