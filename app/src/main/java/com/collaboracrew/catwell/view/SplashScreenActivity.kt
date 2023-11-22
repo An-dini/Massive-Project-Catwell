@@ -21,7 +21,7 @@ class SplashScreenActivity : AppCompatActivity() {
             override fun onAnimationStart(animation: Animator) {}
 
             override fun onAnimationEnd(animation: Animator) {
-                startActivity(Intent(this@SplashScreenActivity, WelcomeScreenActivity::class.java))
+                startActivity(Intent(this@SplashScreenActivity, Pilih_Sebagai::class.java))
                 finish()
             }
 
