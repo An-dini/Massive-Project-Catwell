@@ -77,9 +77,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/fotoprofile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_below="@+id/include"
                 android:layout_marginTop="40dp"
                 android:src="@drawable/usereditprofil" />
@@ -92,77 +91,63 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/fotoprofile"
                 android:layout_gravity="center"
+                android:textStyle="bold"
                 android:text="Bunga Citra lestari"/>
 
-        <TextView
-            style="@style/poppinsReg16spBlack"
-            android:id="@+id/almt_rumah"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="@color/white"
-            android:text="Alamat Rumah"
-            android:textAllCaps="false"
-            android:gravity="start"
-            android:padding="10dp"
-            android:drawableEnd="@drawable/ic_forward"/>
-        <View
-            android:id="@+id/view1"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/SecondaryColor"/>
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/editProfile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/white"
+                android:text="Edit Profile"
+                android:textAllCaps="false"
+                android:gravity="start"
+                android:padding="10dp"
+                android:drawableEnd="@drawable/ic_forward"/>
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/SecondaryColor"/>
 
-        <TextView
-            style="@style/poppinsReg16spBlack"
-            android:id="@+id/edt_pass"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:backgroundTint="@color/white"
-            android:text="Edit Password"
-            android:padding="10dp"
-            android:textAllCaps="false"
-            android:gravity="start"
-            android:drawableEnd="@drawable/ic_forward"/>
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/profileKucing"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:text="Profile Kucing"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:gravity="start"
+                android:drawableEnd="@drawable/ic_forward"/>
 
-        <View
-            android:id="@+id/view2"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/SecondaryColor"/>
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/SecondaryColor"/>
 
-        <TextView
-            style="@style/poppinsReg16spBlack"
-            android:id="@+id/logout"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:backgroundTint="@color/white"
-            android:text="Logout"
-            android:textAllCaps="false"
-            android:padding="10dp"
-            android:gravity="start"
-            android:drawableEnd="@drawable/ic_forward"/>
-        <View
-            android:id="@+id/view3"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/SecondaryColor"/>
-
-        <TextView
-            style="@style/poppinsReg16spBlack"
-            android:id="@+id/editProfile"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:backgroundTint="@color/white"
-            android:text="Edit Profile"
-            android:textAllCaps="false"
-            android:padding="10dp"
-            android:gravity="start"
-            android:drawableEnd="@drawable/ic_forward"/>
-        <View
-            android:id="@+id/view4"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/SecondaryColor"/>
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/edt_pass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:text="Ubah Password"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:gravity="start"
+                android:drawableEnd="@drawable/ic_forward"/>
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/SecondaryColor"/>
 
         <TextView
             style="@style/poppinsReg16spBlack"
@@ -184,7 +169,20 @@
             android:layout_height="2dp"
             android:background="@color/SecondaryColor"/>
 
-    </LinearLayout>
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/hps_akn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/red"
+                android:text="Hapus Akun"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                android:gravity="start"/>
+
+        </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>
-

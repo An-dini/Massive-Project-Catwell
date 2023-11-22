@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white"
-    tools:context=".view.DoctorDetailActivity">
+    android:backgroundTint="@color/white"
+    tools:context=".view.TentangAplikasi">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -47,14 +45,15 @@
                     style="@style/poppinsBold24spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:text="Diskusi yuk!" />
+                    android:textStyle="bold"
+                    android:text="Tentang Aplikasi" />
 
                 <TextView
                     android:id="@+id/tvSubTitle"
                     style="@style/poppinsMed12spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Diskusikan dengan user lain" />
+                    android:text="Informasi Aplikasi" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -65,64 +64,60 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="92dp"
+        android:padding="16dp"
         android:background="@drawable/base_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/paymentName"
-                android:layout_width="250dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/rectangle_rounded_stroke"
-                android:gravity="center_vertical"
-                android:paddingStart="16dp"
-                android:text="DANA"
-                android:textColor="@color/black"
-                android:textSize="16sp"/>
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvPaymentMethod"
+                android:layout_marginTop="40dp"
+                android:id="@+id/head1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:contentDescription="Payment Methods"
-                tools:listitem="@layout/payment_list_mitra"/>
+                android:layout_height="30dp"
+                android:text="Definisi"
+                style="@style/poppinsMed16spBlack"/>
+            <TextView
+                android:id="@+id/isi1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textAlignment="textStart"
+                android:text="Aplikasi Cat Well adalah sebuah aplikasi yang memberikan layanan konsultasi online, edukasi, dan informasi bagi para pecinta kucing yang tidak memiliki akses secara langsung ke puskeswan atau dokter hewan."
+                android:layout_below="@id/head1"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/head2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Misi Kami"
+                style="@style/poppinsMed16spBlack"
+                android:layout_below="@id/isi1"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/isi2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textAlignment="viewStart"
+                android:text="Misi kami adalah memudahkan para pemilik hewan peliharaan khususnya kucing yang tidak memiliki akses waktu dan informasi untuk tetap dapat menjaga kesehatan kucing mereka dengan berkonsultasi secara online dengan dokter hewan atau membaca artikel edukasi tentang kesehatan kucing mereka."
+                android:layout_below="@id/head2"
+                android:layout_marginTop="10dp"/>
 
-            <Button
-                android:id="@+id/viewMoreButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/PrimaryColor"
-                android:textSize="16sp"
-                android:text="Lainnya"
-                android:background="@android:color/transparent"
-                />
+            <TextView
+                android:id="@+id/cprgt"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textAlignment="viewEnd"
+                android:text="Copyright . CollaboraCrew"
+                android:layout_below="@id/isi2"
+                android:layout_marginTop="100dp"/>
 
-            <Button
-                style="@style/poppinsSemiBold16spWhite"
-                android:id="@+id/btPay"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:background="@drawable/rectangle_rounded"
-                android:layout_gravity="center_horizontal"
-                android:paddingHorizontal="64dp"
-                android:layout_marginTop="24dp"
-                android:text="Bayar"
-                />
-        </LinearLayout>
 
+
+        </RelativeLayout>
     </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

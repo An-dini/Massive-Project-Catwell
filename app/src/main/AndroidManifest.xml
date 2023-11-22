@@ -8,7 +8,6 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Catwell"
         tools:targetApi="31">
@@ -17,6 +16,25 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:name=".view.TentangAplikasi"
+            android:exported="false" />
+        <activity
+            android:name=".view.Room_VidioCall"
+            android:exported="false" />
+        <activity
+            android:name=".view.EditProfileKucing"
+            android:exported="false" />
+        <activity
+            android:name=".view.Pembayaran_Telepon"
+            android:exported="false" />
+        <activity
+            android:name=".view.SplashScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.Pilih_Sebagai"
+            android:exported="false" />
+        <activity
+            android:name=".view.WelcomeScreenActivity"
             android:exported="false" />
         <activity
             android:name=".view.ScheduleConsultationActivity"
@@ -71,9 +89,16 @@
             android:exported="false" />
         <activity
             android:name=".model.profil_kucing"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Catwell">
+            android:exported="false"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PembayaranChat"
+            android:exported="true">
+
+            <!-- android:label="@string/app_name" -->
+            <!-- android:theme="@style/Theme.Catwell"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

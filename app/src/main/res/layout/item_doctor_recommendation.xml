@@ -45,12 +45,12 @@
     </LinearLayout>
 
     <Button
-        style="@style/poppinsBold12spWhite"
+        style="@style/poppinsSemiBold16spWhite"
         android:id="@+id/btKonsultasi"
-        android:background="@drawable/rounded_button_background"
+        android:background="@drawable/rectangle_rounded"
         android:text="Chat"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_height="45dp"
         android:layout_marginStart="65dp"
         android:layout_marginTop="8dp"
         android:layout_alignParentEnd="true"
