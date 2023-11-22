@@ -77,9 +77,10 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/fotoprofile"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_below="@+id/include"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:layout_marginTop="40dp"
                 android:src="@drawable/usereditprofil" />
 
@@ -109,7 +110,7 @@
             <View
                 android:id="@+id/view1"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="@color/SecondaryColor"/>
 
             <TextView
@@ -128,7 +129,7 @@
             <View
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="@color/SecondaryColor"/>
 
             <TextView
@@ -146,7 +147,7 @@
             <View
                 android:id="@+id/view3"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="@color/SecondaryColor"/>
 
         <TextView
@@ -166,17 +167,17 @@
         <View
             android:id="@+id/view5"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:background="@color/SecondaryColor"/>
 
             <TextView
                 style="@style/poppinsReg16spBlack"
-                android:id="@+id/hps_akn"
+                android:id="@+id/btKeluar"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/red"
-                android:text="Hapus Akun"
+                android:text="Keluar"
                 android:paddingLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:padding="10dp"

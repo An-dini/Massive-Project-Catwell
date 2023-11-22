@@ -12,10 +12,6 @@
         android:theme="@style/Theme.Catwell"
         tools:targetApi="31">
         <activity
-            android:name=".view.Edit_Profil_Kucing"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:name=".view.TentangAplikasi"
             android:exported="false" />
         <activity
@@ -28,7 +24,7 @@
             android:name=".view.Pembayaran_Telepon"
             android:exported="false" />
         <activity
-            android:name=".view.SplashScreenActivity"
+            android:name=".view.PembayaranChat"
             android:exported="false" />
         <activity
             android:name=".view.Pilih_Sebagai"
@@ -88,17 +84,11 @@
             android:name=".view.WishListku"
             android:exported="false" />
         <activity
-            android:name=".model.profil_kucing"
-            android:exported="false"/>
-        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".view.PembayaranChat"
+            android:name=".view.SplashScreenActivity"
             android:exported="true">
-
-            <!-- android:label="@string/app_name" -->
-            <!-- android:theme="@style/Theme.Catwell"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
