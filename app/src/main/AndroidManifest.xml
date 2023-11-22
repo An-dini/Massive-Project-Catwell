@@ -12,7 +12,13 @@
         android:theme="@style/Theme.Catwell"
         tools:targetApi="31">
         <activity
+            android:name=".view.TentangAplikasi"
+            android:exported="false" />
+        <activity
             android:name=".view.Room_VidioCall"
+            android:exported="false" />
+        <activity
+            android:name=".view.EditProfileKucing"
             android:exported="false" />
         <activity
             android:name=".view.Pembayaran_Telepon"
