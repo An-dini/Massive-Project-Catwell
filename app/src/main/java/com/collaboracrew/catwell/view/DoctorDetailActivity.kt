@@ -20,18 +20,25 @@ class DoctorDetailActivity : AppCompatActivity() {
         binding = ActivityDoctorDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val backButton = findViewById(R.id.ivBack) as ImageView
+
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
+
+
         val doctorID = intent.getIntExtra(DOCTOR_ID_EXTRA, -1)
         val doctor = doctorFromID(doctorID)
         Log.d("DoctorFragment", "Doctor ID: $doctorID")
 
         if (doctor != null) {
             binding.cover.setImageResource(doctor.photo)
-            binding.price.text = doctor.price
-            binding.duration.text = "${doctor.duration} menit"
-            binding.name.text = doctor.name
-            binding.instance.text = doctor.instance
+            binding.tvHarga.text = doctor.price
+            binding.tvDurasi.text = "${doctor.duration} menit"
+            binding.tvNama.text = doctor.name
+            binding.tvInstansi.text = doctor.instance
             binding.ratingBar.rating = doctor.rating
-            binding.schedule.text = doctor.schedule
+            binding.tvJam.text = doctor.schedule
 
             val btKonsultasi = binding.btConsultation
             btKonsultasi.setOnClickListener {
@@ -40,10 +47,6 @@ class DoctorDetailActivity : AppCompatActivity() {
                 startActivity(intent)
             }
 
-            val backButton = findViewById(R.id.ivBack) as ImageView
-            backButton.setOnClickListener {
-                onBackPressed()
-            }
         }
     }
 

@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Catwell"
         tools:targetApi="31">
         <activity
+            android:name=".view.JadwalKonsultasiActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.WelcomeScreenActivity"
             android:exported="false" />
         <activity
@@ -69,9 +72,17 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".view.DetailArtikel"
+            android:exported="false" />
+        <activity
+            android:name=".view.HalamanProduk"
+            android:exported="false" />
+        <activity
+            android:name=".view.HalamanListArtikel"
+            android:exported="false" />
+        <activity
             android:name=".view.SplashScreenActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.Catwell">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

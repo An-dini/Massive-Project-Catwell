@@ -8,9 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.collaboracrew.catwell.R
+import com.collaboracrew.catwell.model.DoctorRecommendationModel
 import com.collaboracrew.catwell.model.ProductRecommendationModel
 
-class ProductRecomAdapter(private val data: List<ProductRecommendationModel>) : RecyclerView.Adapter<ProductRecomAdapter.ViewHolder>() {
+class ListProductRecomAdapter(private val data: List<ProductRecommendationModel>) : RecyclerView.Adapter<ListProductRecomAdapter.ViewHolder>() {
 
     private var onItemClickListener: ((ProductRecommendationModel) -> Unit)? = null
 
@@ -19,7 +20,7 @@ class ProductRecomAdapter(private val data: List<ProductRecommendationModel>) : 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_product_recomendation, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_product, parent, false)
         return ViewHolder(view)
     }
 

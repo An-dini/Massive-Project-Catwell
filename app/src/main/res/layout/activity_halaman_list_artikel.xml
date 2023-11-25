@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.HalamanProduk">
+    tools:context=".view.HalamanListArtikel">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -42,17 +42,17 @@
 
                 <TextView
                     android:id="@+id/tvTitle"
-                    style="@style/poppinsBold20spWhite"
+                    style="@style/poppinsBold24spWhite"
                     android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:text="Rekomendasi Produk" />
+                    android:layout_height="35dp"
+                    android:text="Kucingpedia" />
 
                 <TextView
                     android:id="@+id/tvSubTitle"
                     style="@style/poppinsMed12spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Direkomendasikan untuk anabul" />
+                    android:text="Temukan Tips Berguna &amp; Informasi Menarik" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -79,7 +79,7 @@
             android:layout_marginTop="80dp"
             android:background="@color/white"
             tools:itemCount="6"
-            tools:listitem="@layout/rekomen_list_item" />
+            tools:listitem="@layout/list_article_recomendation" />
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/SearchView"
@@ -93,17 +93,6 @@
             app:queryBackground="@android:color/transparent"
             app:queryHint="Cari" />
 
-
     </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/ivWishlist"
-        android:layout_width="30dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/cardView3"
-        android:src="@drawable/ic_wishlist"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

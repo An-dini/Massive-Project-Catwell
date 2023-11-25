@@ -322,7 +322,7 @@
                         android:id="@+id/scheduleButton"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/PrimaryColor"
+                        android:background="@drawable/rectangle_rounded"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:layout_gravity="right|bottom"
