@@ -167,7 +167,7 @@
                 android:id="@+id/edt_nohp"/>
 
             <Button
-                style="@style/poppinsSemiBold16spBlack"
+                style="@style/poppinsSemiBold16spWhite"
                 android:id="@+id/btn_edt_profil"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
@@ -175,10 +175,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="107dp"
                 android:width="250dp"
-                android:backgroundTint="@color/SecondaryColor"
+                android:background="@drawable/rectangle_rounded"
+                android:backgroundTint="@color/PrimaryColor"
                 android:text="Selesai"
-                android:textAllCaps="false"
-                android:textColor="@color/white"/>
+                android:textAllCaps="false"/>
 
 
         </RelativeLayout>
