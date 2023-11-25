@@ -42,14 +42,14 @@
                     style="@style/poppinsBold24spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:text="Diskusi yuk!" />
+                    android:text="Notifikasi" />
 
                 <TextView
                     android:id="@+id/tvSubTitle"
                     style="@style/poppinsMed12spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Diskusikan dengan user lain" />
+                    android:text="Notifikasi aplikasi kamu" />
             </LinearLayout>
         </RelativeLayout>
 

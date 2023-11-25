@@ -215,7 +215,7 @@
 
 
             <Button
-                style="@style/poppinsSemiBold16spBlack"
+                style="@style/poppinsSemiBold16spWhite"
                 android:id="@+id/btn_edt_profilkucing"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
@@ -223,10 +223,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="70dp"
                 android:width="250dp"
+                android:background="@drawable/rectangle_rounded"
                 android:backgroundTint="@color/PrimaryColor"
                 android:text="Simpan"
-                android:textAllCaps="false"
-                android:textColor="@color/white"/>
+                android:textAllCaps="false"/>
 
 
         </RelativeLayout>
