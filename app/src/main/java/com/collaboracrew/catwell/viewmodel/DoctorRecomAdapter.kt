@@ -8,10 +8,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.collaboracrew.catwell.R
+import com.collaboracrew.catwell.model.ArticleRecommendationModel
 import com.collaboracrew.catwell.model.DoctorRecommendationModel
 
 class DoctorRecomAdapter(private val data: List<DoctorRecommendationModel>) :
     RecyclerView.Adapter<DoctorRecomAdapter.ViewHolder>() {
+
+    private var onItemClickListener: ((DoctorRecommendationModel) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (DoctorRecommendationModel) -> Unit) {
+        onItemClickListener = listener
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -42,7 +49,10 @@ class DoctorRecomAdapter(private val data: List<DoctorRecommendationModel>) :
             price.text = item.price
 
             chatButton.setOnClickListener {
-                // Handle button click here
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    onItemClickListener?.invoke(data[position])
+                }
             }
         }
     }

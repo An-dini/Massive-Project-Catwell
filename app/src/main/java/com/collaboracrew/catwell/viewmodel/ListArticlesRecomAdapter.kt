@@ -8,12 +8,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.model.ArticleRecommendationModel
+import com.collaboracrew.catwell.model.ListArticleRecommendationModel
 
-class ArticlesRecomAdapter(private val data: List<ArticleRecommendationModel>) : RecyclerView.Adapter<ArticlesRecomAdapter.ViewHolder>() {
+class ListArticlesRecomAdapter(private val data: List<ListArticleRecommendationModel>) : RecyclerView.Adapter<ListArticlesRecomAdapter.ViewHolder>() {
 
-    private var onItemClickListener: ((ArticleRecommendationModel) -> Unit)? = null
+    private var onItemClickListener: ((ListArticleRecommendationModel) -> Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_article_recomendation, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_article_recomendation, parent, false)
         return ViewHolder(view)
     }
 
@@ -22,7 +23,7 @@ class ArticlesRecomAdapter(private val data: List<ArticleRecommendationModel>) :
         holder.bind(item)
     }
 
-    fun setOnItemClickListener(listener: (ArticleRecommendationModel) -> Unit) {
+    fun setOnItemClickListener(listener: (ListArticleRecommendationModel) -> Unit) {
         onItemClickListener = listener
     }
     override fun getItemCount(): Int = data.size
@@ -30,10 +31,14 @@ class ArticlesRecomAdapter(private val data: List<ArticleRecommendationModel>) :
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val  ivArticle: ImageView = itemView.findViewById(R.id.ivArticle)
         private val tvTitle: TextView = itemView.findViewById(R.id.tvTitle)
+        private val tvCategory: TextView = itemView.findViewById(R.id.tvCategory)
 
-        fun bind(item: ArticleRecommendationModel) {
+
+        fun bind(item: ListArticleRecommendationModel) {
             ivArticle.setImageResource(item.articleImage)
             tvTitle.text = item.title
+            tvCategory.text = item.category
+
         }
 
         init {

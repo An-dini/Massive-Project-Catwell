@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.DetailArtikel">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_orange"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_back" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="48dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    style="@style/poppinsBold24spWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Edukasi" />
+
+                <TextView
+                    android:id="@+id/tvSubTitle"
+                    style="@style/poppinsMed12spWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edukasi untuk kamu" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/base_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/SearchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="52dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/searchview_background"
+                android:textAppearance="@style/poppinsMed12spBlack"
+                app:iconifiedByDefault="false"
+                app:queryHint="Cari" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/poppinsSemiBold16spBlack"
+                        android:layout_width="250dp"
+                        android:layout_height="46dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="Cara Mengobati Kucing Luka Karena Berkelahi"
+                        android:gravity="center"/>
+
+                    <ImageView
+                        android:id="@+id/img_artikel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_artikel"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/PrimaryColor"/>
+
+                    <TextView
+                        style="@style/poppinsSemiBold14spBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:text="Keterangan"/>
+                    <TextView
+                        style="@style/poppinsMed12spBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:text="Masalah batas kekuasaan dan pasangan merupakan penyebab umum yang membuat kucing berkelahi. Apalagi kucing jantan yang belum disteril. Oleh karena itu, bila kucingmu termasuk kucing yang suka bermain di luar rumah dan berkelahi dengan kucing lain, PetLovers harus siap melakukan pertolongan pertama dan mengetahui cara mengobati infeksi luka pada kucing jika ia terluka." />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/PrimaryColor"/>
+                    <TextView
+                        style="@style/poppinsSemiBold14spBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:text="Gejala"/>
+                    <TextView
+                        style="@style/poppinsMed12spBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="4dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:text="Lebih dari 90% luka yang terinfeksi disebabkan oleh kucing yang berkelahi. Jika luka itu tidak tertangani dengan baik, akan menimbulkan infeksi karena kontaminasi bakteri. Infeksi tersebut kemudian akan menimbulkan demam pada kucing dan terkadang diikuti munculnya nanah pada area luka." />
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

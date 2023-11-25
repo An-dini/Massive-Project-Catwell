@@ -11,6 +11,12 @@ import com.collaboracrew.catwell.model.UpComingScheduleItem
 
 class UpComingScheduleAdapter(private val data: List<UpComingScheduleItem>) : RecyclerView.Adapter<UpComingScheduleAdapter.ViewHolder>() {
 
+    private var onItemClickListener: ((UpComingScheduleItem) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (UpComingScheduleItem) -> Unit) {
+        onItemClickListener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_upcoming_schedule, parent, false)
         return ViewHolder(view)
@@ -38,6 +44,13 @@ class UpComingScheduleAdapter(private val data: List<UpComingScheduleItem>) : Re
             vetName.text = item.vetName
             dateText.text = item.date
             timeText.text = item.time
+
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    onItemClickListener?.invoke(data[position])
+                }
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.collaboracrew.catwell.view
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -64,6 +65,14 @@ class BerandaFragment : Fragment() {
             startActivity(Intent(requireContext(), ProfileActivity::class.java))
         }
 
+        val btnMoreProduct = view.findViewById<ImageButton>(R.id.btnMoreProduct)
+        btnMoreProduct.setOnClickListener {
+            startActivity(Intent(requireContext(), HalamanProduk::class.java))
+        }
+        val btnMoreArticles = view.findViewById<ImageButton>(R.id.btnMoreArticles)
+        btnMoreArticles.setOnClickListener {
+            startActivity(Intent(requireContext(), HalamanListArtikel::class.java))
+        }
 
 
         // Inisialisasi RecyclerView
@@ -82,14 +91,37 @@ class BerandaFragment : Fragment() {
 
         // Set adapter (anda perlu membuat adapter sesuai dengan kebutuhan Anda)
         rvPromotions.adapter = PromotionsAdapter(getSamplePromoData())
-        rvUpComingSchedule.adapter = UpComingScheduleAdapter(getSampleScheduleData())
-        rvDoctorRecom.adapter = DoctorRecomAdapter(repeatedDoctorData)
-        rvArticlesRecom.adapter = ArticlesRecomAdapter(repeatedArticleData)
-        rvProductRecom.adapter = ProductRecomAdapter(repeatedProductData)
+        rvUpComingSchedule.adapter = UpComingScheduleAdapter(getSampleScheduleData()).apply {
+            setOnItemClickListener { scheduleItem ->
+                val intent = Intent(requireContext(), JadwalKonsultasiActivity::class.java)
+                startActivity(intent)
+            }
+        }
+        rvDoctorRecom.adapter = DoctorRecomAdapter(repeatedDoctorData).apply {
+            setOnItemClickListener { doctor ->
+                val intent = Intent(requireContext(), DoctorDetailActivity::class.java)
+                startActivity(intent)
+            }
+        }
+//        rvArticlesRecom.adapter = ArticlesRecomAdapter(repeatedArticleData)
+        rvArticlesRecom.adapter = ArticlesRecomAdapter(repeatedArticleData).apply {
+            setOnItemClickListener { article ->
+                val intent = Intent(requireContext(), DetailArtikel::class.java)
+                startActivity(intent)
+            }
+        }
+
+        rvProductRecom.adapter = ProductRecomAdapter(repeatedProductData).apply {
+            setOnItemClickListener { productItem ->
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://shopee.co.id/Royal-Canin-kitten-pouch-LOAF-85gr-makanan-basah-kucing-85gr-i.108031550.14771366690?sp_atk=36440427-a7d1-442f-94fe-dd1e349097e8&xptdk=36440427-a7d1-442f-94fe-dd1e349097e8"))
+                startActivity(intent)
+            }
+        }
 
         val snapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(rvPromotions)
         snapHelper.attachToRecyclerView(rvUpComingSchedule)
+
 
     }
 
