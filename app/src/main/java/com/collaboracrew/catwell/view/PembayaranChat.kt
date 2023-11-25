@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import android.widget.Button
+import android.widget.ImageView
 import com.collaboracrew.catwell.R
 
 class PembayaranChat : AppCompatActivity() {
@@ -18,6 +19,12 @@ class PembayaranChat : AppCompatActivity() {
         val btpay: Button = findViewById(R.id.BtnBayarChat)
         btpay.setOnClickListener {
             successDialog()
+        }
+
+        val backButton = findViewById(R.id.ivBack) as ImageView
+
+        backButton.setOnClickListener {
+            onBackPressed()
         }
     }
 
