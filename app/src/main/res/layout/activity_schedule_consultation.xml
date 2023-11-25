@@ -314,6 +314,7 @@
                         android:textSize="16sp"
                         android:layout_gravity="right|bottom"
                         android:text="Buat Jadwal"
+                        android:textAllCaps="false"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="16dp"
                         app:layout_constraintEnd_toEndOf="parent"

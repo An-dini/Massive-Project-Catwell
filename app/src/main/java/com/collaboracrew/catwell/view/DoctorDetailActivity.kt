@@ -46,7 +46,6 @@ class DoctorDetailActivity : AppCompatActivity() {
                 intent.putExtra(DOCTOR_ID_EXTRA, doctor.id)
                 startActivity(intent)
             }
-
         }
     }
 

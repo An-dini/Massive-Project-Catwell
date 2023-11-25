@@ -5,7 +5,6 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
@@ -15,10 +14,11 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.model.ArticleRecommendationModel
-import com.collaboracrew.catwell.model.DoctorRecommendationModel
+import com.collaboracrew.catwell.model.DOCTOR_ID_EXTRA
+import com.collaboracrew.catwell.model.DoctorModel
 import com.collaboracrew.catwell.model.ProductRecommendationModel
 import com.collaboracrew.catwell.model.UpComingScheduleItem
-import com.collaboracrew.catwell.model.VET_ID_EXTRA
+import com.collaboracrew.catwell.model.doctorList
 import com.collaboracrew.catwell.viewmodel.ArticlesRecomAdapter
 import com.collaboracrew.catwell.viewmodel.DoctorRecomAdapter
 import com.collaboracrew.catwell.viewmodel.ProductRecomAdapter
@@ -35,11 +35,6 @@ class BerandaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val repeatedDoctorData = mutableListOf<DoctorRecommendationModel>()
-        repeat(5) {
-            repeatedDoctorData.addAll(getSampleDoctorData())
-        }
 
         val repeatedArticleData = mutableListOf<ArticleRecommendationModel>()
         repeat(5) {
@@ -97,12 +92,14 @@ class BerandaFragment : Fragment() {
                 startActivity(intent)
             }
         }
-        rvDoctorRecom.adapter = DoctorRecomAdapter(repeatedDoctorData).apply {
+        rvDoctorRecom.adapter = DoctorRecomAdapter(getSampleDoctorData()).apply {
             setOnItemClickListener { doctor ->
                 val intent = Intent(requireContext(), DoctorDetailActivity::class.java)
+                intent.putExtra(DOCTOR_ID_EXTRA, doctor.id)
                 startActivity(intent)
             }
         }
+
 //        rvArticlesRecom.adapter = ArticlesRecomAdapter(repeatedArticleData)
         rvArticlesRecom.adapter = ArticlesRecomAdapter(repeatedArticleData).apply {
             setOnItemClickListener { article ->
@@ -138,11 +135,44 @@ class BerandaFragment : Fragment() {
         )
     }
 
-    private fun getSampleDoctorData(): List<DoctorRecommendationModel> {
-        return listOf(
-            DoctorRecommendationModel(R.drawable.dr_aji, "Drh. Aji Kusuma", "OJ Pet Care, Batam","Rp130.000")
-        )
+    private fun getSampleDoctorData(): List<DoctorModel> {
+        val doctorNames = resources.getStringArray(R.array.doctor_names)
+        val doctorInstances = resources.getStringArray(R.array.doctor_instances)
+        val doctorPrice = resources.getString(R.string.doctor_price)
+        val doctorSchedule = resources.getString(R.string.doctor_schedule)
+        val doctorDuration = resources.getString(R.string.doctor_duration)
+        val doctorRating = resources.getStringArray(R.array.doctor_rating)
+        val coverList = cover()
+
+        for (i in 0 until 3) {
+            val doctor = DoctorModel(
+                coverList[i],
+                doctorNames[i],
+                doctorInstances[i],
+                doctorPrice,
+                doctorSchedule,
+                doctorDuration,
+                doctorRating[i].toFloat()
+            )
+            doctorList.add(doctor)
+        }
+        return doctorList
     }
+
+    private fun cover():List<Int> = listOf(
+        R.drawable.aji,
+        R.drawable.mutiara,
+        R.drawable.chandra,
+        R.drawable.nadine,
+        R.drawable.caroline,
+        R.drawable.julia,
+        R.drawable.aisha,
+        R.drawable.nalend,
+        R.drawable.lisa,
+        R.drawable.annisa,
+        R.drawable.nabila,
+        R.drawable.dion
+    )
 
     private fun getSampleArticleData(): List<ArticleRecommendationModel> {
         return listOf(

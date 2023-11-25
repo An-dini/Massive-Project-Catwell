@@ -371,7 +371,7 @@
 
         <Button
             style="@style/poppinsSemiBold16spWhite"
-            android:id="@+id/BtnBayarChat"
+            android:id="@+id/BtnBayarVidcall"
             android:text="Bayar"
             android:paddingStart="15dp"
             android:paddingRight="15dp"
