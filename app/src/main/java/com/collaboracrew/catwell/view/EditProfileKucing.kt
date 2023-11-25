@@ -4,19 +4,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.ImageView
 import com.collaboracrew.catwell.R
 
-class EditProfile : AppCompatActivity() {
-
+class EditProfileKucing : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit_profile)
+        setContentView(R.layout.activity_edit_profile_kucing)
 
-        var btn_edt_profil = findViewById<Button>(R.id.btn_edt_profil)
-        btn_edt_profil.setOnClickListener {
-            var intent = Intent(this, Edit_Profil_Kucing::class.java)
+        var btn_edt_profilkucing = findViewById<Button>(R.id.btn_edt_profilkucing)
+        btn_edt_profilkucing.setOnClickListener {
+            var intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
 

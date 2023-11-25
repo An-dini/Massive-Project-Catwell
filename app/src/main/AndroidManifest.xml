@@ -14,6 +14,24 @@
         <activity
             android:name=".view.JadwalKonsultasiActivity"
             android:exported="false" />
+      <activity
+            android:name=".view.TentangAplikasi"
+            android:exported="false" />
+        <activity
+            android:name=".view.Room_VidioCall"
+            android:exported="false" />
+        <activity
+            android:name=".view.EditProfileKucing"
+            android:exported="false" />
+        <activity
+            android:name=".view.Pembayaran_Telepon"
+            android:exported="false" />
+        <activity
+            android:name=".view.PembayaranChat"
+            android:exported="false" />
+        <activity
+            android:name=".view.Pilih_Sebagai"
+            android:exported="false" />
         <activity
             android:name=".view.WelcomeScreenActivity"
             android:exported="false" />

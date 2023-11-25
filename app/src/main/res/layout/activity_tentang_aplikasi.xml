@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    tools:context=".view.TentangAplikasi">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_orange"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_back" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="48dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    style="@style/poppinsBold24spWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:textStyle="bold"
+                    android:text="Tentang Aplikasi" />
+
+                <TextView
+                    android:id="@+id/tvSubTitle"
+                    style="@style/poppinsMed12spWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Informasi Aplikasi" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="92dp"
+        android:padding="16dp"
+        android:background="@drawable/base_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="40dp"
+                android:id="@+id/head1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Definisi"
+                style="@style/poppinsMed16spBlack"/>
+            <TextView
+                android:id="@+id/isi1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textAlignment="textStart"
+                android:text="Aplikasi Cat Well adalah sebuah aplikasi yang memberikan layanan konsultasi online, edukasi, dan informasi bagi para pecinta kucing yang tidak memiliki akses secara langsung ke puskeswan atau dokter hewan."
+                android:layout_below="@id/head1"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/head2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Misi Kami"
+                style="@style/poppinsMed16spBlack"
+                android:layout_below="@id/isi1"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/isi2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textAlignment="viewStart"
+                android:text="Misi kami adalah memudahkan para pemilik hewan peliharaan khususnya kucing yang tidak memiliki akses waktu dan informasi untuk tetap dapat menjaga kesehatan kucing mereka dengan berkonsultasi secara online dengan dokter hewan atau membaca artikel edukasi tentang kesehatan kucing mereka."
+                android:layout_below="@id/head2"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/cprgt"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textAlignment="viewEnd"
+                android:text="Copyright . CollaboraCrew"
+                android:layout_below="@id/isi2"
+                android:layout_marginTop="100dp"/>
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

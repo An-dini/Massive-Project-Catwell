@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/white"
-    tools:context=".view.EditProfile">
+    tools:context=".view.EditProfileKucing">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -42,20 +42,18 @@
 
                 <TextView
                     android:id="@+id/tvTitle"
-                    android:fontFamily="@font/poppinssemibold"
-                    android:textSize="24sp"
-                    android:textColor="@color/white"
+                    style="@style/poppinsBold24spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:textStyle="bold"
-                    android:text="Edit Profile" />
+                    android:text="Edit Profile Kucing" />
 
                 <TextView
                     android:id="@+id/tvSubTitle"
                     style="@style/poppinsMed12spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Edit Profile Kamu" />
+                    android:text="Edit Profile Kucing Kamu" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -75,16 +73,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/fotoprofile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:src="@drawable/usereditprofil" />
+                android:layout_marginTop="20dp"
+                android:src="@drawable/userprofile4" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionButton2"
@@ -95,14 +93,15 @@
                 android:layout_marginEnd="-13dp"
                 android:layout_marginBottom="-3dp"
                 android:clickable="true"
-                android:src="@drawable/camera"/>
+                android:src="@drawable/camera"
+                android:backgroundTint="@color/transparan"/>
             <TextView
                 style="@style/poppinsReg16spBlack"
                 android:id="@+id/txv1"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_centerHorizontal="true"
-                android:text="Nama"
+                android:text="Nama Kucing"
                 android:layout_marginTop="20dp"
                 android:layout_below="@+id/floatingActionButton2"/>
 
@@ -111,7 +110,7 @@
                 android:id="@+id/edtnama"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
-                android:hint="Nama Lengkap"
+                android:hint="Nama Kucing Kamu"
                 android:layout_marginTop="5dp"
                 android:paddingHorizontal="16dp"
                 android:layout_centerHorizontal="true"
@@ -124,18 +123,18 @@
                 android:id="@+id/txv2"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_below="@id/edtnama"
-                android:text="Email"
+                android:text="jenis Kelamin"
                 android:layout_centerHorizontal="true"/>
 
             <EditText
                 style="@style/poppinsReg14spBlack"
-                android:id="@+id/edt_email"
+                android:id="@+id/edt_jenis_kelamin"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:layout_marginTop="5dp"
-                android:hint="cth. meow@gmail.com"
+                android:hint="Jenis Kelamin"
                 android:paddingHorizontal="16dp"
                 android:layout_below="@+id/txv2"
                 android:background="@drawable/rectangle_rounded_stroke"
@@ -147,10 +146,10 @@
                 android:id="@+id/txv3"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/edt_email"
-                android:text="No Handpone"/>
+                android:layout_below="@id/edt_jenis_kelamin"
+                android:text="Tanggal Lahir (DD/MMM/YYYY)" />
 
             <EditText
                 style="@style/poppinsReg14spBlack"
@@ -161,22 +160,71 @@
                 android:layout_centerHorizontal="true"
                 android:paddingHorizontal="16dp"
                 android:inputType="number"
-                android:hint="085300000"
+                android:hint="Pilih Tanggal Lahir"
                 android:paddingLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/edt_nohp"/>
 
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/txv4"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/edt_nohp"
+                android:text="Berat Badan" />
+
+            <EditText
+                style="@style/poppinsReg14spBlack"
+                android:layout_below="@id/txv4"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/rectangle_rounded_stroke"
+                android:layout_centerHorizontal="true"
+                android:paddingHorizontal="16dp"
+                android:inputType="number"
+                android:hint="Masukkan Berat Badan"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/edt_berat_badan"/>
+
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/txv5"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/edt_berat_badan"
+                android:text="Jenis Ras" />
+
+            <EditText
+                style="@style/poppinsReg14spBlack"
+                android:layout_below="@id/txv5"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/rectangle_rounded_stroke"
+                android:layout_centerHorizontal="true"
+                android:paddingHorizontal="16dp"
+                android:inputType="number"
+                android:hint="Masukkan Berat Badan"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/edt_ras"/>
+
+
             <Button
                 style="@style/poppinsSemiBold16spBlack"
-                android:id="@+id/btn_edt_profil"
+                android:id="@+id/btn_edt_profilkucing"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
-                android:layout_below="@id/edt_nohp"
+                android:layout_below="@id/edt_ras"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="107dp"
+                android:layout_marginTop="70dp"
                 android:width="250dp"
-                android:backgroundTint="@color/SecondaryColor"
-                android:text="Selesai"
+                android:backgroundTint="@color/PrimaryColor"
+                android:text="Simpan"
                 android:textAllCaps="false"
                 android:textColor="@color/white"/>
 
