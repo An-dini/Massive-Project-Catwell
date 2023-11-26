@@ -380,14 +380,13 @@
             style="@style/poppinsSemiBold16spWhite"
             android:id="@+id/BtnBayarChat"
             android:text="Bayar"
-            android:textSize="15sp"
-            android:textColor="@color/white"
             android:paddingStart="15dp"
             android:paddingRight="15dp"
             android:layout_width="300dp"
             android:layout_gravity="center"
             android:background="@drawable/rectangle_rounded"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
 

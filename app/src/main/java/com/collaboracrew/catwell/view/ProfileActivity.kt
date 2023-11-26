@@ -21,12 +21,12 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         txtviewalmt.setOnClickListener(this)
         val txtviedtpass: TextView = findViewById(R.id.edt_pass)
         txtviedtpass.setOnClickListener(this)
-        val txtviedtlogout: TextView = findViewById(R.id.logout)
+        val txtviedtlogout: TextView = findViewById(R.id.btKeluar)
         txtviedtlogout.setOnClickListener(this)
         val txtviedtprofil: TextView = findViewById(R.id.editProfile)
         txtviedtprofil.setOnClickListener(this)
-        val txtviabout: TextView = findViewById(R.id.ttg_aplikasi)
-        txtviabout.setOnClickListener(this)
+//        val txtviabout: TextView = findViewById(R.id.ttg_aplikasi)
+//        txtviabout.setOnClickListener(this)
         val txtvihapusakn: TextView = findViewById(R.id.hps_akn)
         txtvihapusakn.setOnClickListener(this)
 
@@ -51,7 +51,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
         when (v.id) {
-            R.id.logout-> {
+            R.id.btKeluar-> {
                 LogoutAccountDialog()
             }
         }
@@ -61,12 +61,12 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(intent)
             }
         }
-        when (v.id) {
-            R.id.ttg_aplikasi-> {
-                val intent = Intent(this@ProfileActivity, TentangAplikasi::class.java)
-                startActivity(intent)
-            }
-        }
+//        when (v.id) {
+//            R.id.ttg_aplikasi-> {
+//                val intent = Intent(this@ProfileActivity, TentangAplikasi::class.java)
+//                startActivity(intent)
+//            }
+//        }
         when (v.id) {
             R.id.hps_akn-> {
                 deleteAccountDialog()

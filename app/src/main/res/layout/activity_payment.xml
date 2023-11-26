@@ -47,14 +47,7 @@
                     style="@style/poppinsBold24spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:text="Diskusi yuk!" />
-
-                <TextView
-                    android:id="@+id/tvSubTitle"
-                    style="@style/poppinsMed12spWhite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Diskusikan dengan user lain" />
+                    android:text="Pembayaran" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -119,6 +112,7 @@
                 android:layout_gravity="center_horizontal"
                 android:paddingHorizontal="64dp"
                 android:layout_marginTop="24dp"
+                android:textAllCaps="false"
                 android:text="Bayar"
                 />
         </LinearLayout>

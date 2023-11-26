@@ -210,11 +210,9 @@
                     android:layout_height="55dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="16dp"
-                    android:backgroundTint="@color/white"
+                    android:background="@drawable/white_rounded_stroke"
                     android:onClick="onClick"
-                    android:text="Lihat Riwayat Konsultasi"
-                    app:strokeColor="@color/PrimaryColor"
-                    app:strokeWidth="2dp" />
+                    android:text="Lihat Riwayat Konsultasi"/>
 
                 <Button
                     style="@style/poppinsSemiBold16spWhite"

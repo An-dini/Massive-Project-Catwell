@@ -16,7 +16,7 @@ class EditProfile : AppCompatActivity() {
 
         var btn_edt_profil = findViewById<Button>(R.id.btn_edt_profil)
         btn_edt_profil.setOnClickListener {
-            var intent = Intent(this, ProfileActivity::class.java)
+            var intent = Intent(this, Edit_Profil_Kucing::class.java)
             startActivity(intent)
         }
 

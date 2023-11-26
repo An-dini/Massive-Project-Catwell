@@ -63,7 +63,8 @@ class PaymentActivity : AppCompatActivity() {
 
         val btpay = findViewById(R.id.btPay) as Button
         btpay.setOnClickListener {
-            successDialog()
+            val intent = Intent(this, PembayaranChat::class.java)
+            startActivity(intent)
         }
 
         val backButton = findViewById(R.id.ivBack) as ImageView
@@ -71,20 +72,5 @@ class PaymentActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             onBackPressed()
         }
-    }
-
-    private  fun  successDialog(){
-        val dialog = Dialog(this)
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog.setContentView(R.layout.dialog_doctor_ready)
-
-        val btMasuk: Button = dialog.findViewById(R.id.btMasuk)
-        btMasuk.setOnClickListener {
-            val intent = Intent(this@PaymentActivity, ChatLogActivity::class.java)
-            intent.putExtra("startConsultation", true) // Sinyal untuk kembali ke beranda
-            startActivity(intent)
-        }
-        dialog.show()
     }
 }
