@@ -44,7 +44,15 @@
                     style="@style/poppinsBold24spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:text="Pembayaran" />
+                    android:textStyle="bold"
+                    android:text="Payment" />
+
+                <TextView
+                    android:id="@+id/tvSubTitle"
+                    style="@style/poppinsMed12spWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lakukan Pembayaran" />
             </LinearLayout>
         </RelativeLayout>
 
