@@ -218,6 +218,12 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/black</item>
     </style>
+    <style name="poppinsSemiBold18spBlack">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     <style name="poppinsSemiBold20spBlack">
         <item name="android:fontFamily">@font/poppins_semibold</item>
         <item name="android:textSize">20sp</item>

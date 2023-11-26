@@ -33,12 +33,13 @@ class DoctorDetailActivity : AppCompatActivity() {
 
         if (doctor != null) {
             binding.cover.setImageResource(doctor.photo)
-            binding.tvHarga.text = doctor.price
-            binding.tvDurasi.text = "${doctor.duration} menit"
-            binding.tvNama.text = doctor.name
-            binding.tvInstansi.text = doctor.instance
+            binding.price.text = doctor.price
+//            binding.duration.text = "${doctor.duration} menit"
+            binding.rating.text = "${doctor.rating}/5"
+            binding.name.text = doctor.name
+            binding.instance.text = doctor.instance
             binding.ratingBar.rating = doctor.rating
-            binding.tvJam.text = doctor.schedule
+            binding.schedule.text = doctor.schedule
 
             val btKonsultasi = binding.btConsultation
             btKonsultasi.setOnClickListener {

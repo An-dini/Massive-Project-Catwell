@@ -95,15 +95,43 @@
                         android:contentDescription="apa"/>
 
                 </androidx.cardview.widget.CardView>
-                <RatingBar
-                    android:id="@+id/ratingBar"
-                    style="@style/SmallRatingBar"
-                    android:layout_width="240dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:numStars="5"
-                    android:stepSize="0.1"
-                    android:rating="3.5" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/baseNama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:paddingStart="50dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="5/5"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textColor="@color/PrimaryColor"
+                        android:textSize="20sp"/>
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/SmallRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:numStars="5"
+                        android:stepSize="0.1"
+                        android:rating="5" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <View
                     android:id="@+id/divider"
@@ -111,62 +139,14 @@
                     android:layout_height="1.5dp"
                     android:layout_weight="1"
                     android:background="@color/grey"/>
-
-                <LinearLayout
-                    android:id="@+id/baseNama"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:layout_marginStart="16dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_user"
-                        android:tint="@color/PrimaryColor"/>
-
-                        <TextView
-                            android:id="@+id/rating"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:layout_gravity="center"
-                            android:text="5/5"
-                            android:textColor="@color/PrimaryColor"
-                            android:textSize="20sp"/>
-
-                        <RatingBar
-                            android:id="@+id/ratingBar"
-                            style="@style/SmallRatingBar"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="left"
-                            android:numStars="5"
-                            android:stepSize="0.1"
-                            android:rating="5" />
-
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/divider2"
-                    android:layout_width="match_parent"
-                    android:layout_height="1.5dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="60dp"
-                    android:background="@color/grey"/>
               
                 <TextView
-                    style="@style/poppinsBold16spBlack"
+                    style="@style/poppinsSemiBold18spBlack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="70dp"
-                    android:text="Nama Dokter"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:text="Nama Dokter"/>
                 <TextView
                     android:id="@+id/name"
                     style="@style/poppinsReg16spBlack"
@@ -174,9 +154,7 @@
                     android:layout_marginStart="70dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Drh. Aji Kusuma"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:text="Drh. Aji Kusuma"/>
                 <ImageView
                     android:id="@+id/Garis2"
                     android:src="@drawable/img_1"
@@ -186,15 +164,12 @@
                     android:layout_height="wrap_content"/>
 
                 <TextView
-                    style="@style/poppinsBold16spBlack"
+                    style="@style/poppinsSemiBold18spBlack"
                     android:layout_marginTop="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Instansi"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_marginStart="70dp"
-                    android:textStyle="bold"/>
+                    android:layout_marginStart="70dp"/>
                 <TextView
                     style="@style/poppinsReg16spBlack"
                     android:id="@+id/instance"
@@ -202,27 +177,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="70dp"
-                    android:text="Puskeswan Depok"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
-                <ImageView
-                    android:id="@+id/Garis3"
-                    android:src="@drawable/img_1"
-                    android:layout_marginTop="20dp"
-                    android:layout_width="300dp"
-                    android:layout_marginStart="70dp"
-                    android:layout_height="wrap_content"/>
+                    android:text="Puskeswan Depok"/>
 
                 <TextView
-                    style="@style/poppinsBold16spBlack"
+                    style="@style/poppinsSemiBold18spBlack"
                     android:layout_marginTop="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jam Operasional"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:layout_marginStart="70dp"
-                    android:textStyle="bold"/>
+                    android:layout_marginStart="70dp"/>
                 <TextView
                     style="@style/poppinsReg16spBlack"
                     android:id="@+id/schedule"
@@ -230,9 +193,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Senin - Jumat . 08.00 - 17.00"
-                    android:textColor="@color/black"
-                    android:layout_marginStart="70dp"
-                    android:textSize="16sp" />
+                    android:layout_marginStart="70dp"/>
                 <ImageView
                     android:id="@+id/Garis4"
                     android:src="@drawable/img_1"
@@ -243,40 +204,37 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:padding="8dp"
                     android:background="@drawable/base_card"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/konsul_chat"
-                        style="@style/poppinsBold16spBlack"
+                        style="@style/poppinsSemiBold20spBlack"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Konsultasi Melalui Chat"
-                        android:textSize="20sp"
                         android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:textStyle="bold" />
+                        android:layout_marginTop="10dp"/>
 
                     <TextView
+                        style="@style/poppinsSemiBold18spBlack"
                         android:id="@+id/price"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Rp130.000"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
                         android:layout_marginTop="10dp"
-                        android:layout_marginStart="10dp"
-                        style="@style/poppinsBold16spBlack" />
+                        android:layout_marginStart="10dp" />
 
                     <TextView
-                        android:id="@+id/duration"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="40 Menit"
                         android:textSize="18sp"
                         android:textStyle="bold"
+                        android:textColor="@color/grey"
                         android:layout_marginEnd="10dp"
                         android:textAlignment="viewEnd"/>
 
@@ -287,40 +245,39 @@
                         android:textSize="16sp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
-                        android:backgroundTint="#F28705"
+                        android:background="@drawable/rectangle_rounded"
+                        android:backgroundTint="@color/PrimaryColor"
                         android:text="Mulai Konsultasi"
+                        android:textAllCaps="false"
                         android:layout_marginBottom="16dp"
                         android:textColor="@color/white" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:padding="8dp"
                     android:background="@drawable/base_card"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/konsul_chat2"
-                        style="@style/poppinsBold16spBlack"
+                        style="@style/poppinsSemiBold20spBlack"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Konsultasi Melalui Video Call"
-                        android:textSize="20sp"
                         android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:textStyle="bold" />
+                        android:layout_marginTop="10dp" />
 
                     <TextView
+                        style="@style/poppinsSemiBold18spBlack"
                         android:id="@+id/price2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Rp150.000"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
                         android:layout_marginTop="10dp"
-                        android:layout_marginStart="10dp"
-                        style="@style/poppinsBold16spBlack" />
+                        android:layout_marginStart="10dp" />
 
                     <TextView
                         android:id="@+id/duration2"
@@ -329,6 +286,7 @@
                         android:text="30 Menit"
                         android:textSize="18sp"
                         android:textStyle="bold"
+                        android:textColor="@color/grey"
                         android:layout_marginEnd="10dp"
                         android:textAlignment="viewEnd"/>
 
@@ -339,8 +297,10 @@
                         android:textSize="16sp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
-                        android:backgroundTint="#F28705"
+                        android:background="@drawable/rectangle_rounded"
+                        android:backgroundTint="@color/PrimaryColor"
                         android:layout_marginBottom="10dp"
+                        android:textAllCaps="false"
                         android:text="Mulai Konsultasi"
                         android:textColor="@color/white" />
                 </LinearLayout>
