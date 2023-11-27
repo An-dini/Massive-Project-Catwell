@@ -124,7 +124,6 @@
                 </LinearLayout>
 
                 <Button
-                    style="@style/poppinsSemiBold16spBGWhite"
                     android:id="@+id/Change"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

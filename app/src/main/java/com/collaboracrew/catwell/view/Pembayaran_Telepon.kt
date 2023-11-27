@@ -36,7 +36,7 @@ class Pembayaran_Telepon : AppCompatActivity() {
 
         val btnDialog: Button = dialog.findViewById(R.id.btMasuk)
         btnDialog.setOnClickListener {
-            val intent = Intent(this@Pembayaran_Telepon, ChatLogActivity::class.java)
+            val intent = Intent(this@Pembayaran_Telepon, Room_Call::class.java)
             intent.putExtra("startConsultation", true)
             startActivity(intent)
         }
