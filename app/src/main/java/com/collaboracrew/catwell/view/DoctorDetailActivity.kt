@@ -47,7 +47,7 @@ class DoctorDetailActivity : AppCompatActivity() {
                 intent.putExtra(DOCTOR_ID_EXTRA, doctor.id)
                 startActivity(intent)
             }
-            val btnKonsultasi2 = binding.btVideoChat
+            val btnKonsultasi2 = binding.btConsultation2
             btnKonsultasi2.setOnClickListener{
                 var Intent = Intent(this, Pembayaran_Telepon::class.java)
                 Intent.putExtra(DOCTOR_ID_EXTRA, doctor.id)
