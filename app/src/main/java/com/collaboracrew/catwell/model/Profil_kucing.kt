@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.collaboracrew.catwell.R
+import com.collaboracrew.catwell.viewmodel.AdapterProfilKucing
 
 class profil_kucing : AppCompatActivity() {
     private lateinit var  recyclerView: RecyclerView

@@ -12,8 +12,12 @@ class Pilih_Sebagai : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pilih_sebagai)
 
-        var Klik: Button = findViewById(R.id.BtnUser)
-        Klik.setOnClickListener(this)
+        var BtnUser: Button = findViewById(R.id.BtnUser)
+        BtnUser.setOnClickListener(this)
+
+        var BtnDokter: Button = findViewById(R.id.BtnDokter)
+        BtnDokter.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View) {
@@ -22,6 +26,11 @@ class Pilih_Sebagai : AppCompatActivity(), View.OnClickListener {
                 var Tekan = Intent(this@Pilih_Sebagai, WelcomeScreenActivity::class.java)
                 startActivity(Tekan)
             }
+            R.id.BtnDokter -> {
+                var Tekan = Intent(this@Pilih_Sebagai, RiwayatPasienActivity::class.java)
+                startActivity(Tekan)
+            }
+
         }
     }
 }

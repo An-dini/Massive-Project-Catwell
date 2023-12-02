@@ -1,4 +1,4 @@
-package com.collaboracrew.catwell.model
+package com.collaboracrew.catwell.viewmodel
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.collaboracrew.catwell.R
+import com.collaboracrew.catwell.model.DataProfilKucing
 
 class AdapterProfilKucing(private val dataList: ArrayList<DataProfilKucing>): RecyclerView.Adapter<AdapterProfilKucing.ViewHolderClass>() {
 

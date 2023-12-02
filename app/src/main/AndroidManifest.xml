@@ -32,6 +32,9 @@
         <activity
             android:name=".view.Pilih_Sebagai"
             android:exported="false" />
+      <activity
+            android:name=".view.RiwayatPasienActivity"
+            android:exported="false" />
         <activity
             android:name=".view.WelcomeScreenActivity"
             android:exported="false" />
@@ -62,6 +65,9 @@
         <activity
             android:name=".view.EditAddressActivity"
             android:exported="false" />
+        <activity
+              android:name=".view.PatientHistoryDetailActivity"
+              android:exported="false" />
         <activity
             android:name=".view.register"
             android:exported="false" />
@@ -99,7 +105,7 @@
             android:name=".view.HalamanListArtikel"
             android:exported="false" />
         <activity
-            android:name=".view.SplashScreenActivity"
+            android:name=".view.ChatLogDoctorActivity"
             android:exported="true"
             android:theme="@style/Theme.Catwell">
             <intent-filter>
