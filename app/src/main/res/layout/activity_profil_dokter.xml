@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/white"
-    tools:context=".view.ProfileActivity">
+    tools:context=".view.ProfileDokter">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -46,14 +46,14 @@
                     android:fontFamily="@font/poppinssemibold"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:text="Edit Profil" />
+                    android:text="Profil" />
 
                 <TextView
                     android:id="@+id/tvSubTitle"
                     style="@style/poppinsMed12spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Edit Profil Kucing Kamu" />
+                    android:text="Info profil kamu" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -68,7 +68,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/BackgroundColor">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -76,32 +77,32 @@
             android:padding="16dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/fotoprofile"
-                android:layout_width="103dp"
-                android:layout_height="100dp"
+                android:id="@+id/fotoprofile_dk"
+                android:layout_width="159dp"
+                android:layout_height="159dp"
                 android:layout_below="@+id/include"
                 android:layout_marginTop="40dp"
                 android:layout_gravity="center"
-                android:src="@drawable/usereditprofil" />
+                android:src="@drawable/annisa" />
 
             <TextView
                 style="@style/poppinsBold16spOrange"
                 android:layout_marginTop="10dp"
-                android:id="@+id/namaprofile"
+                android:id="@+id/namaprofile_dk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/fotoprofile"
+                android:layout_below="@+id/fotoprofile_dk"
                 android:layout_gravity="center"
                 android:textStyle="bold"
-                android:text="Bunga Citra lestari"/>
+                android:text="Drh. Sri Wulandari"/>
 
             <TextView
                 style="@style/poppinsReg16spBlack"
-                android:id="@+id/editProfile"
+                android:id="@+id/editProfile_dk"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
-                android:backgroundTint="@color/white"
+                android:background="@color/white"
                 android:text="Edit Profile"
                 android:textAllCaps="false"
                 android:gravity="start"
@@ -110,16 +111,16 @@
             <View
                 android:id="@+id/view1"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="2dp"
                 android:background="@color/SecondaryColor"/>
 
             <TextView
                 style="@style/poppinsReg16spBlack"
-                android:id="@+id/profileKucing"
+                android:id="@+id/edtPass_dk"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/white"
-                android:text="Profile Kucing"
+                android:background="@color/white"
+                android:text="Edit Password"
                 android:padding="10dp"
                 android:layout_marginTop="10dp"
                 android:textAllCaps="false"
@@ -129,16 +130,16 @@
             <View
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="2dp"
                 android:background="@color/SecondaryColor"/>
 
             <TextView
                 style="@style/poppinsReg16spBlack"
-                android:id="@+id/edt_pass"
+                android:id="@+id/ttgapk_dk"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/white"
-                android:text="Ubah Password"
+                android:background="@color/white"
+                android:text="Tentang Aplikasi"
                 android:padding="10dp"
                 android:layout_marginTop="10dp"
                 android:textAllCaps="false"
@@ -147,50 +148,26 @@
             <View
                 android:id="@+id/view3"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/SecondaryColor"/>
-
-            <TextView
-                style="@style/poppinsReg16spBlack"
-                android:id="@+id/ttgapk_user"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/white"
-                android:text="Tentang Aplikasi"
-                android:padding="10dp"
-                android:layout_marginTop="10dp"
-                android:textAllCaps="false"
-                android:gravity="start"
-                android:drawableEnd="@drawable/ic_forward"/>
-            <View
-                android:id="@+id/view4"
-                android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@color/SecondaryColor"/>
 
-        <TextView
-            style="@style/poppinsReg16spBlack"
-            android:id="@+id/hps_akn"
-            android:drawableEnd="@drawable/ic_delete2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:backgroundTint="@color/white"
-            android:outlineAmbientShadowColor="@color/SecondaryColor"
-            android:text="Hapus Akun"
-            android:paddingLeft="10dp"
-            android:padding="10dp"
-            android:textAllCaps="false"
-            android:gravity="start"/>
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/hps_akn_dk"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:outlineAmbientShadowColor="@color/SecondaryColor"
+                android:text="Hapus Akun"
+                android:textColor="@color/PrimaryColor"
+                android:paddingLeft="10dp"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                android:gravity="start"/>
 
-        <View
-            android:id="@+id/view5"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/SecondaryColor"/>
 
             <TextView
                 style="@style/poppinsReg16spBlack"
-                android:id="@+id/Keluar_user"
+                android:id="@+id/keluar_dk"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:backgroundTint="@color/white"

@@ -69,6 +69,9 @@
             android:name=".view.Detail_Vet_Puskeswan"
             android:exported="false" />
         <activity
+            android:name=".view.PembayaranChat"
+            android:exported="false" />
+        <activity
             android:name=".view.NotifikasiActivity"
             android:exported="false" />
         <activity
@@ -90,7 +93,13 @@
             android:name=".view.EditPassword"
             android:exported="false" />
         <activity
+            android:name=".view.EditPasswordDokter"
+            android:exported="false" />
+        <activity
             android:name=".view.EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".view.EditProfileDokter"
             android:exported="false" />
         <activity
             android:name=".view.OtpPassword"
@@ -105,6 +114,9 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".view.ProfileDokter"
+            android:exported="false"/>
+      <activity
             android:name=".view.DetailArtikel"
             android:exported="false" />
         <activity
