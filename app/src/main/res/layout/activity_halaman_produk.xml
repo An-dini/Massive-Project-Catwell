@@ -42,17 +42,17 @@
 
                 <TextView
                     android:id="@+id/tvTitle"
-                    style="@style/poppinsBold24spWhite"
+                    style="@style/poppinsBold20spWhite"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:text="Diskusi yuk!" />
+                    android:layout_height="25dp"
+                    android:text="Rekomendasi Produk" />
 
                 <TextView
                     android:id="@+id/tvSubTitle"
                     style="@style/poppinsMed12spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Diskusikan dengan user lain" />
+                    android:text="Direkomendasikan untuk anabul" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -74,9 +74,11 @@
             android:id="@+id/rvListProduk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
             android:layout_marginTop="80dp"
-            tools:itemCount="6"
             android:background="@color/white"
+            tools:itemCount="6"
             tools:listitem="@layout/rekomen_list_item" />
 
         <androidx.appcompat.widget.SearchView
@@ -95,14 +97,12 @@
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="40dp"
-        android:layout_height="42dp"
+        android:id="@+id/ivWishlist"
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.886"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533"
         app:layout_constraintBottom_toTopOf="@id/cardView3"
         android:src="@drawable/ic_wishlist"/>
 

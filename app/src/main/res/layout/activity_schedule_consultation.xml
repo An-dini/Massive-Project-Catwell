@@ -29,28 +29,15 @@
                 android:layout_centerVertical="true"
                 android:padding="8dp"
                 android:src="@drawable/ic_back" />
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/poppinsBold20spWhite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:layout_marginStart="48dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvTitle"
-                    style="@style/poppinsBold24spWhite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:text="Diskusi yuk!" />
-
-                <TextView
-                    android:id="@+id/tvSubTitle"
-                    style="@style/poppinsMed12spWhite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Diskusikan dengan user lain" />
-            </LinearLayout>
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="Jadwalkan Konsultasi Kamu" />
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
@@ -322,11 +309,12 @@
                         android:id="@+id/scheduleButton"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/PrimaryColor"
+                        android:background="@drawable/rectangle_rounded"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:layout_gravity="right|bottom"
                         android:text="Buat Jadwal"
+                        android:textAllCaps="false"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="16dp"
                         app:layout_constraintEnd_toEndOf="parent"

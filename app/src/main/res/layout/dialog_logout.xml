@@ -8,7 +8,7 @@
     android:background="@color/white"
     android:padding="5dp"
     tools:context=".Logout">
-    
+
     <TextView
         style="@style/poppinsSemiBold14spBlack"
         android:id="@+id/txtV_popup_logout"
@@ -52,22 +52,24 @@
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp">
         <Button
+            style="@style/poppinsSemiBold16spWhite"
             android:id="@+id/btYa"
             android:layout_width="100dp"
             android:layout_height="50dp"
+            android:background="@drawable/rectangle_rounded"
             android:backgroundTint="@color/PrimaryColor"
             android:layout_marginEnd="50dp"
-            android:textColor="@color/white"
             android:text="Iya"
             android:textAllCaps="false"/>
         <Button
+            style="@style/poppinsSemiBold16spWhite"
             android:id="@+id/btTidak"
             android:layout_width="100dp"
             android:layout_height="50dp"
+            android:background="@drawable/rectangle_rounded"
             android:backgroundTint="@color/PrimaryColor"
             android:text="Tidak"
-            android:textAllCaps="false"
-            android:textColor="@color/white"/>
+            android:textAllCaps="false"/>
     </LinearLayout>
 
 
