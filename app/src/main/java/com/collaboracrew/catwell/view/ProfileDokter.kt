@@ -4,71 +4,65 @@ import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.View
 import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.collaboracrew.catwell.R
+import com.collaboracrew.catwell.R.layout.activity_profil_dokter
 
-class ProfileActivity : AppCompatActivity(), View.OnClickListener {
+class ProfileDokter: AppCompatActivity(), View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
-        val txtviewalmt: TextView = findViewById(R.id.profileKucing)
-        txtviewalmt.setOnClickListener(this)
-        val txtviedtpass: TextView = findViewById(R.id.edt_pass)
-        txtviedtpass.setOnClickListener(this)
-        val txtviedtlogout: TextView = findViewById(R.id.Keluar_user)
-        txtviedtlogout.setOnClickListener(this)
-        val txtviedtprofil: TextView = findViewById(R.id.editProfile)
-        txtviedtprofil.setOnClickListener(this)
-        val txtviabout: TextView = findViewById(R.id.ttgapk_user)
-        txtviabout.setOnClickListener(this)
-        val txtvihapusakn: TextView = findViewById(R.id.hps_akn)
-        txtvihapusakn.setOnClickListener(this)
+        setContentView(R.layout.activity_profil_dokter)
+        val edtprofil_dk: TextView = findViewById(R.id.editProfile_dk)
+        edtprofil_dk.setOnClickListener(this)
+        val edtpasswd_dk: TextView = findViewById(R.id.edtPass_dk)
+        edtpasswd_dk.setOnClickListener(this)
+        val ttgapk_dk: TextView = findViewById(R.id.ttgapk_dk)
+        ttgapk_dk.setOnClickListener(this)
+        val keluar_dk: TextView = findViewById(R.id.keluar_dk)
+        keluar_dk.setOnClickListener(this)
+        val hpsakun_dk: TextView = findViewById(R.id.hps_akn_dk)
+        hpsakun_dk.setOnClickListener(this)
 
         val backButton = findViewById(R.id.ivBack) as ImageView
 
         backButton.setOnClickListener {
             onBackPressed()
         }
-    }
 
+    }
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.profileKucing -> {
-                val intent = Intent(this@ProfileActivity, EditProfileKucing::class.java)
+            R.id.editProfile_dk -> {
+                val intent = Intent(this@ProfileDokter, EditProfileDokter::class.java)
                 startActivity(intent)
             }
         }
         when (v.id) {
-            R.id.edt_pass-> {
-                val intent = Intent(this@ProfileActivity, EditPassword::class.java)
+            R.id.edtPass_dk-> {
+                val intent = Intent(this@ProfileDokter, EditPasswordDokter::class.java)
                 startActivity(intent)
             }
         }
         when (v.id) {
-            R.id.Keluar_user-> {
+            R.id.keluar_dk-> {
                 LogoutAccountDialog()
             }
         }
         when (v.id) {
-            R.id.editProfile-> {
-                val intent = Intent(this@ProfileActivity, EditProfile::class.java)
+            R.id.ttgapk_dk-> {
+                val intent = Intent(this@ProfileDokter, TentangAplikasi::class.java)
                 startActivity(intent)
             }
         }
         when (v.id) {
-            R.id.ttgapk_user-> {
-                val intent = Intent(this@ProfileActivity, TentangAplikasi::class.java)
-                startActivity(intent)
-            }
-        }
-        when (v.id) {
-            R.id.hps_akn-> {
+            R.id.hps_akn_dk-> {
                 deleteAccountDialog()
             }
         }
@@ -82,7 +76,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
         val btYa: Button = dialog.findViewById(R.id.btYa)
         btYa.setOnClickListener {
-            val intent = Intent(this@ProfileActivity, WelcomeScreenActivity::class.java)
+            val intent = Intent(this@ProfileDokter, WelcomeScreenActivity::class.java)
             startActivity(intent)
         }
 
@@ -103,7 +97,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
         val btYa: Button = dialog.findViewById(R.id.btYa)
         btYa.setOnClickListener {
-            val intent = Intent(this@ProfileActivity, WelcomeScreenActivity::class.java)
+            val intent = Intent(this@ProfileDokter, WelcomeScreenActivity::class.java)
             startActivity(intent)
         }
 
@@ -115,5 +109,6 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
         dialog.show()
     }
+
 
 }

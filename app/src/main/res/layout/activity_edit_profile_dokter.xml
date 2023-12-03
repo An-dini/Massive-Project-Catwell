@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/white"
-    tools:context=".view.EditProfile">
+    tools:context=".view.EditProfileDokter">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -69,23 +69,25 @@
         android:layout_marginTop="92dp"
         android:padding="16dp"
         android:background="@drawable/base_white"
+        android:backgroundTint="@color/BackgroundColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_width="395dp"
+            android:layout_height="589dp"
+            android:background="@color/BackgroundColor">
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/fotoprofile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:src="@drawable/usereditprofil" />
+                android:layout_marginTop="20dp"
+                android:src="@drawable/aisha" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/floatingActionButton2"
@@ -96,81 +98,82 @@
                 android:layout_marginEnd="-13dp"
                 android:layout_marginBottom="-3dp"
                 android:clickable="true"
-                android:backgroundTint="@color/transparan"
-                android:src="@drawable/camera"/>
+                android:src="@drawable/camera"
+                android:backgroundTint="@color/transparan"/>
+
             <TextView
-                style="@style/poppinsReg16spBlack"
                 android:id="@+id/txv1"
+                style="@style/poppinsReg16spBlack"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
+                android:layout_below="@+id/floatingActionButton2"
                 android:layout_centerHorizontal="true"
-                android:text="Nama"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/floatingActionButton2"/>
+                android:text="Nama" />
 
             <EditText
-                style="@style/poppinsReg14spBlack"
                 android:id="@+id/edtnama"
+                style="@style/poppinsReg14spBlack"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
+                android:layout_below="@id/txv1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle_rounded_stroke"
                 android:hint="Nama Lengkap"
-                android:layout_marginTop="5dp"
-                android:paddingHorizontal="16dp"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/rectangle_rounded_stroke"
                 android:inputType="textPersonName"
-                android:layout_below="@id/txv1"/>
+                android:paddingHorizontal="16dp" />
 
             <TextView
-                style="@style/poppinsReg16spBlack"
                 android:id="@+id/txv2"
+                style="@style/poppinsReg16spBlack"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_marginTop="15dp"
                 android:layout_below="@id/edtnama"
-                android:text="Email"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Nomor Handphone" />
 
             <EditText
-                style="@style/poppinsReg14spBlack"
                 android:id="@+id/edt_email"
+                style="@style/poppinsReg14spBlack"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
-                android:layout_marginTop="5dp"
-                android:hint="cth. meow@gmail.com"
-                android:paddingHorizontal="16dp"
                 android:layout_below="@+id/txv2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/rectangle_rounded_stroke"
-                android:inputType="text"
-                android:layout_centerHorizontal="true"/>
+                android:hint="085300000"
+                android:inputType="number"
+                android:paddingHorizontal="16dp" />
 
             <TextView
-                style="@style/poppinsReg16spBlack"
                 android:id="@+id/txv3"
+                style="@style/poppinsReg16spBlack"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_marginTop="15dp"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@id/edt_email"
-                android:text="No Handpone"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Email" />
 
             <EditText
+                android:id="@+id/edt_nohp"
                 style="@style/poppinsReg14spBlack"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
-                android:background="@drawable/rectangle_rounded_stroke"
                 android:layout_below="@id/txv3"
                 android:layout_centerHorizontal="true"
-                android:paddingHorizontal="16dp"
-                android:inputType="number"
-                android:hint="085300000"
-                android:paddingLeft="10dp"
                 android:layout_marginTop="5dp"
-                android:id="@+id/edt_nohp"/>
+                android:background="@drawable/rectangle_rounded_stroke"
+                android:hint="meowbib@gmail.com"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="16dp"
+                android:paddingLeft="10dp" />
 
             <Button
+                android:id="@+id/btn_edt_profil_dk"
                 style="@style/poppinsSemiBold16spBlack"
-                android:id="@+id/btn_edt_profil"
                 android:layout_width="140dp"
                 android:layout_height="50dp"
                 android:layout_below="@id/edt_nohp"
@@ -180,7 +183,7 @@
                 android:backgroundTint="@color/SecondaryColor"
                 android:text="Selesai"
                 android:textAllCaps="false"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
 
 
         </RelativeLayout>

@@ -15,7 +15,6 @@
             android:name=".view.Edit_Profil_Kucing"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
             android:name=".view.TentangAplikasi"
             android:exported="false" />
         <activity
@@ -55,6 +54,9 @@
             android:name=".view.Detail_Vet_Puskeswan"
             android:exported="false" />
         <activity
+            android:name=".view.PembayaranChat"
+            android:exported="false" />
+        <activity
             android:name=".view.NotifikasiActivity"
             android:exported="false" />
         <activity
@@ -76,7 +78,13 @@
             android:name=".view.EditPassword"
             android:exported="false" />
         <activity
+            android:name=".view.EditPasswordDokter"
+            android:exported="false" />
+        <activity
             android:name=".view.EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".view.EditProfileDokter"
             android:exported="false" />
         <activity
             android:name=".view.OtpPassword"
@@ -94,7 +102,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".view.PembayaranChat"
+            android:name=".view.ProfileDokter"
             android:exported="true">
 
             <!-- android:label="@string/app_name" -->
