@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.collaboracrew.catwell.DoctorMainActivity
 import com.collaboracrew.catwell.R
 
 class Pilih_Sebagai : AppCompatActivity(), View.OnClickListener {
@@ -32,6 +33,11 @@ class Pilih_Sebagai : AppCompatActivity(), View.OnClickListener {
                 var Masuk = Intent(this@Pilih_Sebagai,WelcomeScreen_Dokter::class.java)
                 startActivity(Masuk)
             }
+            R.id.BtnDokter -> {
+                var Tekan = Intent(this@Pilih_Sebagai, DoctorMainActivity::class.java)
+                startActivity(Tekan)
+            }
+
         }
     }
 }

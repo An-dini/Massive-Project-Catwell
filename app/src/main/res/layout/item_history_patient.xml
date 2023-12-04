@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clTransaction"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rectangle_rounded_stroke"
+        android:padding="8dp"
+        android:src="@drawable/ic_diskusi"
+        android:tint="@color/PrimaryColor"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Konsultasi"
+        android:textColor="@color/PrimaryColor"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="Senin, 13 Agustus 2023"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="Pukul 20:01 WIB"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"/>
+
+    <TextView
+        android:id="@+id/tvPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="Pembayaran via DANA sebesar Rp130.000"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/PrimaryColor"
+        app:layout_constraintTop_toBottomOf="@id/tvPayment"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

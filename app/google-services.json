@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "684972488299",
+    "project_id": "catwell-a85bd",
+    "storage_bucket": "catwell-a85bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684972488299:android:04083b074d6e5c1138632e",
+        "android_client_info": {
+          "package_name": "com.collaboracrew.catwell"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoxoM-s1-VaLvKQRRvi8zH1bMrXsBg7hs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

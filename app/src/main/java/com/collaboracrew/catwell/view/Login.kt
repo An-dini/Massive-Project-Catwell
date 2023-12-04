@@ -8,11 +8,15 @@ import android.widget.Button
 import android.widget.TextView
 import com.collaboracrew.catwell.MainActivity
 import com.collaboracrew.catwell.R
+import com.collaboracrew.catwell.databinding.ActivityLoginBinding
 
 class Login : AppCompatActivity(), View.OnClickListener {
+
+    private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val txtviewsignup: TextView = findViewById(R.id.txt_signup)
         txtviewsignup.setOnClickListener(this)
@@ -32,15 +36,16 @@ class Login : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this@Login, register::class.java)
                 startActivity(intent)
             }
+
             R.id.txt_forgot -> {
                 val intent = Intent(this@Login, ForgotPassword::class.java)
                 startActivity(intent)
             }
+
             R.id.btnLogin -> {
                 val intent = Intent(this@Login, MainActivity::class.java)
                 startActivity(intent)
             }
-
         }
     }
 }
