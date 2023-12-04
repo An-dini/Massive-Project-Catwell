@@ -30,6 +30,9 @@
             android:name=".view.PembayaranChat"
             android:exported="false" />
         <activity
+            android:name=".DoctorMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.Pilih_Sebagai"
             android:exported="false" />
       <activity
