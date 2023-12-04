@@ -1,14 +1,13 @@
 {
   "project_info": {
-    "project_number": "564230864108",
-    "firebase_url": "https://catwell-252e7-default-rtdb.firebaseio.com",
-    "project_id": "catwell-252e7",
-    "storage_bucket": "catwell-252e7.appspot.com"
+    "project_number": "684972488299",
+    "project_id": "catwell-a85bd",
+    "storage_bucket": "catwell-a85bd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:564230864108:android:c2c99ea4353f5e5e4239c9",
+        "mobilesdk_app_id": "1:684972488299:android:04083b074d6e5c1138632e",
         "android_client_info": {
           "package_name": "com.collaboracrew.catwell"
         }
@@ -16,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCYqgBLRWp1xIw6ZjHuTxJrKu1TM0SZ1sA"
+          "current_key": "AIzaSyAoxoM-s1-VaLvKQRRvi8zH1bMrXsBg7hs"
         }
       ],
       "services": {
