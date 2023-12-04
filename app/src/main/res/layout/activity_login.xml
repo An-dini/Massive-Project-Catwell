@@ -34,41 +34,55 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <TextView
+            style="@style/poppinsMed14spBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Email"/>
+
         <EditText
             style="@style/poppinsReg14spBlack"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/rectangle_rounded_stroke"
-            android:hint="Username"
+            android:hint="cth. nama@gmail.com"
+            android:inputType="textEmailAddress"
             android:textColorHint="#B2B4B6"
             android:paddingLeft="10dp"
             android:id="@+id/username"/>
 
+        <TextView
+            style="@style/poppinsMed14spBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="Kata Sandi"/>
+
         <EditText
             style="@style/poppinsReg14spBlack"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/rectangle_rounded_stroke"
-            android:hint="Password"
+            android:hint="Masukkan Kata Sandi"
             android:textColorHint="#B2B4B6"
             android:inputType="textPassword"
             android:paddingLeft="10dp"
-            android:id="@+id/passwd"
-            android:layout_marginTop="10dp"/>
+            android:id="@+id/passwd"/>
     </LinearLayout>
 
     <TextView
         android:id="@+id/txt_forgot"
-        style="@style/poppinsMed16spOrange"
-        android:layout_width="142dp"
+        style="@style/poppinsSemiBold14spOrange"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linear"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="23dp"
         android:layout_marginTop="-10dp"
-        android:layout_marginEnd="246dp"
-        android:text="Lupa Password?" />
+        android:text="Lupa Kata Sandi?" />
 
     <Button
         style="@style/poppinsSemiBold16spWhite"
@@ -98,7 +112,7 @@
             android:id="@+id/txt_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mendaftar"
+            android:text="Daftar Sekarang"
             android:layout_marginLeft="5dp"/>
     </LinearLayout>
 

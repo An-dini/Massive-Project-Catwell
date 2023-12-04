@@ -179,6 +179,12 @@
         <item>true</item>
         <item>else</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
+
+<!--    gender option -->
+    <string-array name="gender_options">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

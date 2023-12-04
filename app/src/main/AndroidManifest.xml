@@ -14,7 +14,7 @@
         <activity
             android:name=".view.JadwalKonsultasiActivity"
             android:exported="false" />
-      <activity
+        <activity
             android:name=".view.TentangAplikasi"
             android:exported="false" />
         <activity
@@ -105,7 +105,10 @@
             android:name=".view.HalamanListArtikel"
             android:exported="false" />
         <activity
-            android:name=".view.ChatLogDoctorActivity"
+              android:name=".view.ChatLogDoctorActivity"
+              android:exported="false" />
+        <activity
+            android:name=".view.SplashScreenActivity"
             android:exported="true"
             android:theme="@style/Theme.Catwell">
             <intent-filter>
