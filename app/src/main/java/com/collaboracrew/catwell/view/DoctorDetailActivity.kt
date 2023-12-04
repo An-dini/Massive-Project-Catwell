@@ -27,7 +27,7 @@ class DoctorDetailActivity : AppCompatActivity() {
         if (doctor != null) {
             binding.cover.setImageResource(doctor.photo)
             binding.price.text = doctor.price
-            binding.duration.text = "${doctor.duration} menit"
+            binding.duration.text  = "${doctor.duration} menit"
             binding.name.text = doctor.name
             binding.instance.text = doctor.instance
             binding.ratingBar.rating = doctor.rating
