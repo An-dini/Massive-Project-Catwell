@@ -23,22 +23,35 @@
     </ImageView>
 
 
+    <!--    <ImageView-->
+<!--        android:id="@+id/atau"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:src="@drawable/atau"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.579"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/BtnDokter">-->
+
+<!--    </ImageView>-->
+
     <ImageView
         android:id="@+id/Catwell"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="248dp"
         android:src="@drawable/logo_catwell"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.564"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
 
     <Button
-        style="@style/poppinsSemiBold20spOrange"
         android:id="@+id/BtnDokter"
+        style="@style/poppinsSemiBold20spOrange"
         android:layout_width="157dp"
         android:layout_height="50dp"
         android:layout_marginTop="48dp"
@@ -47,12 +60,11 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Catwell">
 
     </Button>
-
+  
     <LinearLayout
         android:id="@+id/divider"
         android:layout_width="250dp"
@@ -86,17 +98,16 @@
     </LinearLayout>
 
     <Button
-        style="@style/poppinsSemiBold20spWhite"
         android:id="@+id/BtnUser"
+        style="@style/poppinsSemiBold20spWhite"
         android:layout_width="157dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_rounded"
         android:text="User"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:background="@drawable/rectangle_rounded"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider">
 

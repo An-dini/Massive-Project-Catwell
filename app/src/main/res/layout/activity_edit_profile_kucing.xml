@@ -79,6 +79,7 @@
                 android:id="@+id/fotoprofile"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"

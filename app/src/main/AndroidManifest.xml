@@ -12,13 +12,28 @@
         android:theme="@style/Theme.Catwell"
         tools:targetApi="31">
         <activity
+            android:name="Dokter.view.LupaPasswordDokter"
+            android:exported="false" />
+        <activity
+            android:name="Dokter.view.SignUp_Dokter"
+            android:exported="false" />
+        <activity
+            android:name="Dokter.view.Login_Dokter"
+            android:exported="false" />
+        <activity
+            android:name="Dokter.view.WelcomeScreen_Dokter"
+            android:exported="false" />
+        <activity
+            android:name=".view.Room_telephone"
+            android:exported="false" />
+        <activity
             android:name=".view.JadwalKonsultasiActivity"
             android:exported="false" />
         <activity
             android:name=".view.TentangAplikasi"
             android:exported="false" />
         <activity
-            android:name=".view.Room_VidioCall"
+            android:name=".view.Room_Call"
             android:exported="false" />
         <activity
             android:name=".view.EditProfileKucing"
@@ -60,6 +75,9 @@
             android:name=".view.Detail_Vet_Puskeswan"
             android:exported="false" />
         <activity
+            android:name=".view.PembayaranChat"
+            android:exported="false" />
+        <activity
             android:name=".view.NotifikasiActivity"
             android:exported="false" />
         <activity
@@ -84,7 +102,13 @@
             android:name=".view.EditPassword"
             android:exported="false" />
         <activity
+            android:name=".view.EditPasswordDokter"
+            android:exported="false" />
+        <activity
             android:name=".view.EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".view.EditProfileDokter"
             android:exported="false" />
         <activity
             android:name=".view.OtpPassword"
@@ -99,6 +123,9 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".view.ProfileDokter"
+            android:exported="false"/>
+      <activity
             android:name=".view.DetailArtikel"
             android:exported="false" />
         <activity

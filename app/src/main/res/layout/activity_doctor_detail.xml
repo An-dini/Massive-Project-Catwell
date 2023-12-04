@@ -42,14 +42,14 @@
                     style="@style/poppinsBold24spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:text="Detail Veneritarian" />
-
+                    android:text="Detail Veneritarian"
+                    android:textStyle="bold"/>
                 <TextView
                     android:id="@+id/tvSubTitle"
                     style="@style/poppinsMed12spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Info lengkap veneritarian yang kamu pilih" />
+                    android:text="Info Lengkap Veneritarian" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -95,15 +95,43 @@
                         android:contentDescription="apa"/>
 
                 </androidx.cardview.widget.CardView>
-                <RatingBar
-                    android:id="@+id/ratingBar"
-                    style="@style/SmallRatingBar"
-                    android:layout_width="240dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:numStars="5"
-                    android:stepSize="0.1"
-                    android:rating="3.5" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/baseNama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:paddingStart="50dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="5/5"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textColor="@color/PrimaryColor"
+                        android:textSize="20sp"/>
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/SmallRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:numStars="5"
+                        android:stepSize="0.1"
+                        android:rating="5" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <View
                     android:id="@+id/divider"
@@ -111,218 +139,171 @@
                     android:layout_height="1.5dp"
                     android:layout_weight="1"
                     android:background="@color/grey"/>
-
-                <LinearLayout
-                    android:id="@+id/baseNama"
+              
+                <TextView
+                    style="@style/poppinsSemiBold18spBlack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:layout_marginStart="16dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_user"
-                        android:tint="@color/PrimaryColor"/>
-
-                    <TextView
-                        style="@style/poppinsMed16spBlack"
-                        android:id="@+id/tvNama"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:text="Drh. Aji Kusuma" />
-
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/divider2"
-                    android:layout_width="match_parent"
-                    android:layout_height="1.5dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="60dp"
-                    android:background="@color/grey"/>
-
-                <LinearLayout
-                    android:id="@+id/baseInstansi"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="70dp"
+                    android:text="Nama Dokter"/>
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/poppinsReg16spBlack"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="70dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="16dp"
-                    android:layout_marginStart="16dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:text="Drh. Aji Kusuma"/>
+                <ImageView
+                    android:id="@+id/Garis2"
+                    android:src="@drawable/img_1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="300dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_height="wrap_content"/>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_location"
-                        android:tint="@color/PrimaryColor"/>
-
-                    <TextView
-                        style="@style/poppinsMed16spBlack"
-                        android:id="@+id/tvInstansi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:text="OJ Pet Care, Batam" />
-
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/divider3"
-                    android:layout_width="match_parent"
-                    android:layout_height="1.5dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="60dp"
-                    android:background="@color/grey"/>
-
-                <LinearLayout
-                    android:id="@+id/baseJadwal"
+                <TextView
+                    style="@style/poppinsSemiBold18spBlack"
+                    android:layout_marginTop="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="24dp"
-                    android:layout_marginStart="16dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:text="Instansi"
+                    android:layout_marginStart="70dp"/>
+                <TextView
+                    style="@style/poppinsReg16spBlack"
+                    android:id="@+id/instance"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:text="Puskeswan Depok"/>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_times"
-                        android:tint="@color/PrimaryColor"/>
+                <TextView
+                    style="@style/poppinsSemiBold18spBlack"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jam Operasional"
+                    android:layout_marginStart="70dp"/>
+                <TextView
+                    style="@style/poppinsReg16spBlack"
+                    android:id="@+id/schedule"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Senin - Jumat . 08.00 - 17.00"
+                    android:layout_marginStart="70dp"/>
+                <ImageView
+                    android:id="@+id/Garis4"
+                    android:src="@drawable/img_1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
 
-                            <TextView
-                                style="@style/poppinsMed16spBlack"
-                                android:id="@+id/tvHari"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="24dp"
-                                android:text="Senin - Jumat: " />
-
-                            <TextView
-                                style="@style/poppinsMed16spBlack"
-                                android:id="@+id/tvJam"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="24dp"
-                                android:text="08:00 - 15:00 WIB" />
-
-                        </LinearLayout>
-
-                </LinearLayout>
-
-                <View
-                    android:id="@+id/divider4"
-                    android:layout_width="match_parent"
-                    android:layout_height="1.5dp"
-                    android:layout_weight="1"
-                    android:background="@color/grey"/>
-
-                <RelativeLayout
-                    android:id="@+id/cardChat"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:padding="16dp"
-                    android:background="@drawable/base_card_white">
+                    android:padding="8dp"
+                    android:background="@drawable/base_card"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tvChat"
-                        style="@style/poppinsSemiBold16spBlack"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/konsul_chat"
+                        style="@style/poppinsSemiBold20spBlack"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Konsultasi Melalui Chat"/>
-                    <TextView
-                        android:id="@+id/tvHarga"
-                        style="@style/poppinsSemiBold14spBlack"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tvChat"
-                        android:text="Rp130.000"/>
+                        android:text="Konsultasi Melalui Chat"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"/>
 
                     <TextView
-                        android:id="@+id/tvDurasi"
-                        style="@style/poppinsMed14spBlack"
-                        android:layout_width="wrap_content"
+                        style="@style/poppinsSemiBold18spBlack"
+                        android:id="@+id/price"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tvChat"
-                        android:layout_marginStart="16dp"
-                        android:layout_toEndOf="@+id/tvHarga"
+                        android:text="Rp130.000"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="40 Menit"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:textColor="@color/grey"
-                        android:text="40 menit" />
+                        android:layout_marginEnd="10dp"
+                        android:textAlignment="viewEnd"/>
 
                     <Button
-                        style="@style/poppinsSemiBold16spWhite"
                         android:id="@+id/bt_consultation"
-                        android:layout_width="wrap_content"
+                        android:layout_width="200dp"
                         android:layout_height="50dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginTop="48dp"
-                        android:paddingVertical="4dp"
-                        android:paddingHorizontal="24dp"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
                         android:background="@drawable/rectangle_rounded"
-                        android:drawableRight="@drawable/baseline_chat_24"
-                        android:drawablePadding="8dp"
-                        android:text="Chat"
-                        android:textAllCaps="false" />
+                        android:backgroundTint="@color/PrimaryColor"
+                        android:text="Mulai Konsultasi"
+                        android:textAllCaps="false"
+                        android:layout_marginBottom="16dp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
 
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/cardVidcall"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:padding="16dp"
-                    android:background="@drawable/base_card_white">
+                    android:padding="8dp"
+                    android:background="@drawable/base_card"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tvVideoChat"
-                        style="@style/poppinsSemiBold16spBlack"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/konsul_chat2"
+                        style="@style/poppinsSemiBold20spBlack"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Konsultasi Melalui Video Chat"/>
-                    <TextView
-                        android:id="@+id/tvHargaVc"
-                        style="@style/poppinsSemiBold14spBlack"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/tvVideoChat"
-                        android:text="Rp130.000"/>
+                        android:text="Konsultasi Melalui Video Call"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp" />
 
                     <TextView
-                        android:id="@+id/tvDurasiVc"
-                        style="@style/poppinsMed14spBlack"
-                        android:layout_width="wrap_content"
+                        style="@style/poppinsSemiBold18spBlack"
+                        android:id="@+id/price2"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/tvVideoChat"
-                        android:layout_marginStart="16dp"
-                        android:layout_toEndOf="@+id/tvHargaVc"
+                        android:text="Rp150.000"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp" />
+
+                    <TextView
+                        android:id="@+id/duration2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="30 Menit"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:textColor="@color/grey"
-                        android:text="30 menit" />
+                        android:layout_marginEnd="10dp"
+                        android:textAlignment="viewEnd"/>
 
                     <Button
-                        style="@style/poppinsSemiBold16spWhite"
-                        android:id="@+id/bt_VideoChat"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/bt_consultation2"
+                        android:layout_width="200dp"
                         android:layout_height="50dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginTop="48dp"
-                        android:paddingVertical="4dp"
-                        android:paddingHorizontal="24dp"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
                         android:background="@drawable/rectangle_rounded"
-                        android:drawableRight="@drawable/ic_videocam"
-                        android:drawablePadding="8dp"
-                        android:text="VideoCall"
-                        android:textAllCaps="false" />
-                </RelativeLayout>
+                        android:backgroundTint="@color/PrimaryColor"
+                        android:layout_marginBottom="10dp"
+                        android:textAllCaps="false"
+                        android:text="Mulai Konsultasi"
+                        android:textColor="@color/white" />
+                </LinearLayout>
 
             </LinearLayout>
 
