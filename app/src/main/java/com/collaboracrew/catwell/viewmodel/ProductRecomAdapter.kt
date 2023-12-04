@@ -12,6 +12,12 @@ import com.collaboracrew.catwell.model.ProductRecommendationModel
 
 class ProductRecomAdapter(private val data: List<ProductRecommendationModel>) : RecyclerView.Adapter<ProductRecomAdapter.ViewHolder>() {
 
+    private var onItemClickListener: ((ProductRecommendationModel) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (ProductRecommendationModel) -> Unit) {
+        onItemClickListener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_product_recomendation, parent, false)
         return ViewHolder(view)
@@ -32,7 +38,12 @@ class ProductRecomAdapter(private val data: List<ProductRecommendationModel>) : 
         fun bind(item: ProductRecommendationModel) {
             productImage.setImageResource(item.ProductImage)
             productName.text = item.ProductName
-            shopButton.setOnClickListener { /* Handle click action */ }
+            shopButton.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    onItemClickListener?.invoke(data[position])
+                }
+            }
         }
     }
 }

@@ -16,7 +16,7 @@
         android:padding="16dp">
 
         <TextView
-            style="@style/poppinsBold16spBlack"
+            style="@style/poppinsSemiBold16spBlack"
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,6 +67,7 @@
             android:rating="3.5" />
 
         <Button
+            style="@style/poppinsSemiBold16spWhite"
             android:id="@+id/btKirim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,9 +75,9 @@
             android:layout_marginBottom="16dp"
             android:paddingHorizontal="64dp"
             android:layout_marginTop="24dp"
+            android:background="@drawable/rectangle_rounded"
             android:backgroundTint="@color/PrimaryColor"
-            android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textAllCaps="false"
             android:text="Kirim"
             />
     </androidx.cardview.widget.CardView>

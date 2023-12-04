@@ -62,32 +62,40 @@
 
         <LinearLayout
             android:id="@+id/baseButton"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/SearchView"
-            android:layout_marginTop="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="48dp"
+            android:padding="2dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button_background"
             android:gravity="center"
             android:orientation="horizontal">
 
             <Button
-
-                android:id="@+id/btn_vet"
-                style="@style/poppinsBold14spWhite"
-                android:layout_width="140dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="20dp"
-                android:backgroundTint="@color/PrimaryColor"
-                android:text="Vet" />
+                style="@style/poppinsSemiBold16spOrange"
+                android:id="@+id/btnVet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button_background"
+                android:backgroundTint="@color/white"
+                android:text="Vet"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/btn_psw"
-                style="@style/poppinsBold14spWhite"
-                android:layout_width="140dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="20dp"
-                android:backgroundTint="@color/PrimaryColor"
-                android:text="Puskeswan" />
+                style="@style/poppinsSemiBold16spWhite"
+                android:id="@+id/btnPsw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button_background"
+                android:text="Puskeswan"
+                android:textAllCaps="false" />
+
         </LinearLayout>
+
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_container_info"
             android:layout_width="match_parent"

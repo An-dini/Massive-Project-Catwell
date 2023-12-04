@@ -1,5 +1,6 @@
 package com.collaboracrew.catwell.view
 
+import Dokter.view.WelcomeScreen_Dokter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,18 +13,25 @@ class Pilih_Sebagai : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pilih_sebagai)
 
-        var Klik: Button = findViewById(R.id.BtnUser)
+        var Klik : Button = findViewById(R.id.BtnUser)
         Klik.setOnClickListener(this)
+
+        var BtnDokter: Button = findViewById(R.id.BtnDokter)
+        BtnDokter.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
         when(v.id){
             R.id.BtnUser -> {
-                var Tekan = Intent(this@Pilih_Sebagai, WelcomeScreenActivity::class.java)
-                startActivity(Tekan)
+                var Masuk = Intent(this@Pilih_Sebagai, WelcomeScreenActivity::class.java)
+                startActivity(Masuk)
+            }
+        }
+        when(v.id){
+            R.id.BtnDokter -> {
+                var Masuk = Intent(this@Pilih_Sebagai,WelcomeScreen_Dokter::class.java)
+                startActivity(Masuk)
             }
         }
     }
 }
-
-

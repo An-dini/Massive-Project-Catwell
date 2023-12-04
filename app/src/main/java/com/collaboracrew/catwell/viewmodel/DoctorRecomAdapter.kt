@@ -1,5 +1,6 @@
 package com.collaboracrew.catwell.viewmodel
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,10 +9,18 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.collaboracrew.catwell.R
+import com.collaboracrew.catwell.model.ArticleRecommendationModel
+import com.collaboracrew.catwell.model.DoctorModel
 import com.collaboracrew.catwell.model.DoctorRecommendationModel
 
-class DoctorRecomAdapter(private val data: List<DoctorRecommendationModel>) :
+class DoctorRecomAdapter(private val data: List<DoctorModel>) :
     RecyclerView.Adapter<DoctorRecomAdapter.ViewHolder>() {
+
+    private var onItemClickListener: ((DoctorModel) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (DoctorModel) -> Unit) {
+        onItemClickListener = listener
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -34,15 +43,19 @@ class DoctorRecomAdapter(private val data: List<DoctorRecommendationModel>) :
         private val price: TextView = itemView.findViewById(R.id.tvPrice)
         private val chatButton: Button = itemView.findViewById(R.id.btKonsultasi)
 
-        fun bind(item: DoctorRecommendationModel) {
+        fun bind(item: DoctorModel) {
             // Set data to the views
-            doctorImage.setImageResource(item.doctorImage)
-            doctorName.text = item.doctorName
-            vetName.text = item.vetName
+            doctorImage.setImageResource(item.photo)
+            doctorName.text = item.name
+            vetName.text = item.instance
             price.text = item.price
 
             chatButton.setOnClickListener {
-                // Handle button click here
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    onItemClickListener?.invoke(data[position])
+                    Log.d("DoctorRecomAdapter", "Clicked Doctor ID: ${data[position]}")
+                }
             }
         }
     }
