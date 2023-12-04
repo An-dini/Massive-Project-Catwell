@@ -12,38 +12,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/base_orange"
-        app:logo="@drawable/logo_white"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:paddingEnd="16dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/logo_white">
 
         <ImageView
             android:id="@+id/icProfile"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:src="@drawable/ic_profile"
             android:layout_gravity="end"
-            android:layout_marginEnd="12dp"/>
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_profile" />
 
         <ImageView
             android:id="@+id/icBookmark"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:src="@drawable/ic_bookmark"
             android:layout_gravity="end"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_bookmark" />
 
         <ImageView
             android:id="@+id/icNotification"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:src="@drawable/ic_notification"
             android:layout_gravity="end"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_notification" />
     </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
