@@ -83,9 +83,10 @@
                 android:text="Definisi"
                 style="@style/poppinsMed16spBlack"/>
             <TextView
+                style="@style/poppinsReg12spBlack"
                 android:id="@+id/isi1"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:textAlignment="textStart"
                 android:text="Aplikasi Cat Well adalah sebuah aplikasi yang memberikan layanan konsultasi online, edukasi, dan informasi bagi para pecinta kucing yang tidak memiliki akses secara langsung ke puskeswan atau dokter hewan."
                 android:layout_below="@id/head1"
@@ -99,15 +100,17 @@
                 android:layout_below="@id/isi1"
                 android:layout_marginTop="20dp"/>
             <TextView
+                style="@style/poppinsReg12spBlack"
                 android:id="@+id/isi2"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:textAlignment="viewStart"
                 android:text="Misi kami adalah memudahkan para pemilik hewan peliharaan khususnya kucing yang tidak memiliki akses waktu dan informasi untuk tetap dapat menjaga kesehatan kucing mereka dengan berkonsultasi secara online dengan dokter hewan atau membaca artikel edukasi tentang kesehatan kucing mereka."
                 android:layout_below="@id/head2"
                 android:layout_marginTop="10dp"/>
 
             <TextView
+                style="@style/poppinsReg12spBlack"
                 android:id="@+id/cprgt"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"

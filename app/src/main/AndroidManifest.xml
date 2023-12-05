@@ -24,7 +24,10 @@
             android:name="Dokter.view.WelcomeScreen_Dokter"
             android:exported="false" />
         <activity
-            android:name=".view.Room_telephone"
+            android:name=".DoctorMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.Room_Vidcall"
             android:exported="false" />
         <activity
             android:name=".view.JadwalKonsultasiActivity"
@@ -43,9 +46,6 @@
             android:exported="false" />
         <activity
             android:name=".view.PembayaranChat"
-            android:exported="false" />
-        <activity
-            android:name=".DoctorMainActivity"
             android:exported="false" />
         <activity
             android:name=".view.Pilih_Sebagai"
@@ -73,9 +73,6 @@
             android:exported="false" />
         <activity
             android:name=".view.Detail_Vet_Puskeswan"
-            android:exported="false" />
-        <activity
-            android:name=".view.PembayaranChat"
             android:exported="false" />
         <activity
             android:name=".view.NotifikasiActivity"

@@ -7,89 +7,78 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.collaboracrew.catwell.MainActivity
 import com.collaboracrew.catwell.R
-import com.collaboracrew.catwell.viewmodel.RiwayatAdapter.TransactionClickListener
-import com.collaboracrew.catwell.databinding.FragmentRiwayatBinding
-import com.collaboracrew.catwell.model.RiwayatModel
-import com.collaboracrew.catwell.model.TRANSACTION_ID_EXTRA
-import com.collaboracrew.catwell.viewmodel.RiwayatAdapter
+import com.collaboracrew.catwell.databinding.FragmentKonsultasiDokterBinding
+import com.collaboracrew.catwell.model.CHAT_PATIENT_HISTORY_ID_EXTRA
+import com.collaboracrew.catwell.model.ChatPatientHistoryModel
+import com.collaboracrew.catwell.viewmodel.RiwayatChatAdapter
 
-class KonsultasiDokterFragment : Fragment(), TransactionClickListener {
-    private lateinit var binding: FragmentRiwayatBinding
-    private val transactionList = mutableListOf<RiwayatModel>()
+class KonsultasiDokterFragment : Fragment(), RiwayatChatAdapter.ChatClickListener {
+    private lateinit var binding: FragmentKonsultasiDokterBinding
+    private val chatPatientHistoryList = mutableListOf<ChatPatientHistoryModel>()
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentRiwayatBinding.inflate(inflater, container, false)
+    ): View {
+        binding = FragmentKonsultasiDokterBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         transactions()
-        setupRecyclerView()
+
+        val openChatData = chatPatientHistoryList.subList(0, 2)
+        val closedChatData = chatPatientHistoryList.subList(2, chatPatientHistoryList.size)
+
+        binding.rvOpenChat.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = RiwayatChatAdapter(openChatData, this@KonsultasiDokterFragment)
+        }
+
+        binding.rvClosedChat.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = RiwayatChatAdapter(closedChatData, this@KonsultasiDokterFragment)
+        }
     }
 
-    override fun onClick(transaction: RiwayatModel) {
-        val intent = Intent(requireContext(), HistoryConsultationDetailActivity::class.java)
-        intent.putExtra(TRANSACTION_ID_EXTRA, transaction.id)
+    override fun onClick(transaction: ChatPatientHistoryModel) {
+        val intent = Intent(requireContext(), ChatLogDoctorActivity::class.java)
+        intent.putExtra(CHAT_PATIENT_HISTORY_ID_EXTRA, transaction.id)
         startActivity(intent)
     }
 
 
 
     private fun transactions(){
-        val doctorName = resources.getStringArray(R.array.doctor_name_trans)
-        val doctorInstance = resources.getStringArray(R.array.doctor_instance_trans)
-        val priceTrans = 130000
-        val ratingTrans = resources.getStringArray(R.array.rating_trans)
-        val dateTrans = resources.getStringArray(R.array.date_trans)
-        val timeTrans = resources.getStringArray(R.array.time_trans)
-        val paymentMethod = resources.getStringArray(R.array.payment_trans)
+        val patientName = resources.getStringArray(R.array.patient_name_trans)
+        val isiChat = resources.getStringArray(R.array.isi_chat_trans)
 
-        for (i in doctorName.indices) {
-            val doctor = doctorName[i]
-            val transaction = RiwayatModel(
-                coverResource(doctor),
-                doctor,
-                doctorInstance[i],
-                ratingTrans[i].toFloat(),
-                dateTrans[i],
-                timeTrans[i],
-                priceTrans,
-                paymentMethod[i],
-                id = transactionList.size
+        for (i in patientName.indices) {
+            val user = patientName[i]
+            val transaction = ChatPatientHistoryModel(
+                coverResource(user),
+                user,
+                isiChat[i],
+                id = chatPatientHistoryList.size
             )
-            transactionList.add(transaction)
+            chatPatientHistoryList.add(transaction)
         }
     }
 
-    private fun coverResource(doctor: String): Int {
-        return when (doctor) {
-            "Drh. Aji Kusuma" -> R.drawable.aji
-            "Drh. Mutiara" -> R.drawable.mutiara
-            "Drh. Chandra" -> R.drawable.chandra
-            "Drh. Nadine" -> R.drawable.nadine
-            "Drh. Caroline" -> R.drawable.caroline
-            "Drh. Julia" -> R.drawable.julia
-            "Drh. Aisha" -> R.drawable.aisha
-            "Drh. Nalend" -> R.drawable.nalend
-            "Drh. Isa" -> R.drawable.lisa
-            "Drh. Annisa" -> R.drawable.annisa
-            "Drh. Nabila" -> R.drawable.nabila
-            "Drh. Dion" -> R.drawable.dion
+    private fun coverResource(user: String): Int {
+        return when (user) {
+            "Budi" -> R.drawable.aji
+            "Larasati" -> R.drawable.mutiara
+            "Joko" -> R.drawable.chandra
+            "Eka" -> R.drawable.nadine
+            "Saras" -> R.drawable.caroline
+            "Intan" -> R.drawable.julia
             else -> R.drawable.aji
         }
     }
 
-    private fun setupRecyclerView() {
-        binding.rvHistory.apply {
-            layoutManager = LinearLayoutManager(requireContext())
-            adapter = RiwayatAdapter(transactionList, this@KonsultasiDokterFragment)
-        }
-    }
 }

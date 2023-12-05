@@ -10,16 +10,18 @@ import androidx.core.content.ContextCompat
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.databinding.ActivityRiwayatPasienBinding
 import com.collaboracrew.catwell.databinding.FragmentInfoVetBinding
+import com.collaboracrew.catwell.databinding.FragmentKonsultasiDokterBinding
 
 class RiwayatDokterFragment : Fragment() {
     private lateinit var binding: ActivityRiwayatPasienBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = ActivityRiwayatPasienBinding.inflate(inflater, container, false)
-        val view = binding.root
+
 
         if (savedInstanceState == null) {
             replaceFragment(AcceptConsultationFragment())
@@ -44,7 +46,7 @@ class RiwayatDokterFragment : Fragment() {
             binding.btReject.setTextAppearance(R.style.poppinsSemiBold16spOrange)
         }
 
-        return view
+        return binding.root
     }
 
 

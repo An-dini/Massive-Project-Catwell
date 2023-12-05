@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    tools:context=".view.ProfileDokterFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_orange"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/poppinsBold24spWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Profile" />
+            <TextView
+                style="@style/poppinsMed12spWhite"
+                android:id="@+id/tvSubTitle"
+                android:text="Info Profile Kamu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/base_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoprofile_dk"
+                android:layout_width="159dp"
+                android:layout_height="159dp"
+                android:layout_below="@+id/include"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/annisa" />
+
+            <TextView
+                style="@style/poppinsBold16spOrange"
+                android:layout_marginTop="10dp"
+                android:id="@+id/namaprofile_dk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fotoprofile_dk"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="Drh. Sri Wulandari"/>
+
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/editProfile_dk"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:text="Edit Profile"
+                android:textAllCaps="false"
+                android:gravity="start"
+                android:padding="10dp"
+                android:drawableEnd="@drawable/ic_forward"/>
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/SecondaryColor"/>
+
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/edtPass_dk"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:text="Edit Password"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:gravity="start"
+                android:drawableEnd="@drawable/ic_forward"/>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/SecondaryColor"/>
+
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/ttgapk_dk"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:text="Tentang Aplikasi"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:gravity="start"
+                android:drawableEnd="@drawable/ic_forward"/>
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/SecondaryColor"/>
+
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/hps_akn_dk"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:outlineAmbientShadowColor="@color/SecondaryColor"
+                android:text="Hapus Akun"
+                android:textColor="@color/PrimaryColor"
+                android:paddingLeft="10dp"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                android:gravity="start"/>
+
+
+            <TextView
+                style="@style/poppinsReg16spBlack"
+                android:id="@+id/keluar_dk"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/red"
+                android:text="Keluar"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                android:gravity="start"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
