@@ -51,7 +51,7 @@
             android:inputType="textEmailAddress"
             android:textColorHint="#B2B4B6"
             android:paddingLeft="10dp"
-            android:id="@+id/emailDc"/>
+            android:id="@+id/username"/>
 
         <TextView
             style="@style/poppinsMed14spBlack"
@@ -70,7 +70,7 @@
             android:textColorHint="#B2B4B6"
             android:inputType="textPassword"
             android:paddingLeft="10dp"
-            android:id="@+id/passwdDc"/>
+            android:id="@+id/passwd"/>
     </LinearLayout>
 
     <TextView
