@@ -15,6 +15,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.collaboracrew.catwell.DoctorMainActivity
 import com.collaboracrew.catwell.R
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
@@ -36,10 +37,10 @@ class ChatLogDoctorActivity : AppCompatActivity() {
         var ivTimer = findViewById<ImageView>(R.id.ivTimer)
         val handler = Handler(Looper.getMainLooper())
 
-        if (intent.getBooleanExtra("startConsultation", false)) {
+        if (intent.getBooleanExtra("chatBaru", false)) {
             handler.postDelayed({
-//                timesUpDialog()
-            }, 5000)
+                timesUpDocDialog()
+            }, 3000)
         }else{
             tvTimer.visibility = View.GONE
             ivTimer.visibility = View.GONE
@@ -51,28 +52,24 @@ class ChatLogDoctorActivity : AppCompatActivity() {
         val rvChatLog = findViewById<RecyclerView>(R.id.rvChatLog)
         val adapter = GroupAdapter<GroupieViewHolder>()
 
-        adapter.add(ChatFromDoctor("Halo! Dengan Drh. Aji disini, keluhan apa yang dapat saya bantu? Boleh disampaikan ya  "))
-        adapter.add(ChatToDoctor("Halo Dokter, kucing saya sudah dua hari ini diare. Apa yang harus saya lakukan ya dok?"))
-        adapter.add(ChatFromDoctor("Terima kasih atas informasinya. Saya akan bertanya beberapa pertanyaan terlebih dahulu. Apakah ada perubahan dalam nafsu makan kucing anda akhir-akhir ini?"))
-        adapter.add(ChatToDoctor("Nafsu makannya normal tapi kucing saya lemas beberapa hari ini. kucingnya sempat muntah juga beberapa hari lalu."))
-
         rvChatLog.layoutManager = LinearLayoutManager(this) // Menambahkan layout manager jika belum ada
         rvChatLog.adapter = adapter
     }
 
-//    private  fun  timesUpDialog(){
-//        val dialog = Dialog(this)
-//        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-//        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-//        dialog.setContentView(R.layout.dialog_times_up)
-//
-//        val btKirim: Button = dialog.findViewById(R.id.btKirim)
-//        btKirim.setOnClickListener {
-//            val intent = Intent(this, HistoryConsultationDetailActivity::class.java)
-//            startActivity(intent)
-//        }
-//        dialog.show()
-//    }
+    private  fun  timesUpDocDialog(){
+        val dialog = Dialog(this)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.setContentView(R.layout.dialog_times_up_doctor)
+
+        val btTutup: Button = dialog.findViewById(R.id.btTutup)
+        btTutup.setOnClickListener {
+            val intent = Intent(this, DoctorMainActivity::class.java)
+            intent.putExtra("listChatDoctor", true)
+            startActivity(intent)
+        }
+        dialog.show()
+    }
 }
 
 class ChatToDoctor(val text: String) : Item<GroupieViewHolder>() {

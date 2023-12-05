@@ -69,7 +69,7 @@
         android:layout_marginTop="92dp"
         android:padding="16dp"
         android:background="@drawable/base_white"
-        android:backgroundTint="@color/BackgroundColor"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
         <RelativeLayout
             android:layout_width="395dp"
             android:layout_height="589dp"
-            android:background="@color/BackgroundColor">
+            android:background="@color/white">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/fotoprofile"
@@ -173,18 +173,16 @@
 
             <Button
                 android:id="@+id/btn_edt_profil_dk"
-                style="@style/poppinsSemiBold16spBlack"
-                android:layout_width="140dp"
-                android:layout_height="50dp"
+                style="@style/poppinsSemiBold16spWhite"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/edt_nohp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="107dp"
-                android:width="250dp"
-                android:backgroundTint="@color/SecondaryColor"
+                android:background="@drawable/rectangle_rounded"
+                android:backgroundTint="@color/PrimaryColor"
                 android:text="Selesai"
-                android:textAllCaps="false"
-                android:textColor="@color/white" />
-
+                android:textAllCaps="false" />
 
         </RelativeLayout>
     </RelativeLayout>

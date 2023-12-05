@@ -4,13 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
-import com.collaboracrew.catwell.view.BerandaFragment
 import com.collaboracrew.catwell.view.DiskusiFragment
-import com.collaboracrew.catwell.view.InfoVetFragment
+import com.collaboracrew.catwell.view.FragmentBeranda_dk
 import com.collaboracrew.catwell.view.KonsultasiDokterFragment
-import com.collaboracrew.catwell.view.KonsultasiFragment
+import com.collaboracrew.catwell.view.ProfileDokterFragment
 import com.collaboracrew.catwell.view.RiwayatDokterFragment
-import com.collaboracrew.catwell.view.RiwayatFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DoctorMainActivity : AppCompatActivity() {
@@ -22,21 +20,24 @@ class DoctorMainActivity : AppCompatActivity() {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationBarDoctor)
 
-        if (intent.getBooleanExtra("transactionData", false)) {
-            replaceFragment(RiwayatFragment())
-            bottomNavigationView.selectedItemId = R.id.riwayatDokter
-        } else if (intent.getBooleanExtra("newSchedule", false)) {
-            replaceFragment(KonsultasiFragment())
+        if (intent.getBooleanExtra("simpanProfil", false)) {
+            replaceFragment(ProfileDokterFragment())
+            bottomNavigationView.selectedItemId = R.id.profileDokter
+        } else if (intent.getBooleanExtra("listChatDoctor", false)) {
+            replaceFragment(KonsultasiDokterFragment())
             bottomNavigationView.selectedItemId = R.id.konsultasiDokter
+        }else if (intent.getBooleanExtra("listDiskusi", false)) {
+            replaceFragment(DiskusiFragment())
+            bottomNavigationView.selectedItemId = R.id.diskusiDokter
         } else {
-            replaceFragment(BerandaFragment())
+            replaceFragment(FragmentBeranda_dk())
             bottomNavigationView.selectedItemId = R.id.berandaDokter
         }
 
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.berandaDokter -> {
-                    replaceFragment(BerandaFragment())
+                    replaceFragment(FragmentBeranda_dk())
                     true
                 }
                 R.id.diskusiDokter -> {
@@ -52,7 +53,7 @@ class DoctorMainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.profileDokter -> {
-                    replaceFragment(InfoVetFragment())
+                    replaceFragment(ProfileDokterFragment())
                     true
                 }
                 else -> false

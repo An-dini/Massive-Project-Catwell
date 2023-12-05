@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
+import com.collaboracrew.catwell.DoctorMainActivity
 import com.collaboracrew.catwell.R
 
 class Login_Dokter : AppCompatActivity(), View.OnClickListener {
@@ -17,6 +19,11 @@ class Login_Dokter : AppCompatActivity(), View.OnClickListener {
 
         var TextLupaPw:TextView = findViewById(R.id.txt_forgot)
         TextLupaPw.setOnClickListener(this)
+
+        var btnLogin:Button = findViewById(R.id.btnLogin)
+        btnLogin.setOnClickListener(this)
+
+
     }
 
     override fun onClick(v: View) {
@@ -32,5 +39,12 @@ class Login_Dokter : AppCompatActivity(), View.OnClickListener {
                 startActivity(PW)
             }
         }
+        when(v.id){
+            R.id.btnLogin -> {
+                var PW = Intent(this@Login_Dokter, DoctorMainActivity::class.java)
+                startActivity(PW)
+            }
+        }
+
     }
 }

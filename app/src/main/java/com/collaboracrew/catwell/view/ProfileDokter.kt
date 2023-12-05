@@ -5,7 +5,6 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
 import android.view.Window
 import android.widget.Button
@@ -13,7 +12,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.collaboracrew.catwell.R
-import com.collaboracrew.catwell.R.layout.activity_profil_dokter
 
 class ProfileDokter: AppCompatActivity(), View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,7 +74,7 @@ class ProfileDokter: AppCompatActivity(), View.OnClickListener{
 
         val btYa: Button = dialog.findViewById(R.id.btYa)
         btYa.setOnClickListener {
-            val intent = Intent(this@ProfileDokter, WelcomeScreenActivity::class.java)
+            val intent = Intent(this@ProfileDokter, Pilih_Sebagai::class.java)
             startActivity(intent)
         }
 
@@ -97,7 +95,7 @@ class ProfileDokter: AppCompatActivity(), View.OnClickListener{
 
         val btYa: Button = dialog.findViewById(R.id.btYa)
         btYa.setOnClickListener {
-            val intent = Intent(this@ProfileDokter, WelcomeScreenActivity::class.java)
+            val intent = Intent(this@ProfileDokter, Pilih_Sebagai::class.java)
             startActivity(intent)
         }
 
@@ -109,6 +107,4 @@ class ProfileDokter: AppCompatActivity(), View.OnClickListener{
 
         dialog.show()
     }
-
-
 }

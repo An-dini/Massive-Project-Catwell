@@ -26,32 +26,72 @@ class RejectConsultationFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
+        transactions()
     }
 
+
     private fun setupRecyclerView() {
-        val patientHistoryList = generateScheduleList()
-        adapter = PatientHistoryAdapter(patientHistoryList, clickListener = {patientHistoryList ->
-            val intent = Intent(requireContext(), PatientHistoryDetailActivity::class.java)
-            intent.putExtra(PATIENT_HISTORY_ID_EXTRA, patientHistoryList?.id)
-            startActivity(intent) }, isFromAcceptConsultationFragment = false)
+        val patientHistoryList = transactions()
+        adapter =
+            PatientHistoryAdapter(patientHistoryList, clickListener = { selectedPatientHistory ->
+                val intent = Intent(requireContext(), PatientHistoryDetailActivity::class.java)
+                intent.putExtra(PATIENT_HISTORY_ID_EXTRA, selectedPatientHistory.id)
+                startActivity(intent)
+            }, isFromAcceptConsultationFragment = true)
 
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
     }
 
-
-    private fun generateScheduleList(): List<PatientHistoryModel> {
+    private fun transactions(): List<PatientHistoryModel> {
         val patientHistoryList = mutableListOf<PatientHistoryModel>()
+        val patientName = resources.getStringArray(R.array.patient_name_dc)
+        val day = resources.getStringArray(R.array.day_dc)
+        val date = resources.getStringArray(R.array.date_dc)
+        val time = resources.getStringArray(R.array.time_dc)
+        val payment = resources.getStringArray(R.array.payment_dc)
+        val price = resources.getStringArray(R.array.price_dc)
+        val complaint = resources.getStringArray(R.array.complaint_dc)
+        val solution = resources.getStringArray(R.array.solution_dc)
+        val method = resources.getStringArray(R.array.method_dc)
+        val recipe = resources.getStringArray(R.array.recipe_dc)
+        val reference = "-"
 
-        patientHistoryList.add(PatientHistoryModel(R.drawable.mutiara, "Larasati", "Senin", "13 Agustus 2023", "20:00", "DANA", "130.000", "Muntah-muntah, nafsu makan menurun, lemas", "di beri makanan favorit lalu di kasih obat penambah nafsu makan", "Video Call", "Maropitant citrate (3x1 hari)", "-", 1))
-        patientHistoryList.add(PatientHistoryModel(R.drawable.annisa, "Larasati", "Senin", "13 Agustus 2023", "20:00", "DANA", "130.000", "Muntah-muntah, nafsu makan menurun, lemas", "di beri makanan favorit lalu di kasih obat penambah nafsu makan", "Video Call", "Maropitant citrate (3x1 hari)", "-", 2))
-        patientHistoryList.add(PatientHistoryModel(R.drawable.aji, "Larasati", "Senin", "13 Agustus 2023", "20:00", "DANA", "130.000", "Muntah-muntah, nafsu makan menurun, lemas", "di beri makanan favorit lalu di kasih obat penambah nafsu makan", "Video Call", "Maropitant citrate (3x1 hari)", "-", 3))
-        patientHistoryList.add(PatientHistoryModel(R.drawable.julia, "Larasati", "Senin", "13 Agustus 2023", "20:00", "DANA", "130.000", "Muntah-muntah, nafsu makan menurun, lemas", "di beri makanan favorit lalu di kasih obat penambah nafsu makan", "Video Call", "Maropitant citrate (3x1 hari)", "-", 4))
 
 
+        for (i in patientName.indices) {
+            val user = patientName[i]
+            val transaction = PatientHistoryModel(
+                coverResource(user),
+                user,
+                day[i],
+                date[i],
+                time[i],
+                payment[i],
+                price[i],
+                complaint[i],
+                solution[i],
+                method[i],
+                recipe[i],
+                reference,
+                id = patientHistoryList.size
+            )
+            patientHistoryList.add(transaction)
+        }
         return patientHistoryList
+    }
+
+    private fun coverResource(user: String): Int {
+        return when (user) {
+            "Budi" -> R.drawable.aji
+            "Larasati" -> R.drawable.mutiara
+            "Mutiara" -> R.drawable.aisha
+            "Devi" -> R.drawable.nadine
+            else -> R.drawable.aji
+        }
     }
 }

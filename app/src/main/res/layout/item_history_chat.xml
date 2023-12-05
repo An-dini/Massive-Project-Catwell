@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clTransaction"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPatient"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/usereditprofil" />
+
+    <TextView
+        android:id="@+id/tvNama"
+        style="@style/poppinsSemiBold16spOrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:paddingVertical="2dp"
+        android:text="Larasati"
+        app:layout_constraintStart_toEndOf="@+id/ivPatient"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/poppinsReg12spBlack"
+        android:id="@+id/tvChatIsi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvNama"
+        app:layout_constraintStart_toEndOf="@+id/ivPatient"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:maxLines="3"
+        android:text="Selamat pagi, kucing saya mengalami batuk yang berkepanjangan. Bisakah saya mendapatkan saran atau perawatan yang diperlukan?"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/PrimaryColor"
+        app:layout_constraintTop_toBottomOf="@id/tvChatIsi"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
