@@ -26,6 +26,7 @@ class register : AppCompatActivity() {
     private lateinit var etEmail: EditText
     private lateinit var etPass: EditText
     private lateinit var etGender: Spinner
+    private lateinit var tipePengguna: TextView
     private lateinit var etConfirmPass: EditText
     private lateinit var binding: ActivityRegisterBinding
 
@@ -49,7 +50,10 @@ class register : AppCompatActivity() {
         etEmail = binding.edtEmail
         etGender = binding.autoCompleteGender
         etPass = binding.edtEnteepasswd
+        tipePengguna = binding.tipePengguna
         etConfirmPass = binding.edtConfirmpasswd
+
+        tipePengguna.text = "User"
 
         setupListener()
     }
@@ -59,7 +63,7 @@ class register : AppCompatActivity() {
             if (etName.text.toString().isNotEmpty() || etEmail.text.toString().isNotEmpty() || etPass.text.toString().isNotEmpty() || etConfirmPass.text.toString().isNotEmpty() || etGender.selectedItem.toString().isNotEmpty()){
                 if (etPass.text.toString() == etConfirmPass.text.toString()) {
                     Log.e("RegisterActivity", etName.text.toString())
-                    api.create(etName.text.toString(),etEmail.text.toString(),etPass.text.toString(),etGender.selectedItem.toString())
+                    api.create(etName.text.toString(),etEmail.text.toString(),etPass.text.toString(),etGender.selectedItem.toString(),tipePengguna.text.toString())
                         .enqueue(object : Callback<SubmitModel> {
                             override fun onFailure(call: Call<SubmitModel>, t: Throwable) {
                                 Log.e("RegisterActivity", t.toString())

@@ -13,7 +13,8 @@ interface ApiEndpoint {
     @POST("login.php")
     fun login(
         @Field("email_user") emailUser: String,
-        @Field("pass_user") passUser: String
+        @Field("pass_user") passUser: String,
+        @Field("tipe_pengguna") tipePengguna: String,
     ): Call<LoginModel>
 
     @FormUrlEncoded
@@ -23,5 +24,6 @@ interface ApiEndpoint {
         @Field("email_user") emailUser: String,
         @Field("pass_user") passUser: String,
         @Field("gender_user") genderUser: String,
+        @Field("tipe_pengguna") tipePengguna: String,
     ): Call<SubmitModel>
 }
