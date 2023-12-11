@@ -36,6 +36,15 @@
         android:padding="20dp">
 
         <TextView
+            android:id="@+id/tipePengguna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone"
+            android:text="Dokter"/>
+
+        <TextView
             style="@style/poppinsMed14spBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

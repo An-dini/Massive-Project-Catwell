@@ -35,6 +35,15 @@
         android:id="@+id/linear">
 
         <TextView
+            android:id="@+id/tipePengguna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone"
+            android:text="User"/>
+
+        <TextView
             style="@style/poppinsMed14spBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -144,6 +153,7 @@
         android:background="@drawable/rectangle_rounded"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/linear"
+        android:textAllCaps="false"
         android:text="Daftar"/>
     <LinearLayout
         android:layout_width="match_parent"

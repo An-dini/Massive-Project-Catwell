@@ -24,6 +24,7 @@ class Login : AppCompatActivity(){
     private lateinit var btLogin: Button
     private lateinit var etEmail: EditText
     private lateinit var etPass: EditText
+    private lateinit var tipePengguna: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,16 +51,19 @@ class Login : AppCompatActivity(){
         btLogin = findViewById(R.id.btnLogin)
         etEmail = findViewById(R.id.email)
         etPass = findViewById(R.id.passwd)
+        tipePengguna = binding.tipePengguna
+        tipePengguna.text = "User"
     }
 
     private fun setupListener() {
         btLogin.setOnClickListener {
             val emailUser = etEmail.text.toString()
             val passUser = etPass.text.toString()
+            val tipePengguna = tipePengguna.text.toString()
 
             if (emailUser.isNotEmpty() && passUser.isNotEmpty()) {
                 Log.e("RegisterActivity", emailUser)
-                api.login(emailUser, passUser)
+                api.login(emailUser, passUser, tipePengguna)
                     .enqueue(object : Callback<LoginModel> {
                         override fun onFailure(call: Call<LoginModel>, t: Throwable) {
                             Log.e("LoginActivity", t.toString())

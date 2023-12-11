@@ -22,6 +22,7 @@ class Login_Dokter : AppCompatActivity() {
     private lateinit var btLogin: Button
     private lateinit var etEmail: EditText
     private lateinit var etPass: EditText
+    private lateinit var tipePengguna: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_dokter)
@@ -46,16 +47,19 @@ class Login_Dokter : AppCompatActivity() {
         btLogin = findViewById(R.id.btnLogin)
         etEmail = findViewById(R.id.emailDc)
         etPass = findViewById(R.id.passwdDc)
+        tipePengguna = findViewById(R.id.tipePengguna)
+        tipePengguna.text = "Dokter"
     }
 
     private fun setupListener() {
         btLogin.setOnClickListener {
             val emailUser = etEmail.text.toString()
             val passUser = etPass.text.toString()
+            val tipePengguna = tipePengguna.text.toString()
 
             if (emailUser.isNotEmpty() && passUser.isNotEmpty()) {
                 Log.e("RegisterActivity", emailUser)
-                api.login(emailUser, passUser)
+                api.login(emailUser, passUser, tipePengguna)
                     .enqueue(object : Callback<LoginModel> {
                         override fun onFailure(call: Call<LoginModel>, t: Throwable) {
                             Log.e("LoginActivity", t.toString())
