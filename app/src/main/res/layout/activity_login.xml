@@ -50,7 +50,7 @@
             android:inputType="textEmailAddress"
             android:textColorHint="#B2B4B6"
             android:paddingLeft="10dp"
-            android:id="@+id/username"/>
+            android:id="@+id/email"/>
 
         <TextView
             style="@style/poppinsMed14spBlack"
