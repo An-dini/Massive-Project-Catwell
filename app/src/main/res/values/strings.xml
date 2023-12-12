@@ -12,6 +12,132 @@
     <string name="bri">BRI</string>
     <string name="bni">BNI</string>
 
+    <!--    riwayat pasien ACC -->
+
+    <string-array name="patient_name_accept">
+        <item>Larasati</item>
+        <item>Budi</item>
+    </string-array>
+
+    <string-array name="day_accept">
+        <item>Kamis</item>
+        <item>Jumat</item>
+    </string-array>
+
+    <string-array name="date_accept">
+        <item>16 November 2023</item>
+        <item>17 November 2023</item>
+    </string-array>
+
+    <string-array name="time_accept">
+        <item>13:00</item>
+        <item>09:00</item>
+    </string-array>
+
+    <string-array name="payment_accept">
+        <item>ShopeePay</item>
+        <item>BCA</item>
+    </string-array>
+
+    <string-array name="price_accept">
+        <item>130.000</item>
+        <item>130.000</item>
+    </string-array>
+
+    <string-array name="complaint_accept">
+        <item>Muntah-muntah, nafsu makan menurun, lemas</item>
+        <item>Muntah-muntah, nafsu makan menurun, lemas</item>
+    </string-array>
+
+    <string-array name="solution_accept">
+        <item>di beri makanan favorit lalu di kasih obat penambah nafsu makan</item>
+        <item>di beri makanan favorit lalu di kasih obat penambah nafsu makan</item>
+    </string-array>
+
+    <string-array name="method_accept">
+        <item>Chat</item>
+        <item>Chat</item>
+    </string-array>
+
+    <string-array name="recipe_accept">
+        <item>Maropitant citrate (3x1 hari)</item>
+        <item>Maropitant citrate (3x1 hari)</item>
+    </string-array>
+
+    <!--    riwayat pasien DC-->
+
+    <string-array name="patient_name_dc">
+        <item>Mutiara</item>
+        <item>Devi</item>
+    </string-array>
+
+    <string-array name="day_dc">
+        <item>Rabu</item>
+        <item>Jumat</item>
+    </string-array>
+
+    <string-array name="date_dc">
+        <item>15 November 2023</item>
+        <item>24 November 2023</item>
+    </string-array>
+
+    <string-array name="time_dc">
+        <item>20:00</item>
+        <item>11:00</item>
+    </string-array>
+
+    <string-array name="payment_dc">
+        <item>OVO</item>
+        <item>DANA</item>
+    </string-array>
+
+    <string-array name="price_dc">
+        <item>150.000</item>
+        <item>130.000</item>
+    </string-array>
+
+    <string-array name="complaint_dc">
+        <item>Muntah-muntah, nafsu makan menurun, lemas</item>
+        <item>Muntah-muntah, nafsu makan menurun, lemas</item>
+    </string-array>
+
+    <string-array name="solution_dc">
+        <item>di beri makanan favorit lalu di kasih obat penambah nafsu makan</item>
+        <item>di beri makanan favorit lalu di kasih obat penambah nafsu makan</item>
+    </string-array>
+
+    <string-array name="method_dc">
+        <item>Video Call</item>
+        <item>Chat</item>
+    </string-array>
+
+    <string-array name="recipe_dc">
+        <item>Maropitant citrate (3x1 hari)</item>
+        <item>Maropitant citrate (3x1 hari)</item>
+    </string-array>
+
+    <!--    Data Chat Pasien-->
+
+    <string-array name="patient_name_trans">
+        <item>Larasati</item>
+        <item>Budi</item>
+        <item>Eka</item>
+        <item>Saras</item>
+        <item>Intan</item>
+        <item>Joko</item>
+    </string-array>
+
+    <string-array name="isi_chat_trans">
+        <item>Selamat pagi, kucing saya mengalami batuk yang berkepanjangan. Bisakah saya mendapatkan saran atau perawatan yang diperlukan?</item>
+        <item>Hallo, kucing saya terlihat kurang aktif belakangan ini. Apakah ada hal yang perlu saya perhatikan atau lakukan untuk membantunya merasa lebih baik?</item>
+        <item>Hai, saya baru saja mengadopsi kucing dan ingin memastikan bahwa dia mendapatkan perawatan yang tepat. Bisakah Anda membantu saya memahami kebutuhan kesehatannya?</item>
+        <item>Selamat siang, saya ingin menjadwalkan konsultasi rutin untuk pemeriksaan kesehatan tahunan kucing saya. Bagaimana cara terbaik untuk melakukannya?</item>
+        <item>Halo, saya ingin berkonsultasi tentang kesehatan kucing saya.</item>
+        <item>Selamat Pagi, saya ingin berkonsultasi tentang kesehatan kucing saya.</item>
+    </string-array>
+
+
+
     <!--    Data transactions-->
 
     <string-array name="doctor_name_trans">
@@ -179,10 +305,12 @@
         <item>true</item>
         <item>else</item>
     </string-array>
-<<<<<<< HEAD
-<!-- TODO: Remove or change this placeholder text -->
-=======
-    <!-- TODO: Remove or change this placeholder text -->
->>>>>>> origin/branch-zakki
+
+    <!--    gender option -->
+    <string-array name="gender_options">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

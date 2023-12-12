@@ -34,47 +34,106 @@
         android:padding="20dp"
         android:id="@+id/linear">
 
+        <TextView
+            android:id="@+id/tipePengguna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone"
+            android:text="User"/>
+
+        <TextView
+            style="@style/poppinsMed14spBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="Nama lengkap"/>
+
         <EditText
             style="@style/poppinsReg14spBlack"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Nama lengkap"
+            android:hint="Masukkan Nama Lengkap Anda"
+            android:textColorHint="#B2B4B6"
+            android:inputType="textPersonName"
             android:background="@drawable/rectangle_rounded_stroke"
             android:paddingLeft="10dp"
             android:id="@+id/edt_fullname"/>
+
+        <TextView
+            style="@style/poppinsMed14spBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="Jenis Kelamin"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangle_rounded_stroke"
+            android:id="@+id/edt_jenisKelamin">
+
+            <Spinner
+                android:id="@+id/autoCompleteGender"
+                style="@style/poppinsReg14spBlack"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rectangle_rounded_stroke"
+                android:inputType="none"
+                android:paddingHorizontal="2dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            style="@style/poppinsMed14spBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="E-mail Aktif"/>
+
         <EditText
             style="@style/poppinsReg14spBlack"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Jenis kelamin"
-            android:textColorHint="#B2B4B6"
             android:background="@drawable/rectangle_rounded_stroke"
-            android:drawableEnd="@drawable/gender"
-            android:paddingLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/edt_gender"/>
-        <EditText
-            style="@style/poppinsReg14spBlack"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/rectangle_rounded_stroke"
-            android:hint="Email"
+            android:hint="cth. emailanda@domain.com"
             android:textColorHint="#B2B4B6"
             android:paddingLeft="10dp"
-            android:layout_marginTop="10dp"
             android:id="@+id/edt_email"
             android:inputType="textEmailAddress"/>
+
+        <TextView
+            style="@style/poppinsMed14spBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="Kata Sandi"/>
+
         <EditText
             style="@style/poppinsReg14spBlack"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/rectangle_rounded_stroke"
-            android:hint="Kata sandi"
+            android:hint="Masukkan Kata Sandi"
             android:textColorHint="#B2B4B6"
             android:paddingLeft="10dp"
-            android:layout_marginTop="10dp"
             android:id="@+id/edt_enteepasswd"
             android:inputType="textPassword"/>
+
+        <TextView
+            style="@style/poppinsMed14spBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="4dp"
+            android:text="Konfirmasi Kata Sandi"/>
+
         <EditText
             style="@style/poppinsReg14spBlack"
             android:layout_width="match_parent"
@@ -83,7 +142,6 @@
             android:hint="Konfirmasi kata sandi"
             android:textColorHint="#B2B4B6"
             android:paddingLeft="10dp"
-            android:layout_marginTop="10dp"
             android:id="@+id/edt_confirmpasswd"
             android:inputType="textPassword"/>
     </LinearLayout>
@@ -95,6 +153,7 @@
         android:background="@drawable/rectangle_rounded"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/linear"
+        android:textAllCaps="false"
         android:text="Daftar"/>
     <LinearLayout
         android:layout_width="match_parent"

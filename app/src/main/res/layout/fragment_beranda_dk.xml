@@ -6,11 +6,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.FragmentBeranda_dk">
 
-
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/Toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:background="@drawable/base_orange"
         android:minHeight="?attr/actionBarSize"
         android:paddingStart="16dp"
@@ -20,15 +19,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/imgView1"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/usereditprofil"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageView
+            android:id="@+id/imgView1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/usereditprofil"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
         <LinearLayout
@@ -36,22 +35,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvnameacount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Dr. Hafara Peja"
-        android:fontFamily="@font/poppinsregular"
-        android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/tvnameacount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Dr. Hafara Peja"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/white"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="0000000000000"
-        android:fontFamily="@font/poppinsregular"
-        android:textColor="@color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="0000000000000"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/white" />
 
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -60,40 +59,165 @@
         android:id="@+id/cardView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="140dp"
         android:background="@drawable/base_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
 
-    <TextView
+        <TextView
         style="@style/poppinsMed14spBlack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="New Booking" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv1_beranda_dk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="20dp"
-        android:contentDescription="Booking"
-        tools:listitem="@layout/item_booking_dk" />
+        <RelativeLayout
+            android:id="@+id/baseKonsul"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/border_background"
+            android:backgroundTint="@color/PrimaryColor"
+            android:elevation="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoprofile_dk"
+                android:layout_width="56dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/usereditprofil" />
+
+            <TextView
+                android:id="@+id/namaprofile_beranda_dk"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/fotoprofile_dk"
+                android:text="Shafa Shafira"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppinsregular"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/namakucing"
+                android:layout_width="wrap_content"
+                android:layout_height="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/fotoprofile_dk"
+                android:text="Kucing Oyen"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_below="@id/namaprofile_beranda_dk"
+                android:layout_marginTop="2dp" />
+
+            <ImageView
+                android:id="@+id/ic_kalender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namakucing"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/fotoprofile_dk"
+                android:src="@drawable/kalender" />
+
+            <TextView
+                android:id="@+id/tgl"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/namakucing"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/ic_kalender"
+                android:text="22 Okt"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/ic_jam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namakucing"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/tgl"
+                android:src="@drawable/jam" />
+
+            <TextView
+                android:id="@+id/jam"
+                android:layout_width="wrap_content"
+                android:layout_height="20sp"
+                android:layout_below="@+id/namakucing"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/ic_jam"
+                android:text="09:30 - 10:30"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tgl"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:paddingVertical="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/poppinsSemiBold14spWhite"
+                    android:id="@+id/btn_reject"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="2dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/orange_rounded_stroke"
+                    android:text="Reject"
+                    android:textAllCaps="false"/>
+                <Button
+                    style="@style/poppinsSemiBold14spOrange"
+                    android:id="@+id/btn_accept"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/white_rounded_stroke"
+                    android:text="Accept"
+                    android:textAllCaps="false"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:src="@drawable/tidak_ada_pasien_baru" />
 
         <View
             android:layout_width="match_parent"
@@ -108,30 +232,15 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Konsultasi Terbaru" />
+
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvtime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:listitem="@layout/item_time_dk"
-            android:layout_marginStart="16dp"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv2_beranda_dk"
+            android:id="@+id/rvBerandaDr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginStart="20dp"
             android:contentDescription="RiwayatKonsultasi"
             tools:listitem="@layout/item_konsultasi_dk" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:background="#F1F1F1"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"/>
-
-    </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-
+        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

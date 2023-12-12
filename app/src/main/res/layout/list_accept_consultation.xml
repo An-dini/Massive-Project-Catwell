@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutSchedule"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="16dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginBottom="16dp"
+    android:elevation="4dp"
+    android:background="@drawable/white_card">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPatient"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/usereditprofil" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/poppinsSemiBold16spOrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:paddingVertical="2dp"
+        android:text="Larasati"
+        app:layout_constraintStart_toEndOf="@+id/ivPatient"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/poppinsReg12spBlack"
+        android:id="@+id/tvSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toEndOf="@+id/ivPatient"
+        android:text="Senin, 13 Agustus 2023"/>
+    <TextView
+        style="@style/poppinsReg12spBlack"
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/ivPatient"
+        app:layout_constraintTop_toBottomOf="@id/tvSchedule"
+        android:text="Pukul 20:01 WIB" />
+    <TextView
+        style="@style/poppinsMed12spBlack"
+        android:id="@+id/tvPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/ivPatient"
+        app:layout_constraintTop_toBottomOf="@id/tvTime"
+        android:text="Pembayaran via DANA sebesar Rp.130.000"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

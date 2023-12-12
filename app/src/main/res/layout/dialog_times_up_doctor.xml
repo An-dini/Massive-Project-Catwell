@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="280dp"
+        android:layout_height="300dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="12dp"
+        android:elevation="4dp"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/poppinsSemiBold16spBlack"
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="16dp"
+            android:text="Waktu konsultasi habis!"
+            android:gravity="center"
+            android:layout_below="@id/tvTitle"/>
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/times_up"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"/>
+
+        <Button
+            style="@style/poppinsSemiBold16spWhite"
+            android:id="@+id/btTutup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="16dp"
+            android:paddingHorizontal="64dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rectangle_rounded"
+            android:backgroundTint="@color/PrimaryColor"
+            android:textAllCaps="false"
+            android:text="Tutup Sesi"
+            />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

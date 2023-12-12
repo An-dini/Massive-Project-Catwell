@@ -82,7 +82,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
         val btYa: Button = dialog.findViewById(R.id.btYa)
         btYa.setOnClickListener {
-            val intent = Intent(this@ProfileActivity, WelcomeScreenActivity::class.java)
+            val intent = Intent(this@ProfileActivity, Pilih_Sebagai::class.java)
             startActivity(intent)
         }
 
@@ -103,7 +103,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
         val btYa: Button = dialog.findViewById(R.id.btYa)
         btYa.setOnClickListener {
-            val intent = Intent(this@ProfileActivity, WelcomeScreenActivity::class.java)
+            val intent = Intent(this@ProfileActivity, Pilih_Sebagai::class.java)
             startActivity(intent)
         }
 

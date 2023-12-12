@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import com.collaboracrew.catwell.DoctorMainActivity
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.view.ProfileActivity
 
@@ -15,7 +16,8 @@ class EditPasswordDokter : AppCompatActivity() {
 
         var btnSimpan = findViewById<Button>(R.id.btnSimpan)
         btnSimpan.setOnClickListener {
-            var intent = Intent(this@EditPasswordDokter, ProfileDokter::class.java)
+            var intent = Intent(this@EditPasswordDokter, DoctorMainActivity::class.java)
+            intent.putExtra("simpanProfil", true)
             startActivity(intent)
         }
 
