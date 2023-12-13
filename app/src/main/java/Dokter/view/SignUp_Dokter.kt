@@ -70,7 +70,6 @@ class SignUp_Dokter : AppCompatActivity(){
 
                             override fun onResponse(call: Call<SubmitModel>, response: Response<SubmitModel>) {
                                 if (response.isSuccessful){
-//                                    Log.e("RegisterActivity", response.toString())
                                     startActivity(Intent(this@SignUp_Dokter, Login::class.java))
                                     finish()
                                 }

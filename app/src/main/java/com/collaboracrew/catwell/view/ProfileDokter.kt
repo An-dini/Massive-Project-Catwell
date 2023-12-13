@@ -1,7 +1,9 @@
 package com.collaboracrew.catwell.view
 
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -14,9 +16,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.collaboracrew.catwell.R
 
 class ProfileDokter: AppCompatActivity(), View.OnClickListener{
+    private lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profil_dokter)
+
+        sharedPreferences = getSharedPreferences("CatWellPref", Context.MODE_PRIVATE)
+
         val edtprofil_dk: TextView = findViewById(R.id.editProfile_dk)
         edtprofil_dk.setOnClickListener(this)
         val edtpasswd_dk: TextView = findViewById(R.id.edtPass_dk)
@@ -82,8 +88,6 @@ class ProfileDokter: AppCompatActivity(), View.OnClickListener{
         btTidak.setOnClickListener {
             dialog.dismiss()
         }
-
-
         dialog.show()
     }
 
@@ -95,16 +99,20 @@ class ProfileDokter: AppCompatActivity(), View.OnClickListener{
 
         val btYa: Button = dialog.findViewById(R.id.btYa)
         btYa.setOnClickListener {
+            val editor = sharedPreferences.edit()
+            editor.remove("isDoctorLoggedIn")
+            editor.apply()
+
             val intent = Intent(this@ProfileDokter, Pilih_Sebagai::class.java)
             startActivity(intent)
+            finish()
         }
 
         val btTidak: Button = dialog.findViewById(R.id.btTidak)
         btTidak.setOnClickListener {
             dialog.dismiss()
         }
-
-
         dialog.show()
     }
+
 }

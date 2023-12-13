@@ -1,13 +1,16 @@
 package Dokter.view
 
+import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.collaboracrew.catwell.DoctorMainActivity
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.api.ApiRetrofit
@@ -18,11 +21,13 @@ import retrofit2.Response
 
 class Login_Dokter : AppCompatActivity() {
 
-    private val api by lazy { ApiRetrofit().endpoint }
     private lateinit var btLogin: Button
     private lateinit var etEmail: EditText
     private lateinit var etPass: EditText
     private lateinit var tipePengguna: TextView
+    private val api by lazy { ApiRetrofit().endpoint }
+    private lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_dokter)
@@ -39,6 +44,7 @@ class Login_Dokter : AppCompatActivity() {
             finish()
         }
 
+        sharedPreferences = getSharedPreferences("CatWellPref", Context.MODE_PRIVATE)
         setupView()
         setupListener()
     }
@@ -58,11 +64,11 @@ class Login_Dokter : AppCompatActivity() {
             val tipePengguna = tipePengguna.text.toString()
 
             if (emailUser.isNotEmpty() && passUser.isNotEmpty()) {
-                Log.e("RegisterActivity", emailUser)
+                Log.e("DoctorLoginActivity", emailUser)
                 api.login(emailUser, passUser, tipePengguna)
                     .enqueue(object : Callback<LoginModel> {
                         override fun onFailure(call: Call<LoginModel>, t: Throwable) {
-                            Log.e("LoginActivity", t.toString())
+                            Log.e("DoctorLoginActivity", t.toString())
                             Toast.makeText(
                                 applicationContext,
                                 "Login failed: ${t.message}",
@@ -78,6 +84,10 @@ class Login_Dokter : AppCompatActivity() {
                                 val loginResponse = response.body()
 
                                 if (loginResponse?.success == true) {
+                                    val editor = sharedPreferences.edit()
+                                    editor.putBoolean("isDoctorLoggedIn", true)
+                                    editor.apply()
+
                                     startActivity(
                                         Intent(
                                             this@Login_Dokter,
