@@ -1,7 +1,9 @@
 package com.collaboracrew.catwell.view
 
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
@@ -14,9 +16,13 @@ import android.widget.TextView
 import com.collaboracrew.catwell.R
 
 class ProfileActivity : AppCompatActivity(), View.OnClickListener {
+    private lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+
+        sharedPreferences = getSharedPreferences("CatWellPref", Context.MODE_PRIVATE)
+
         val txtviewalmt: TextView = findViewById(R.id.profileKucing)
         txtviewalmt.setOnClickListener(this)
         val txtviedtpass: TextView = findViewById(R.id.edt_pass)
@@ -103,8 +109,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
         val btYa: Button = dialog.findViewById(R.id.btYa)
         btYa.setOnClickListener {
-            val intent = Intent(this@ProfileActivity, Pilih_Sebagai::class.java)
-            startActivity(intent)
+            logout()
         }
 
         val btTidak: Button = dialog.findViewById(R.id.btTidak)
@@ -114,6 +119,16 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
 
         dialog.show()
+    }
+
+    fun logout() {
+        val editor = sharedPreferences.edit()
+        editor.remove("isLoggedIn")
+        editor.apply()
+
+        val intent = Intent(this@ProfileActivity, Pilih_Sebagai::class.java)
+        startActivity(intent)
+        finish()
     }
 
 }

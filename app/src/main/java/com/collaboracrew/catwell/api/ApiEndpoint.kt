@@ -12,18 +12,18 @@ interface ApiEndpoint {
     @FormUrlEncoded
     @POST("login.php")
     fun login(
-        @Field("email_user") emailUser: String,
-        @Field("pass_user") passUser: String,
-        @Field("tipe_pengguna") tipePengguna: String,
+        @Field("Email_User") emailUser: String,
+        @Field("PW_User") passUser: String,
+        @Field("Tipe_Pengguna") tipePengguna: String,
     ): Call<LoginModel>
 
     @FormUrlEncoded
-    @POST("create.php")
+    @POST("register.php")
     fun create(
-        @Field("nama_user") namaUser: String,
-        @Field("email_user") emailUser: String,
-        @Field("pass_user") passUser: String,
-        @Field("gender_user") genderUser: String,
-        @Field("tipe_pengguna") tipePengguna: String,
+        @Field("Nama_User") namaUser: String,
+        @Field("Email_User") emailUser: String,
+        @Field("PW_User") passUser: String,
+        @Field("Gender_User") genderUser: String,
+        @Field("Tipe_Pengguna") tipePengguna: String,
     ): Call<SubmitModel>
 }
