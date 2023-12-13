@@ -1,6 +1,8 @@
 package com.collaboracrew.catwell.view
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -25,6 +27,7 @@ class Login : AppCompatActivity(){
     private lateinit var etEmail: EditText
     private lateinit var etPass: EditText
     private lateinit var tipePengguna: TextView
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +46,7 @@ class Login : AppCompatActivity(){
             finish()
         }
 
+        sharedPreferences = getSharedPreferences("CatWellPref", Context.MODE_PRIVATE)
         setupView()
         setupListener()
     }
@@ -53,6 +57,16 @@ class Login : AppCompatActivity(){
         etPass = findViewById(R.id.passwd)
         tipePengguna = binding.tipePengguna
         tipePengguna.text = "User"
+
+        if (sharedPreferences.contains("isLoggedIn")) {
+            val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
+
+            if (isLoggedIn) {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
     }
 
     private fun setupListener() {
@@ -62,7 +76,7 @@ class Login : AppCompatActivity(){
             val tipePengguna = tipePengguna.text.toString()
 
             if (emailUser.isNotEmpty() && passUser.isNotEmpty()) {
-                Log.e("RegisterActivity", emailUser)
+                Log.e("LoginActivity", emailUser)
                 api.login(emailUser, passUser, tipePengguna)
                     .enqueue(object : Callback<LoginModel> {
                         override fun onFailure(call: Call<LoginModel>, t: Throwable) {
@@ -82,6 +96,10 @@ class Login : AppCompatActivity(){
                                 val loginResponse = response.body()
 
                                 if (loginResponse?.success == true) {
+                                    val editor = sharedPreferences.edit()
+                                    editor.putBoolean("isLoggedIn", true)
+                                    editor.apply()
+
                                     startActivity(
                                         Intent(
                                             this@Login,
