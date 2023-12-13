@@ -21,7 +21,7 @@ class VetAdapter(private val vetlist: List<VetData>, private val clickListener: 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
-            with(vetlist[position]) {
+            with(vetlist[position]) {9
                 binding.imgVet.setImageResource(this.image)
                 binding.namaVet.text = this.namavet
                 binding.deskripsiVet.text = this.deskripsi

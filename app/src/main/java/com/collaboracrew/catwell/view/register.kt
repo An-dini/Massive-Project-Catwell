@@ -3,6 +3,7 @@ package com.collaboracrew.catwell.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+//import android.telecom.Call
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -10,14 +11,17 @@ import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+import androidx.tracing.perfetto.handshake.protocol.Response
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.api.ApiRetrofit
 import com.collaboracrew.catwell.databinding.ActivityRegisterBinding
 import com.collaboracrew.catwell.model.SubmitModel
 import com.google.android.material.textfield.TextInputLayout
+import org.chromium.base.Callback
 import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import retrofit2.Call as RetrofitCall
+import okhttp3.Call as OkHttpCall
+
 
 class register : AppCompatActivity() {
     private val api by lazy { ApiRetrofit().endpoint }
@@ -64,12 +68,12 @@ class register : AppCompatActivity() {
                 if (etPass.text.toString() == etConfirmPass.text.toString()) {
                     Log.e("RegisterActivity", etName.text.toString())
                     api.create(etName.text.toString(),etEmail.text.toString(),etPass.text.toString(),etGender.selectedItem.toString(),tipePengguna.text.toString())
-                        .enqueue(object : Callback<SubmitModel> {
-                            override fun onFailure(call: Call<SubmitModel>, t: Throwable) {
+                        .enqueue(object : retrofit2.Callback<SubmitModel> {
+                            override fun onFailure(call: retrofit2.Call<SubmitModel>, t: Throwable) {
                                 Log.e("RegisterActivity", t.toString())
                             }
 
-                            override fun onResponse(call: Call<SubmitModel>, response: Response<SubmitModel>) {
+                            override fun onResponse(call: Call<SubmitModel>, response: retrofit2.Response<SubmitModel>) {
                                 if (response.isSuccessful){
 //                                    Log.e("RegisterActivity", response.toString())
                                     startActivity(Intent(this@register, Login::class.java))
