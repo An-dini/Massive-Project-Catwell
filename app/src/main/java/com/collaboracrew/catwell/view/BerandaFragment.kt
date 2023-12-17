@@ -18,7 +18,6 @@ import com.collaboracrew.catwell.model.DOCTOR_ID_EXTRA
 import com.collaboracrew.catwell.model.DoctorModel
 import com.collaboracrew.catwell.model.ProductRecommendationModel
 import com.collaboracrew.catwell.model.UpComingScheduleItem
-import com.collaboracrew.catwell.model.doctorList
 import com.collaboracrew.catwell.viewmodel.ArticlesRecomAdapter
 import com.collaboracrew.catwell.viewmodel.DoctorRecomAdapter
 import com.collaboracrew.catwell.viewmodel.ProductRecomAdapter
@@ -92,13 +91,13 @@ class BerandaFragment : Fragment() {
                 startActivity(intent)
             }
         }
-        rvDoctorRecom.adapter = DoctorRecomAdapter(getSampleDoctorData()).apply {
-            setOnItemClickListener { doctor ->
-                val intent = Intent(requireContext(), DoctorDetailActivity::class.java)
-                intent.putExtra(DOCTOR_ID_EXTRA, doctor.id)
-                startActivity(intent)
-            }
-        }
+//        rvDoctorRecom.adapter = DoctorRecomAdapter(getSampleDoctorData()).apply {
+//            setOnItemClickListener { doctor ->
+//                val intent = Intent(requireContext(), DoctorDetailActivity::class.java)
+//                intent.putExtra(DOCTOR_ID_EXTRA, doctor.dokter.size)
+//                startActivity(intent)
+//            }
+//        }
 
 //        rvArticlesRecom.adapter = ArticlesRecomAdapter(repeatedArticleData)
         rvArticlesRecom.adapter = ArticlesRecomAdapter(repeatedArticleData).apply {
@@ -135,29 +134,29 @@ class BerandaFragment : Fragment() {
         )
     }
 
-    private fun getSampleDoctorData(): List<DoctorModel> {
-        val doctorNames = resources.getStringArray(R.array.doctor_names)
-        val doctorInstances = resources.getStringArray(R.array.doctor_instances)
-        val doctorPrice = resources.getString(R.string.doctor_price)
-        val doctorSchedule = resources.getString(R.string.doctor_schedule)
-        val doctorDuration = resources.getString(R.string.doctor_duration)
-        val doctorRating = resources.getStringArray(R.array.doctor_rating)
-        val coverList = cover()
-
-        for (i in 0 until 3) {
-            val doctor = DoctorModel(
-                coverList[i],
-                doctorNames[i],
-                doctorInstances[i],
-                doctorPrice,
-                doctorSchedule,
-                doctorDuration,
-                doctorRating[i].toFloat()
-            )
-            doctorList.add(doctor)
-        }
-        return doctorList
-    }
+//    private fun getSampleDoctorData(): List<DoctorModel> {
+//        val doctorNames = resources.getStringArray(R.array.doctor_names)
+//        val doctorInstances = resources.getStringArray(R.array.doctor_instances)
+//        val doctorPrice = resources.getString(R.string.doctor_price)
+//        val doctorSchedule = resources.getString(R.string.doctor_schedule)
+//        val doctorDuration = resources.getString(R.string.doctor_duration)
+//        val doctorRating = resources.getStringArray(R.array.doctor_rating)
+//        val coverList = cover()
+//
+////        for (i in 0 until 3) {
+////            val doctor = DoctorModel(
+////                coverList[i],
+////                doctorNames[i],
+////                doctorInstances[i],
+////                doctorPrice,
+////                doctorSchedule,
+////                doctorDuration,
+////                doctorRating[i].toFloat()
+////            )
+////            doctorList.add(doctor)
+////        }
+////        return doctorList
+//    }
 
     private fun cover():List<Int> = listOf(
         R.drawable.aji,

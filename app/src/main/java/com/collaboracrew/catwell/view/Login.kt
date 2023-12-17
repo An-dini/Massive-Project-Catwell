@@ -47,6 +47,7 @@ class Login : AppCompatActivity(){
         }
 
         sharedPreferences = getSharedPreferences("CatWellPref", Context.MODE_PRIVATE)
+
         setupView()
         setupListener()
     }
@@ -57,16 +58,6 @@ class Login : AppCompatActivity(){
         etPass = findViewById(R.id.passwd)
         tipePengguna = binding.tipePengguna
         tipePengguna.text = "User"
-
-        if (sharedPreferences.contains("isLoggedIn")) {
-            val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
-
-            if (isLoggedIn) {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-        }
     }
 
     private fun setupListener() {
@@ -96,8 +87,11 @@ class Login : AppCompatActivity(){
                                 val loginResponse = response.body()
 
                                 if (loginResponse?.success == true) {
+                                    val ID_User = loginResponse.ID_User
+
                                     val editor = sharedPreferences.edit()
                                     editor.putBoolean("isLoggedIn", true)
+                                    editor.putInt("userId", ID_User)
                                     editor.apply()
 
                                     startActivity(
