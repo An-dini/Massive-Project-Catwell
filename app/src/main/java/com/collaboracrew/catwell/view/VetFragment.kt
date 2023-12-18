@@ -47,9 +47,9 @@ class VetFragment : Fragment() {
     private fun generateVetDataList(): List<VetData> {
         val vetDataList = mutableListOf<VetData>()
 
-        vetDataList.add(VetData(R.drawable.torovet, "Toro Vet Clinic", "Alamat:Jl. Taman Palem Lestari, RW.13, Cengkareng Bar., Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota "))
-        vetDataList.add(VetData(R.drawable.bvc, "OJ Pet Care", "Alamat:Ruko Tisenia (Tiban Sentra Niaga), Blok E No, RT.5/RW.6, Tiban Lama, Sekupang, Batam City, Riau Islands 29427"))
-        vetDataList.add(VetData(R.drawable.brunopetclinic, "Bruno Pet Clinic", "Alamat: Bruno Pet Clinic, Jalan Teratai 2 No.4, Lubuk Baja Kota, Kec. Lubuk Baja, Kota Batam, Kepulauan Riau 29432"))
+        vetDataList.add(VetData(R.drawable.anabul, "Anabul Vat Centre", "Alamat:Jl. Kartini No.22D, Depok, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16431 "))
+        vetDataList.add(VetData(R.drawable.amore, "Amore Pet Shop", "Alamat:Jl. Raya Muchtar, Sawangan Lama, Kec. Sawangan, Kota Depok "))
+        vetDataList.add(VetData(R.drawable.leovet, "Leo N Vats", "Alamat: Jalan Tole Iskandar Rt 02/20 no 24, Sukamaju, Kec. Cilodong, Kota Depok."))
 
         return vetDataList
     }

@@ -2,9 +2,11 @@ package com.collaboracrew.catwell.api
 
 import com.collaboracrew.catwell.model.LoginModel
 import com.collaboracrew.catwell.model.SubmitModel
+import com.collaboracrew.catwell.model.Vet_Model
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface ApiEndpoint {
@@ -26,4 +28,10 @@ interface ApiEndpoint {
         @Field("Gender_User") genderUser: String,
         @Field("Tipe_Pengguna") tipePengguna: String,
     ): Call<SubmitModel>
+
+//    @FormUrlEncoded
+//    @GET("Data_Vet.php")
+//    fun DataVet(
+//        @Field("")
+//    ): Call<Vet_Model>
 }
