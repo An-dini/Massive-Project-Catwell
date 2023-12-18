@@ -1,13 +1,20 @@
 package com.collaboracrew.catwell.view
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.collaboracrew.catwell.R
+import com.collaboracrew.catwell.api.ApiRetrofit
 import com.collaboracrew.catwell.model.DoctorModel
+import com.collaboracrew.catwell.model.TransactionModel
 import com.midtrans.sdk.corekit.callback.TransactionFinishedCallback
+
 import com.midtrans.sdk.corekit.core.MidtransSDK
 import com.midtrans.sdk.corekit.core.TransactionRequest
 import com.midtrans.sdk.corekit.core.themes.CustomColorTheme
@@ -17,9 +24,15 @@ import com.midtrans.sdk.corekit.models.ItemDetails
 import com.midtrans.sdk.corekit.models.ShippingAddress
 import com.midtrans.sdk.uikit.SdkUIFlowBuilder
 import com.squareup.picasso.Picasso
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class DoctorDetailActivity : AppCompatActivity() {
+    private val api by lazy { ApiRetrofit().endpoint }
     private val doctor by lazy { intent.getSerializableExtra("dokter") as DoctorModel.Data }
+
+    private lateinit var sharedPreferences: SharedPreferences
 
     private lateinit var bt_consultation: Button
     private lateinit var bt_consultation2: Button
@@ -28,10 +41,16 @@ class DoctorDetailActivity : AppCompatActivity() {
     private lateinit var tvInstanceVet: TextView
     private lateinit var schedule: TextView
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_doctor_detail)
+
+        val ivBack = findViewById<ImageView>(R.id.ivBack)
+        ivBack.setOnClickListener {
+            onBackPressed()
+        }
+
+        sharedPreferences = getSharedPreferences("CatWellPref", Context.MODE_PRIVATE)
 
         setupView ()
         setupListener()
@@ -55,9 +74,8 @@ class DoctorDetailActivity : AppCompatActivity() {
         SdkUIFlowBuilder.init()
             .setClientKey("SB-Mid-client-J965Pxy-mc1iojjc")
             .setContext(applicationContext)
-            .setTransactionFinishedCallback (TransactionFinishedCallback {
-              result ->
-//              logic
+            .setTransactionFinishedCallback(TransactionFinishedCallback { result ->
+
             })
             .setMerchantBaseUrl("https://collaboracrew.000webhostapp.com/payment_response.php/")
             .enableLog(true)
@@ -73,8 +91,16 @@ class DoctorDetailActivity : AppCompatActivity() {
             val jumlahKonsultasi = "1"
             val totalHarga = hargaKonsultasi.toDouble() * jumlahKonsultasi.toInt()
 
-            val transactionRequest = TransactionRequest("Catwell-"+System.currentTimeMillis().toShort() + "", totalHarga)
-            val detail = ItemDetails("NamaItem", hargaKonsultasi.toDouble(), jumlahKonsultasi.toInt(), "Konsultasi via chat")
+            val tipe_konsultasi = "Chat"
+            val ID_Dokter = doctor.id_dokter
+            Log.e("id dokter cek", "id_dokter : $ID_Dokter")
+            val Email_User = sharedPreferences.getString("Email_User", "") ?: ""
+            Log.e("email user cek", "email_user : $Email_User")
+            val order_id = "Catwell"+System.currentTimeMillis().toShort() + ""
+
+
+            val transactionRequest = TransactionRequest(order_id, totalHarga)
+            val detail = ItemDetails("NamaItem", hargaKonsultasi.toDouble(), jumlahKonsultasi.toInt(), "chat")
             val itemDetails = arrayListOf<ItemDetails>()
             itemDetails.add(detail)
             uiKitDetail(transactionRequest)
@@ -82,6 +108,9 @@ class DoctorDetailActivity : AppCompatActivity() {
 
             MidtransSDK.getInstance().transactionRequest = transactionRequest
             MidtransSDK.getInstance().startPaymentUiFlow(this)
+
+            getTransaction(order_id, Email_User, ID_Dokter, tipe_konsultasi)
+
         }
 
         bt_consultation2.setOnClickListener {
@@ -89,8 +118,17 @@ class DoctorDetailActivity : AppCompatActivity() {
             val jumlahKonsultasi = "1"
             val totalHarga = hargaKonsultasi.toDouble() * jumlahKonsultasi.toInt()
 
-            val transactionRequest = TransactionRequest("Catwell"+System.currentTimeMillis().toShort() + "", totalHarga)
-            val detail = ItemDetails("NamaItem", hargaKonsultasi.toDouble(), jumlahKonsultasi.toInt(), "Konsultasi via video call")
+
+            val tipe_konsultasi = "Video Call"
+            val ID_Dokter = doctor.id_dokter
+            Log.e("id dokter cek", "id_dokter : $ID_Dokter")
+            val Email_User = sharedPreferences.getString("Email_User", "") ?: ""
+            Log.e("email user cek", "email_user : $Email_User")
+            val order_id = "Catwell"+System.currentTimeMillis().toShort() + ""
+
+
+            val transactionRequest = TransactionRequest(order_id, totalHarga)
+            val detail = ItemDetails("NamaItem", hargaKonsultasi.toDouble(), jumlahKonsultasi.toInt(), "video call")
             val itemDetails = arrayListOf<ItemDetails>()
             itemDetails.add(detail)
             uiKitDetail(transactionRequest)
@@ -98,6 +136,8 @@ class DoctorDetailActivity : AppCompatActivity() {
 
             MidtransSDK.getInstance().transactionRequest = transactionRequest
             MidtransSDK.getInstance().startPaymentUiFlow(this)
+
+            getTransaction(order_id, Email_User, ID_Dokter, tipe_konsultasi)
         }
     }
 
@@ -122,5 +162,28 @@ class DoctorDetailActivity : AppCompatActivity() {
         transactionRequest.customerDetails = customerDetails
 
     }
+
+    private fun getTransaction(order_id: String, Email_User: String, ID_Dokter: String, tipe_konsultasi: String) {
+        api.inputPembayaran(order_id, Email_User, ID_Dokter, tipe_konsultasi)
+            .enqueue(object : Callback<TransactionModel> {
+                override fun onFailure(call: Call<TransactionModel>, t: Throwable) {
+                    Log.e("Transaksi Gagal", t.toString())
+                }
+
+                override fun onResponse(call: Call<TransactionModel>, response: Response<TransactionModel>) {
+                    if (response.isSuccessful) {
+                        val responseBody = response.body()
+                        if (responseBody != null) {
+                            Log.e("Transaksi Berhasil", responseBody.toString())
+                        } else {
+                            Log.e("Transaksi Gagal", "Response body kosong")
+                        }
+                    } else {
+                        Log.e("Transaksi Gagal", "Kode Error: ${response.code()}")
+                    }
+                }
+            })
+    }
+
 
 }

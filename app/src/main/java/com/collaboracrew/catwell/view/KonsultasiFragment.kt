@@ -40,7 +40,7 @@ class KonsultasiFragment : Fragment() {
 
     private fun setupList() {
         listDokter = binding.root.findViewById(R.id.listDokter)
-        listDokter.layoutManager = LinearLayoutManager(requireContext())
+        listDokter.layoutManager = GridLayoutManager(requireContext(), 3)
         doctorAdapter = DoctorListAdapter(arrayListOf(), object : DoctorListAdapter.OnAdapterListener{
             override fun onClick(doctor: DoctorModel.Data) {
                 startActivity(Intent(requireContext(), DoctorDetailActivity::class.java)

@@ -9,10 +9,8 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.collaboracrew.catwell.R
-import com.collaboracrew.catwell.model.DOCTOR_ID_EXTRA
 import com.collaboracrew.catwell.model.ProductRecommendationModel
 import com.collaboracrew.catwell.viewmodel.ListProductRecomAdapter
-import com.collaboracrew.catwell.viewmodel.ProductRecomAdapter
 
 class HalamanProduk : AppCompatActivity() {
 

@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.model.ArticleRecommendationModel
-import com.collaboracrew.catwell.model.DOCTOR_ID_EXTRA
 import com.collaboracrew.catwell.model.DoctorModel
 import com.collaboracrew.catwell.model.ProductRecommendationModel
 import com.collaboracrew.catwell.model.UpComingScheduleItem

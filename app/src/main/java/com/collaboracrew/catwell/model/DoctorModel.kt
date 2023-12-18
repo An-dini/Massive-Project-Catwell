@@ -2,8 +2,6 @@ package com.collaboracrew.catwell.model
 
 import java.io.Serializable
 
-val DOCTOR_ID_EXTRA = "doctorExtra"
-
 class DoctorModel(
     val dokter: List<Data>
 ){

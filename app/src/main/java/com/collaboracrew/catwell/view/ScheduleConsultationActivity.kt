@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.databinding.ActivityScheduleConsultationBinding
-import com.collaboracrew.catwell.model.DOCTOR_ID_EXTRA
 import com.collaboracrew.catwell.model.DateModel
 import com.collaboracrew.catwell.model.DoctorModel
 import com.collaboracrew.catwell.model.TimeModel

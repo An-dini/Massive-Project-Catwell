@@ -87,11 +87,10 @@ class Login : AppCompatActivity(){
                                 val loginResponse = response.body()
 
                                 if (loginResponse?.success == true) {
-                                    val ID_User = loginResponse.ID_User
 
                                     val editor = sharedPreferences.edit()
                                     editor.putBoolean("isLoggedIn", true)
-                                    editor.putInt("userId", ID_User)
+                                    editor.putString("Email_User", emailUser)
                                     editor.apply()
 
                                     startActivity(
