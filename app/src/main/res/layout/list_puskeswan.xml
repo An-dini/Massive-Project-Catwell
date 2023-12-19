@@ -16,9 +16,9 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/img_psw1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/img_puskeswan"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:src="@drawable/pswmagelang"
             android:adjustViewBounds="true"
             android:elevation="8dp"
@@ -30,7 +30,7 @@
             android:orientation="vertical">
             <TextView
                 style="@style/poppinsSemiBold14spBlack"
-                android:id="@+id/nama_vet"
+                android:id="@+id/NamaPuskeswan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Psw"/>
