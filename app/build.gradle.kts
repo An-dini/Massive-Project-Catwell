@@ -97,6 +97,10 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp")
     implementation("com.squareup.okhttp3:logging-interceptor")
 
+    implementation ("com.squareup.picasso:picasso:2.71828")
+
+    implementation ("com.midtrans:uikit:2.0.0-SANDBOX")
+    implementation ("com.midtrans:uikit:1.23.1")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
 

@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.databinding.FragmentAcceptConsultationBinding
 import com.collaboracrew.catwell.databinding.FragmentRejectConsultationBinding
-import com.collaboracrew.catwell.model.DOCTOR_ID_EXTRA
 import com.collaboracrew.catwell.model.PATIENT_HISTORY_ID_EXTRA
 import com.collaboracrew.catwell.model.PatientHistoryModel
 

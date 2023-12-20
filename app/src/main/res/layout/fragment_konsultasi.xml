@@ -49,10 +49,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/listDokter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/item_list_doctor"/>
+            tools:listitem="@layout/item_list_doctor"
+            android:clickable="true"/>
 
     </RelativeLayout>
 

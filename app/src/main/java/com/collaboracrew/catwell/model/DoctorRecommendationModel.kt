@@ -5,6 +5,6 @@ data class DoctorRecommendationModel(
     val doctorName: String,
     val vetName: String,
     val price: String,
-    val id: Int? = doctorList.size
+    val id: Int?
 )
 

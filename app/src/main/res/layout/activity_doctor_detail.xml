@@ -86,7 +86,7 @@
                     app:cardCornerRadius="6dp">
 
                     <ImageView
-                        android:id="@+id/cover"
+                        android:id="@+id/ivImageDokter"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -148,7 +148,7 @@
                     android:layout_marginStart="70dp"
                     android:text="Nama Dokter"/>
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/tvDokterNama"
                     style="@style/poppinsReg16spBlack"
                     android:layout_marginTop="4dp"
                     android:layout_marginStart="70dp"
@@ -172,7 +172,7 @@
                     android:layout_marginStart="70dp"/>
                 <TextView
                     style="@style/poppinsReg16spBlack"
-                    android:id="@+id/instance"
+                    android:id="@+id/tvInstanceVet"
                     android:layout_marginTop="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

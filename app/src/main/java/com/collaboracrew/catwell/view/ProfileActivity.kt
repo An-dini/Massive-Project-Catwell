@@ -8,15 +8,23 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.collaboracrew.catwell.R
+import com.collaboracrew.catwell.api.ApiRetrofit
+import com.collaboracrew.catwell.model.User
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ProfileActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var sharedPreferences: SharedPreferences
+    private val api by lazy { ApiRetrofit().endpoint }
+    private var idUser: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
@@ -41,6 +49,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         backButton.setOnClickListener {
             onBackPressed()
         }
+
     }
 
     override fun onClick(v: View) {
@@ -63,8 +72,8 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         }
         when (v.id) {
             R.id.editProfile-> {
-                val intent = Intent(this@ProfileActivity, EditProfile::class.java)
-                startActivity(intent)
+                val Email_User = sharedPreferences.getString("Email_User", "") ?: ""
+                getIdUser(Email_User)
             }
         }
         when (v.id) {
@@ -101,6 +110,34 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         dialog.show()
     }
 
+    fun getIdUser(email: String) {
+        api.dataUser(Email_User = email).enqueue(object : Callback<User> {
+            override fun onFailure(call: Call<User>, t: Throwable) {
+                Log.e("ProfileActivity", t.toString())
+            }
+
+            override fun onResponse(call: Call<User>, response: Response<User>) {
+                if (response.isSuccessful) {
+                    val user = response.body()?.user
+                    if (user != null && user.isNotEmpty()) {
+                        val userData = user[0]
+                        // Assign value to idUser at the class level
+                        idUser = userData.ID_User
+                        // Start activity after obtaining the idUser
+                        val intent = Intent(this@ProfileActivity, EditProfile::class.java)
+                            .putExtra("email", email)
+                            .putExtra("idUser", idUser)
+                        startActivity(intent)
+                        Log.e("id user", "put $idUser")
+                    } else {
+                        Log.e("ProfileActivity", "No user data found")
+                    }
+                } else {
+                    Log.e("ProfileActivity", "Failed to retrieve user data: ${response.code()}")
+                }
+            }
+        })
+    }
     private  fun  LogoutAccountDialog(){
         val dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)

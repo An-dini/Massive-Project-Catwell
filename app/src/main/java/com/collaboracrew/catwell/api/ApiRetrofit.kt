@@ -1,5 +1,6 @@
 package com.collaboracrew.catwell.api
 
+import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -19,7 +20,7 @@ class ApiRetrofit {
             val retrofit= Retrofit.Builder()
                 .baseUrl("https://collaboracrew.000webhostapp.com/")
                 .client(client)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(GsonBuilder().setLenient().create()))
                 .build()
 
             return retrofit.create(ApiEndpoint::class.java)

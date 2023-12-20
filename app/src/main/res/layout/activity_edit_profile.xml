@@ -162,6 +162,7 @@
                 android:layout_below="@id/txv3"
                 android:layout_centerHorizontal="true"
                 android:paddingHorizontal="16dp"
+                android:maxLength="11"
                 android:inputType="number"
                 android:hint="085300000"
                 android:paddingLeft="10dp"

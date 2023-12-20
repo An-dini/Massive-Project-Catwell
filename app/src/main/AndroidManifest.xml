@@ -52,7 +52,7 @@
         <activity
             android:name=".view.Pilih_Sebagai"
             android:exported="false" />
-      <activity
+        <activity
             android:name=".view.RiwayatPasienActivity"
             android:exported="false" />
         <activity
@@ -86,8 +86,8 @@
             android:name=".view.EditAddressActivity"
             android:exported="false" />
         <activity
-              android:name=".view.PatientHistoryDetailActivity"
-              android:exported="false" />
+            android:name=".view.PatientHistoryDetailActivity"
+            android:exported="false" />
         <activity
             android:name=".view.register"
             android:exported="false" />
@@ -124,7 +124,7 @@
         <activity
             android:name=".view.ProfileDokter"
             android:exported="false"/>
-      <activity
+        <activity
             android:name=".view.DetailArtikel"
             android:exported="false" />
         <activity
@@ -134,8 +134,8 @@
             android:name=".view.HalamanListArtikel"
             android:exported="false" />
         <activity
-              android:name=".view.ChatLogDoctorActivity"
-              android:exported="false" />
+            android:name=".view.ChatLogDoctorActivity"
+            android:exported="false" />
         <activity
             android:name=".view.SplashScreenActivity"
             android:exported="true"

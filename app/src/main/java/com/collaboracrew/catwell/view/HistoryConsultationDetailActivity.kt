@@ -33,8 +33,6 @@ class HistoryConsultationDetailActivity : AppCompatActivity() {
 
 
         if (transaction != null) {
-            binding.name.text = transaction.doctor
-            binding.instance.text = transaction.instance
             binding.date.text = transaction.date
             binding.time.text = transaction.time
             binding.price.text = transaction.price.toString()

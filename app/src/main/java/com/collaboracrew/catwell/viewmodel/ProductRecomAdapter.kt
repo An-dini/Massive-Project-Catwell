@@ -1,49 +1,53 @@
 package com.collaboracrew.catwell.viewmodel
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.model.ProductRecommendationModel
+import com.squareup.picasso.Picasso
 
-class ProductRecomAdapter(private val data: List<ProductRecommendationModel>) : RecyclerView.Adapter<ProductRecomAdapter.ViewHolder>() {
-
-    private var onItemClickListener: ((ProductRecommendationModel) -> Unit)? = null
-
-    fun setOnItemClickListener(listener: (ProductRecommendationModel) -> Unit) {
-        onItemClickListener = listener
-    }
+class ProductRecomAdapter(
+    val produk: ArrayList<ProductRecommendationModel.Data>
+): RecyclerView.Adapter<ProductRecomAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_product_recomendation, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_product_recomendation, parent,false)
+
         return ViewHolder(view)
     }
 
+    override fun getItemCount() = produk.size
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = data[position]
-        holder.bind(item)
+        val data = produk[position]
+        holder.tvTitle.text = data.nama_produk
+
+        data.foto_produk?.let { imageUrl ->
+            Picasso.get().load(imageUrl).into(holder.ivProduk)
+        }
+
+//        link
+        holder.itemView.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(data.link_produk))
+            it.context.startActivity(intent)
+        }
     }
 
-    override fun getItemCount(): Int = data.size
+    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+        val ivProduk = itemView.findViewById<ImageView>(R.id.ivProduct)
+        val tvTitle = itemView.findViewById<TextView>(R.id.tvProductName)
+    }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val productImage: ImageView = itemView.findViewById(R.id.ivProduct)
-        private val productName: TextView = itemView.findViewById(R.id.tvProductName)
-        private val shopButton: ImageButton = itemView.findViewById(R.id.btShop)
-
-        fun bind(item: ProductRecommendationModel) {
-            productImage.setImageResource(item.ProductImage)
-            productName.text = item.ProductName
-            shopButton.setOnClickListener {
-                val position = adapterPosition
-                if (position != RecyclerView.NO_POSITION) {
-                    onItemClickListener?.invoke(data[position])
-                }
-            }
-        }
+    fun setData(data: List<ProductRecommendationModel.Data>){
+        produk.clear()
+        produk.addAll(data)
+        notifyDataSetChanged()
     }
 }
