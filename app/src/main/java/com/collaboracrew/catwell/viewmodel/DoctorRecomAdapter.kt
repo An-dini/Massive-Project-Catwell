@@ -11,15 +11,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.model.DoctorModel
+import com.collaboracrew.catwell.view.DoctorListAdapter
 import com.collaboracrew.catwell.view.PembayaranChat
 import com.squareup.picasso.Picasso
 
-
-interface DoctorRecomItemClickListener {
-    fun onDoctorRecomItemClick(doctorId: String)
-}
 class DoctorRecomAdapter(
     private val doctors: ArrayList<DoctorModel.Data>,
+    private val listener: DoctorRecomAdapter.OnAdapterListener
 ) : RecyclerView.Adapter<DoctorRecomAdapter.ViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -41,10 +39,8 @@ class DoctorRecomAdapter(
         }
 
 //        pindah halaman
-        holder.itemView.setOnClickListener {
-            val intent = Intent(it.context, PembayaranChat::class.java)
-            intent.putExtra("id_dokter", data.id_dokter)
-            it.context.startActivity(intent)
+        holder.btKonsultasi.setOnClickListener {
+            listener.onClick(data)
         }
     }
 
@@ -52,11 +48,16 @@ class DoctorRecomAdapter(
         val ivDokter = itemView.findViewById<ImageView>(R.id.ivDoctor)
         val tvNamaDokter = itemView.findViewById<TextView>(R.id.tvDoctorName)
         val tvInstansi = itemView.findViewById<TextView>(R.id.tvVetName)
+        val btKonsultasi = itemView.findViewById<TextView>(R.id.btKonsultasi)
     }
 
-    fun setData(data: List<DoctorModel.Data>){
+    fun setDokter(data: List<DoctorModel.Data>){
         doctors.clear()
         doctors.addAll(data)
         notifyDataSetChanged()
+    }
+
+    interface OnAdapterListener{
+        fun onClick(doctor: DoctorModel.Data)
     }
 }

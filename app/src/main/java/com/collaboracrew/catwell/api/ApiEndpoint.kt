@@ -2,11 +2,11 @@ package com.collaboracrew.catwell.api
 
 import com.collaboracrew.catwell.model.DoctorModel
 import com.collaboracrew.catwell.model.LoginModel
+import com.collaboracrew.catwell.model.ProductRecommendationModel
 import com.collaboracrew.catwell.model.SubmitModel
 import com.collaboracrew.catwell.model.TransactionModel
 import com.collaboracrew.catwell.model.User
 import retrofit2.Call
-import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -40,13 +40,19 @@ interface ApiEndpoint {
     @GET("data_dokter.php")
     fun dataDokter(): Call<DoctorModel>
 
-    @GET("data_user.php")
-    fun listUser(): Call<User>
-
     @FormUrlEncoded
     @POST("data_user.php")
     fun dataUser(
         @Field("Email_User") Email_User: String,
+    ): Call<User>
+
+    @FormUrlEncoded
+    @POST("update_user.php")
+    fun updateUser(
+        @Field("ID_User") ID_User: String,
+        @Field("Nama_User") Nama_User: String,
+        @Field("Email_User") Email_User: String,
+        @Field("No_User") No_User: String,
     ): Call<User>
 
     @FormUrlEncoded
@@ -57,4 +63,7 @@ interface ApiEndpoint {
         @Field("ID_Dokter") ID_Dokter: String,
         @Field("tipe_konsultasi") tipe_konsultasi: String
     ): Call<TransactionModel>
+
+    @GET("data_produk.php")
+    fun dataProduk(): Call<ProductRecommendationModel>
 }

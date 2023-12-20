@@ -61,7 +61,7 @@ class KonsultasiFragment : Fragment() {
             override fun onResponse(call: Call<DoctorModel>, response: Response<DoctorModel>) {
                 if (response.isSuccessful) {
                     val listDokter = response.body()?.dokter ?: emptyList()
-                    doctorAdapter.setDokter(listDokter) // Update adapter with retrieved data
+                    doctorAdapter.setDokter(listDokter)
                     Log.e("Konsultasi Fragment", response.toString())
                 }
             }
