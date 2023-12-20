@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".view.DiskusiFragment">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/PrimaryColor"
+        android:clickable="true"
+        android:src="@drawable/ic_add" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -114,7 +125,7 @@
                         android:layout_weight="1"
                         android:src="@drawable/ic_like"
                         android:background="@android:color/transparent"
-                        android:tint="@color/grey"/>
+                        app:tint="@color/grey" />
 
                     <Space
                         android:layout_width="0dp"
@@ -128,7 +139,7 @@
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_comment"
-                        android:tint="@color/grey" />
+                        app:tint="@color/grey" />
 
                     <Space
                         android:layout_width="0dp"
@@ -142,7 +153,7 @@
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_bookmark"
-                        android:tint="@color/grey"/>
+                        app:tint="@color/grey" />
 
                 </LinearLayout>
 
@@ -221,7 +232,7 @@
                         android:layout_weight="1"
                         android:src="@drawable/ic_like"
                         android:background="@android:color/transparent"
-                        android:tint="@color/grey"/>
+                        app:tint="@color/grey" />
 
                     <Space
                         android:layout_width="0dp"
@@ -235,7 +246,7 @@
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_comment"
-                        android:tint="@color/grey" />
+                        app:tint="@color/grey" />
 
                     <Space
                         android:layout_width="0dp"
@@ -249,7 +260,7 @@
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_bookmark"
-                        android:tint="@color/grey"/>
+                        app:tint="@color/grey" />
 
                 </LinearLayout>
 
@@ -305,7 +316,7 @@
                         android:layout_weight="1"
                         android:src="@drawable/ic_like"
                         android:background="@android:color/transparent"
-                        android:tint="@color/grey"/>
+                        app:tint="@color/grey" />
 
                     <Space
                         android:layout_width="0dp"
@@ -319,7 +330,7 @@
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_comment"
-                        android:tint="@color/grey" />
+                        app:tint="@color/grey" />
 
                     <Space
                         android:layout_width="0dp"
@@ -333,7 +344,7 @@
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_bookmark"
-                        android:tint="@color/grey"/>
+                        app:tint="@color/grey" />
 
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>

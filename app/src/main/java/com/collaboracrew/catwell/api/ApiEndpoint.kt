@@ -7,7 +7,6 @@ import com.collaboracrew.catwell.model.SubmitModel
 import com.collaboracrew.catwell.model.TransactionModel
 import com.collaboracrew.catwell.model.User
 import com.collaboracrew.catwell.model.Puskeswan_Model
-import com.collaboracrew.catwell.model.SubmitModel
 import com.collaboracrew.catwell.model.Vet_Model
 import retrofit2.Call
 import retrofit2.http.Field
@@ -70,7 +69,6 @@ interface ApiEndpoint {
 
     @GET("data_produk.php")
     fun dataProduk(): Call<ProductRecommendationModel>
-}
 
     @GET("Data_Vet.php")
     fun DataVet(
