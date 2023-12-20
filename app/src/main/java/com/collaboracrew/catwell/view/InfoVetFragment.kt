@@ -1,18 +1,22 @@
 package com.collaboracrew.catwell.view
 
+import VetFragment
 import android.content.res.ColorStateList
+import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.databinding.FragmentInfoVetBinding
 
 class InfoVetFragment : Fragment() {
     private lateinit var binding: FragmentInfoVetBinding
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

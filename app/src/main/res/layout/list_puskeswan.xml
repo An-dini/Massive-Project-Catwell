@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="8dp"
@@ -15,9 +16,9 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/img_psw1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/img_puskeswan"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:src="@drawable/pswmagelang"
             android:adjustViewBounds="true"
             android:elevation="8dp"
@@ -29,17 +30,46 @@
             android:orientation="vertical">
             <TextView
                 style="@style/poppinsSemiBold14spBlack"
-                android:id="@+id/nama_vet"
+                android:id="@+id/NamaPuskeswan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Psw"/>
-            <TextView
-                style="@style/poppinsReg14spBlack"
-                android:id="@+id/deskripsi_vet"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Deskripsi "/>
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/Img_Waktu"
+                    android:src="@drawable/img_6"
+                    android:paddingRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    style="@style/poppinsReg14spBlack"
+                    android:id="@+id/Wakktu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="09:00 - 17:00" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/Img_Lokasi"
+                    android:src="@drawable/img_3"
+                    android:paddingRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    style="@style/poppinsReg14spBlack"
+                    android:id="@+id/deskripsi_vet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deskripsi "/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
