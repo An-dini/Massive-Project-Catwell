@@ -14,6 +14,24 @@
         android:theme="@style/Theme.Catwell"
         tools:targetApi="31">
         <activity
+            android:name=".view.Detail_Psw_Cibinong"
+            android:exported="false" />
+        <activity
+            android:name=".view.Detail_Psw_Ragunan"
+            android:exported="false" />
+        <activity
+            android:name=".view.Detail_Psw_Depok"
+            android:exported="false" />
+        <activity
+            android:name=".view.Detail_Vet_Leo"
+            android:exported="false" />
+        <activity
+            android:name=".view.Detail_Vet_Amore"
+            android:exported="false" />
+        <activity
+            android:name=".view.Detail_Vet_Anabul"
+            android:exported="false" />
+        <activity
             android:name="Dokter.view.LupaPasswordDokter"
             android:exported="false" />
         <activity
@@ -123,7 +141,7 @@
             android:exported="false" />
         <activity
             android:name=".view.ProfileDokter"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".view.DetailArtikel"
             android:exported="false" />

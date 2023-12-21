@@ -2,14 +2,13 @@ package com.collaboracrew.catwell.view
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.collaboracrew.catwell.R
 import com.collaboracrew.catwell.databinding.FragmentPostConsultationBinding
-import com.collaboracrew.catwell.model.SCHEDULE_ID_EXTRA
 import com.collaboracrew.catwell.model.ScheduleModel
 
 class PostConsultationFragment : Fragment() {
@@ -32,7 +31,7 @@ class PostConsultationFragment : Fragment() {
     private fun setupRecyclerView() {
         val scheduleList = generateScheduleList()
         adapter = ScheduleAdapter(scheduleList, clickListener = {
-            val intent = Intent(requireContext(), Detail_Vet_Puskeswan::class.java)
+            val intent = Intent(requireContext(), Detail_Vet_Anabul::class.java)
             startActivity(intent)
                                                                 }, isFromPostConsultationFragment = true)
 

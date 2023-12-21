@@ -1,6 +1,5 @@
 package com.collaboracrew.catwell.view
 
-import VetFragment
 import android.content.res.ColorStateList
 import android.os.Build
 import android.os.Bundle

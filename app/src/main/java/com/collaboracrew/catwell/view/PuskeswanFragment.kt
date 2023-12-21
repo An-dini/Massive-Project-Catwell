@@ -41,9 +41,27 @@ class PuskeswanFragment : Fragment() {
 
     private fun setupRecyclerView() {
         adapter = PuskeswanAdapter(ArrayList()) { puskeswanResult ->
-            val intent = Intent(requireContext(), Detail_Vet_Puskeswan::class.java)
-            intent.putExtra("ID_Puskeswan", puskeswanResult.ID_Puskeswan)
-            startActivity(intent)
+            when (puskeswanResult.ID_Puskeswan) {
+                "1" -> {
+                    val intent1 = Intent(requireContext(), Detail_Psw_Depok::class.java)
+                    intent1.putExtra("1", puskeswanResult.ID_Puskeswan)
+                    startActivity(intent1)
+                }
+                "2" -> {
+                    val intent2 = Intent(requireContext(), Detail_Psw_Ragunan::class.java)
+                    intent2.putExtra("2", puskeswanResult.ID_Puskeswan)
+                    startActivity(intent2)
+                }
+                "3" -> {
+                    val intent3 = Intent(requireContext(), Detail_Psw_Cibinong::class.java)
+                    intent3.putExtra("3", puskeswanResult.ID_Puskeswan)
+                    startActivity(intent3)
+                }
+                else -> {
+                    val intentDefault = Intent(requireContext(), PuskeswanFragment::class.java)
+                    startActivity(intentDefault)
+                }
+            }
         }
 
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -51,7 +69,7 @@ class PuskeswanFragment : Fragment() {
     }
 
     private fun loadDataFromApi() {
-        apiService.DataPuskeswan("Nama_Puskeswan", "Alamat", "Waktu_Buka", "No_Puskeswan", "Img_Puskeswan").enqueue(object : Callback<Puskeswan_Model> {
+        apiService.DataPuskeswan("ID_Puskeswan", "Nama_Puskeswan", "Alamat", "Waktu_Buka", "No_Puskeswan","Img_Puskeswan").enqueue(object : Callback<Puskeswan_Model> {
             override fun onResponse(call: Call<Puskeswan_Model>, response: Response<Puskeswan_Model>) {
                 if (response.isSuccessful) {
                     val puskeswanDataList = response.body()?.result ?: ArrayList()

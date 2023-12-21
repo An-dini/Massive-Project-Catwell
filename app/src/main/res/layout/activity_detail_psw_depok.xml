@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.Detail_Vet_Puskeswan">
+    android:background="@color/white"
+    tools:context=".view.Detail_Psw_Depok">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -44,7 +46,7 @@
                     style="@style/poppinsBold24spWhite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Detail Vet!"
+                    android:text="Detail Puskeswan!"
                     android:textStyle="bold" />
 
                 <TextView
@@ -63,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="92dp"
-        android:background="@drawable/base_white"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,8 +102,9 @@
                 style="@style/poppinsSemiBold24spOrange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Anabul Pet Center"
-                android:layout_alignParentStart="true"/>
+                android:text="Puskeswan Depok"
+                android:layout_alignParentStart="true"
+                android:id="@+id/NamaPsw"/>
 
             <ImageView
                 android:layout_width="20dp"
@@ -152,7 +155,7 @@
                         style="@style/poppinsReg12spBlack"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Jl. Kartini No.22D, Depok, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16431"
+                        android:text="Jl. Raya Pengasinan, Sawangan Lama, Kec. Sawangan, Kota Depok,"
                         android:paddingLeft="35dp"/>
 
                     <TextView
@@ -181,7 +184,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="28dp"
                             android:textColor="@color/black"
-                            android:text="09.00–16.30" />
+                            android:text="08.00–17.00" />
                     </LinearLayout>
 
                     <TextView
@@ -197,7 +200,7 @@
                         android:id="@+id/NoKliik"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="(021) 5560028"
+                        android:text="(021)9278308"
                         android:paddingLeft="40dp"/>
 
                     <Button
@@ -216,4 +219,5 @@
         </ScrollView>
 
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

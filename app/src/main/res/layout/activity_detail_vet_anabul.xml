@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.Detail_Vet_Anabul">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_orange"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_back" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="48dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    style="@style/poppinsBold24spWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detail Vet!"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSubTitle"
+                    style="@style/poppinsMed12spWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Info Lengkap" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="92dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_peta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/peta" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/PrimaryColor"
+            android:layout_below="@id/img_peta"/>
+
+        <RelativeLayout
+            android:id="@+id/lin_namavet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <TextView
+                style="@style/poppinsSemiBold24spOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anabul Pet Center"
+                android:layout_alignParentStart="true"
+                android:id="@+id/NamaPsw"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toStartOf="@+id/jarakLokasi"
+                android:layout_centerInParent="true"
+                android:src="@drawable/img_lokasi" />
+
+            <TextView
+                android:id="@+id/jarakLokasi"
+                style="@style/poppinsReg12spOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:text="4.37 KM" />
+
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin_namavet"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/grey">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/poppinsSemiBold14spBlack"
+                        android:layout_width="148dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="0dp"
+                        android:drawableStart="@drawable/img_3"
+                        android:gravity="center"
+                        android:text="Alamat Outlet" />
+                    <TextView
+                        style="@style/poppinsReg12spBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jl. Kartini No.22D, Depok, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16431"
+                        android:paddingLeft="35dp"/>
+
+                    <TextView
+                        style="@style/poppinsSemiBold14spBlack"
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableStart="@drawable/img_6"
+                        android:gravity="center"
+                        android:text="Jam Operasional"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/poppinsReg14spBlack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="35dp"
+                            android:text="Senin - Jumat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="28dp"
+                            android:textColor="@color/black"
+                            android:text="09.00–16.30" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/poppinsSemiBold14spBlack"
+                        android:layout_width="119dp"
+                        android:layout_height="match_parent"
+                        android:drawableStart="@drawable/img_7"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Telepon" />
+                    <TextView
+                        style="@style/poppinsReg14spBlack"
+                        android:id="@+id/NoKliik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(021) 5560028"
+                        android:paddingLeft="40dp"/>
+
+                    <Button
+                        android:id="@+id/BtnMaps"
+                        android:layout_marginTop="100dp"
+                        android:background="@drawable/rectangle_rounded"
+                        android:text="Tunjukan Lokasi Di Goggle Maps"
+                        android:textColor="@color/white"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
